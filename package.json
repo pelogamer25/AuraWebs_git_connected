@@ -1,0 +1,12 @@
+{
+  "name": "aurawebs",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npx serve . -p 3000",
+    "build": "mkdir -p dist && cp *.html *.css *.js dist/"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

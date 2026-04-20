@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | AuraWebs</title>
+    <meta name="theme-color" content="#030014" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/novamodel.png" />
+
+    <!-- Tailwind CDN -->
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Config -->
+    </head>
+<body class="font-sans antialiased bg-aura-bg text-white min-h-screen flex flex-col items-center justify-center relative overflow-hidden selection:bg-aura-purple selection:text-white">
+    
+    <!-- Minimal Background Glow -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40vw] h-[40vw] min-w-[300px] min-h-[300px] bg-aura-purple/20 blur-[100px] rounded-full mix-blend-screen pointer-events-none"></div>
+
+    <div class="relative z-10 text-center px-6 max-w-2xl mx-auto">
+        <!-- 404 Header -->
+        <h1 class="text-8xl md:text-9xl font-black mb-2 tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-aura-purple via-aura-magenta to-aura-cyan">
+            404
+        </h1>
+        
+        <!-- Messages -->
+        <h2 class="text-2xl md:text-3xl font-semibold mb-4 text-white">
+            Page Not Found
+        </h2>
+        <p class="text-gray-400 mb-10 text-lg max-w-md mx-auto">
+            The page you are looking for doesn't exist or has been moved. <br/>
+            <span class="text-sm opacity-80">La página que buscas no existe o ha sido movida.</span>
+        </p>
+        
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="/en/index.html" class="w-full sm:w-auto px-8 py-4 rounded-full font-semibold text-white bg-white/5 hover:bg-aura-purple border border-white/10 hover:border-aura-purple hover:shadow-[0_0_20px_rgba(124,58,237,0.4)] transition-all duration-300">
+                Go to English homepage
+            </a>
+            <a href="/es/index.html" class="w-full sm:w-auto px-8 py-4 rounded-full font-semibold text-white bg-white/5 hover:bg-aura-magenta border border-white/10 hover:border-aura-magenta hover:shadow-[0_0_20px_rgba(217,70,239,0.4)] transition-all duration-300">
+                Ir a la página en español
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
