@@ -1,4 +1,4 @@
-const fs = require('fs');
+﻿const fs = require('fs');
 
 const schema = `
     <!-- Schema.org Markup -->
@@ -23,7 +23,7 @@ const schema = `
         "longitude": -75.5812
       },
       "sameAs": [
-        "https://www.instagram.com/aurawebsdev/"
+        "https://www.instagram.com/theaurawebs/"
       ],
       "priceRange": "$$",
       "description": "Agencia de diseño de páginas web y desarrollo de software en Medellín. Especialistas en React, Tailwind, Next.js y estrategias de SEO local.",
