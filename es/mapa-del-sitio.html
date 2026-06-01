@@ -2,11 +2,23 @@
 <html lang="en" class="dark">
   <head>
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NR57SF7S');</script>
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+window.addEventListener('load', function () {
+  var loadGtm = function () {
+    var gtmScript = document.createElement('script');
+    gtmScript.async = true;
+    gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-NR57SF7S';
+    document.head.appendChild(gtmScript);
+  };
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(loadGtm, { timeout: 2500 });
+  } else {
+    setTimeout(loadGtm, 1500);
+  }
+});
+</script>
 <!-- End Google Tag Manager -->
     <!-- Google verification -->
     <meta
@@ -30,29 +42,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CO" />
         <meta property="og:url" content="https://aurawebs.site/es/mapa-del-sitio.html" />
         <meta property="og:title" content="Mapa del Sitio | AuraWebs" />
         <meta property="og:description" content="Consulta el mapa del sitio HTML de AuraWebs para encontrar servicios, portafolio, preguntas frecuentes y contacto." />
-    <meta property="og:image" content="/assets/images/novemodel.png" />
+    <meta property="og:image" content="https://aurawebs.site/assets/images/optimized/Web3-1200.webp" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://aurawebs.site/es/mapa-del-sitio.html" />
         <meta property="twitter:title" content="Mapa del Sitio | AuraWebs" />
         <meta property="twitter:description" content="Consulta el mapa del sitio HTML de AuraWebs para encontrar servicios, portafolio, preguntas frecuentes y contacto." />
-    <meta property="twitter:image" content="/assets/images/novemodel.png" />
+    <meta property="twitter:image" content="https://aurawebs.site/assets/images/optimized/Web3-1200.webp" />
+    <meta property="twitter:image:alt" content="AuraWebs - dise?o web y desarrollo digital" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/assets/images/novemodel.png" />
 
     <!-- Tailwind CDN -->
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Paytone+One&display=swap"
-      rel="stylesheet"
-    />
 
     <!-- Tailwind Config -->
     <!-- SEO: Canonical & Hreflang -->
@@ -95,9 +103,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             style="animation-delay: 4s"
           ></div>
           <canvas class="absolute inset-0 z-10 opacity-90"></canvas>
-          <div
-            class="absolute inset-0 opacity-[0.03] bg-[url(&#x27;https://www.transparenttextures.com/patterns/stardust.png&#x27;)] mix-blend-overlay z-20"
-          ></div>
+
           <div
             class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.6)_100%)] z-20"
           ></div>

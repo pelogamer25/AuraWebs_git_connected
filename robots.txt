@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /dev/
+Disallow: /migrated_prompt_history/
+Disallow: /*.cjs$
 
 Sitemap: https://aurawebs.site/sitemap.xml

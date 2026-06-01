@@ -1,21 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://aurawebs.site/</loc></url>
-  <url><loc>https://aurawebs.site/en/contact.html</loc></url>
-  <url><loc>https://aurawebs.site/en/faq.html</loc></url>
-  <url><loc>https://aurawebs.site/en/privacy.html</loc></url>
-  <url><loc>https://aurawebs.site/en/services.html</loc></url>
-  <url><loc>https://aurawebs.site/en/showcase.html</loc></url>
-  <url><loc>https://aurawebs.site/en/sitemap.html</loc></url>
-  <url><loc>https://aurawebs.site/en/terms.html</loc></url>
-  <url><loc>https://aurawebs.site/en/web-design.html</loc></url>
-  <url><loc>https://aurawebs.site/es/contacto.html</loc></url>
-  <url><loc>https://aurawebs.site/es/faq.html</loc></url>
-  <url><loc>https://aurawebs.site/es/index.html</loc></url>
-  <url><loc>https://aurawebs.site/es/mapa-del-sitio.html</loc></url>
-  <url><loc>https://aurawebs.site/es/medellin.html</loc></url>
-  <url><loc>https://aurawebs.site/es/portafolio.html</loc></url>
-  <url><loc>https://aurawebs.site/es/privacidad.html</loc></url>
-  <url><loc>https://aurawebs.site/es/servicios.html</loc></url>
-  <url><loc>https://aurawebs.site/es/terminos.html</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://aurawebs.site/</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/" />
+  </url>
+  <url>
+    <loc>https://aurawebs.site/es/index.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/" />
+  </url>
+  <url>
+    <loc>https://aurawebs.site/es/medellin.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/web-design.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/medellin.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design.html" />
+  </url>
+  <url>
+    <loc>https://aurawebs.site/en/web-design.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/web-design.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/medellin.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design.html" />
+  </url>
+  <url>
+    <loc>https://aurawebs.site/es/servicios.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/services.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/servicios.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/services.html" />
+  </url>
+  <url>
+    <loc>https://aurawebs.site/en/services.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/services.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/servicios.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/services.html" />
+  </url>
+  <url>
+    <loc>https://aurawebs.site/es/portafolio.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/showcase.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/portafolio.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/showcase.html" />
+  </url>
+  <url>
+    <loc>https://aurawebs.site/en/showcase.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/showcase.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/portafolio.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/showcase.html" />
+  </url>
+  <url>
+    <loc>https://aurawebs.site/es/faq.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/faq.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/faq.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/faq.html" />
+  </url>
+  <url>
+    <loc>https://aurawebs.site/en/faq.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/faq.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/faq.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/faq.html" />
+  </url>
+  <url>
+    <loc>https://aurawebs.site/es/contacto.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/contact.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/contacto.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/contact.html" />
+  </url>
+  <url>
+    <loc>https://aurawebs.site/en/contact.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/contact.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/contacto.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/contact.html" />
+  </url>
+  <url>
+    <loc>https://aurawebs.site/es/privacidad.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/privacidad.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/privacy.html" />
+  </url>
+  <url>
+    <loc>https://aurawebs.site/en/privacy.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/privacidad.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/privacy.html" />
+  </url>
+  <url>
+    <loc>https://aurawebs.site/es/terminos.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/terms.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/terminos.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/terms.html" />
+  </url>
+  <url>
+    <loc>https://aurawebs.site/en/terms.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/terms.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/terminos.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/terms.html" />
+  </url>
+  <url>
+    <loc>https://aurawebs.site/es/mapa-del-sitio.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/sitemap.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/mapa-del-sitio.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/sitemap.html" />
+  </url>
+  <url>
+    <loc>https://aurawebs.site/en/sitemap.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/sitemap.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/mapa-del-sitio.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/sitemap.html" />
+  </url>
 </urlset>

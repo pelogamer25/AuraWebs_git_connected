@@ -2,11 +2,23 @@
 <html lang="en" class="dark">
   <head>
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NR57SF7S');</script>
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+window.addEventListener('load', function () {
+  var loadGtm = function () {
+    var gtmScript = document.createElement('script');
+    gtmScript.async = true;
+    gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-NR57SF7S';
+    document.head.appendChild(gtmScript);
+  };
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(loadGtm, { timeout: 2500 });
+  } else {
+    setTimeout(loadGtm, 1500);
+  }
+});
+</script>
 <!-- End Google Tag Manager -->
     <!-- Google verification -->
     <meta
@@ -20,8 +32,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="theme-color" content="#030014" />
 
     <!-- SEO: Title & Description -->
-                <title>Web Design Agency in Medellin | AuraWebs</title>
-                <meta name="description" content="Need web design Medellín? AuraWebs builds fast, SEO-ready websites that turn visitors into clients. Get a free quote today." />
+                <title>AuraWebs | Digital Web Development and SEO Agency</title>
+                <meta name="description" content="AuraWebs builds fast, measurable digital experiences for brands that need stronger technology, technical SEO, and conversion-focused websites." />
     <meta
       name="keywords"
       content="web design, web development, SEO, agency, react, digital experiences, frontend, ui/ux"
@@ -30,29 +42,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
                 <meta property="og:url" content="https://aurawebs.site/" />
-                <meta property="og:title" content="Web Design Agency in Medellin | AuraWebs" />
+                <meta property="og:title" content="AuraWebs | Digital Web Development and SEO Agency" />
                 <meta property="og:description" content="AuraWebs builds high-performance websites, SEO-ready pages, and conversion-focused digital experiences for growing brands." />
-    <meta property="og:image" content="/assets/images/novemodel.png" />
+    <meta property="og:image" content="https://aurawebs.site/assets/images/optimized/Web3-1200.webp" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:url" content="https://aurawebs.site/" />
-                <meta property="twitter:title" content="Web Design Agency in Medellin | AuraWebs" />
+                <meta property="twitter:title" content="AuraWebs | Digital Web Development and SEO Agency" />
                 <meta property="twitter:description" content="AuraWebs builds high-performance websites, SEO-ready pages, and conversion-focused digital experiences for growing brands." />
-    <meta property="twitter:image" content="/assets/images/novemodel.png" />
+    <meta property="twitter:image" content="https://aurawebs.site/assets/images/optimized/Web3-1200.webp" />
+    <meta property="twitter:image:alt" content="AuraWebs - web design and digital development" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/assets/images/novemodel.png" />
 
     <!-- Tailwind CDN -->
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Paytone+One&display=swap"
-      rel="stylesheet"
-    />
 
     <!-- Tailwind Config -->
     <!-- SEO: Canonical & Hreflang -->
@@ -66,9 +74,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "WebDesignAgency",
+        "@type": ["Organization", "ProfessionalService"],
         "name": "AuraWebs",
-        "image": "https://aurawebs.site/assets/images/novemodel.png",
+        "image": "https://aurawebs.site/assets/images/optimized/Web3-1200.webp",
         "@id": "https://aurawebs.site/",
         "url": "https://aurawebs.site/",
         "telephone": "+573217466755",
@@ -85,8 +93,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         },
         "sameAs": ["https://www.instagram.com/theaurawebs/"],
         "priceRange": "$",
-        "description": "Web design and software development agency in Medellin. Especialistas en React, Tailwind, Next.js y estrategias de SEO local.",
-        "areaServed": "Medellín, Colombia",
+        "description": "Digital web development, technical SEO, and conversion-focused experience agency. Specialists in React, Tailwind, Next.js, and measurable growth.",
+        "areaServed": "Colombia",
         "services": [
           "Web Design",
           "Frontend Development",
@@ -129,9 +137,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             style="animation-delay: 4s"
           ></div>
           <canvas class="absolute inset-0 z-10 opacity-90"></canvas>
-          <div
-            class="absolute inset-0 opacity-[0.03] bg-[url(&#x27;https://www.transparenttextures.com/patterns/stardust.png&#x27;)] mix-blend-overlay z-20"
-          ></div>
+
           <div
             class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.6)_100%)] z-20"
           ></div>
@@ -292,7 +298,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       class="animate-fade-in-up flex flex-wrap justify-center items-center gap-x-4"
                       style="animation-delay: 0.1s"
                     >
-                      Web Design Agency Medellín
+                      AuraWebs Digital Agency
                     </span>
                     <span
                       class="animate-fade-in-up block text-4xl md:text-6xl mt-2 w-full text-transparent bg-clip-text bg-gradient-to-r from-aura-purple via-aura-magenta to-aura-cyan animate-gradient-x"
@@ -909,48 +915,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="container mx-auto px-6">
                 <div class="max-w-3xl mx-auto text-center mb-14">
                   <h2 class="text-3xl md:text-5xl font-bold mb-4">
-                    Web Design Medellín FAQ
+                    Web Design and Conversion FAQ
                   </h2>
                   <p class="text-xl text-gray-400 leading-relaxed">
-                    Answers for businesses comparing web design agencies in
-                    Medellín and looking for a website built to rank, load fast,
-                    and convert.
+                    Answers for businesses comparing digital partners and
+                    looking for a website built to rank, load fast, and convert.
                   </p>
                 </div>
                 <div class="max-w-4xl mx-auto grid grid-cols-1 gap-5">
                   <div class="glass-panel rounded-2xl border border-white/5 p-6">
                     <h3 class="text-xl font-bold text-white mb-3">
-                      Why choose a web design agency in Medellín?
+                      Why choose AuraWebs as your digital partner?
                     </h3>
                     <p class="text-gray-400 leading-relaxed">
-                      A local web design agency in Medellín understands the
-                      market, search behavior, and trust signals Colombian
-                      customers expect. AuraWebs combines local SEO, persuasive
-                      copy, responsive design, and fast development to help your
-                      website attract better leads.
+                      AuraWebs combines technical SEO, persuasive copy,
+                      responsive design, and fast development to help your
+                      website attract better leads and convert more visitors.
                     </p>
                   </div>
                   <div class="glass-panel rounded-2xl border border-white/5 p-6">
                     <h3 class="text-xl font-bold text-white mb-3">
-                      Do you build SEO-optimized websites for Medellín businesses?
+                      Do you build SEO-optimized websites?
                     </h3>
                     <p class="text-gray-400 leading-relaxed">
                       Yes. Every website is structured with SEO-friendly titles,
                       headings, internal links, mobile performance, metadata, and
-                      content aligned with Medellín search intent so your business
-                      can compete on Google from launch.
+                      content aligned with the page's search intent so your
+                      business can compete on Google from launch.
                     </p>
                   </div>
                   <div class="glass-panel rounded-2xl border border-white/5 p-6">
                     <h3 class="text-xl font-bold text-white mb-3">
-                      What types of Medellín businesses do you work with?
+                      What types of businesses do you work with?
                     </h3>
                     <p class="text-gray-400 leading-relaxed">
-                      We create web design for startups, gyms, restaurants,
-                      ecommerce brands, consultants, and service-based businesses
-                      across Medellín and Antioquia. The goal is always the same:
-                      clearer positioning, more trust, and more qualified
-                      inquiries.
+                      We create websites for startups, gyms, restaurants,
+                      ecommerce brands, consultants, and service-based
+                      businesses. The goal is always the same: clearer
+                      positioning, more trust, and more qualified inquiries.
                     </p>
                   </div>
                   <div class="glass-panel rounded-2xl border border-white/5 p-6">
@@ -1170,9 +1172,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div>
                   <h2 class="text-xl font-bold text-white">AuraWebs</h2>
                   <p class="text-sm text-gray-400 mt-2">
-                    Web Design Agency in Medellín serving startups, restaurants,
-                    gyms, service businesses, and growing brands across
-                    Medellín, Colombia.
+                    Digital web development and SEO agency serving startups,
+                    restaurants, gyms, service businesses, and growing brands.
                   </p>
                 </div>
                 <div

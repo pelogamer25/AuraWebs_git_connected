@@ -2,11 +2,23 @@
 <html lang="es" class="dark">
   <head>
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NR57SF7S');</script>
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+window.addEventListener('load', function () {
+  var loadGtm = function () {
+    var gtmScript = document.createElement('script');
+    gtmScript.async = true;
+    gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-NR57SF7S';
+    document.head.appendChild(gtmScript);
+  };
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(loadGtm, { timeout: 2500 });
+  } else {
+    setTimeout(loadGtm, 1500);
+  }
+});
+</script>
 <!-- End Google Tag Manager -->
     <!-- Google verification -->
     <meta
@@ -20,39 +32,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="theme-color" content="#030014" />
 
     <!-- SEO: Title & Description -->
-        <title>Diseño Web en Medellín | AuraWebs</title>
-        <meta name="description" content="AuraWebs crea sitios web rápidos, optimizados para SEO y pensados para convertir visitas en oportunidades reales." />
+        <title>AuraWebs | Agencia Digital de Desarrollo Web y SEO</title>
+        <meta name="description" content="AuraWebs crea experiencias digitales rápidas, medibles y orientadas a conversión para marcas que quieren crecer con mejor tecnología y estrategia." />
     <meta
       name="keywords"
-      content="diseño web en medellín, desarrollo web medellín, agencia seo medellín, diseño de páginas web, react, frontend"
+      content="AuraWebs, agencia digital, desarrollo web, SEO técnico, React, frontend, UX, conversión"
     />
     <meta name="author" content="AuraWebs" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CO" />
         <meta property="og:url" content="https://aurawebs.site/es/index.html" />
-        <meta property="og:title" content="Diseño Web en Medellín | AuraWebs" />
-        <meta property="og:description" content="AuraWebs crea sitios web rápidos, optimizados para SEO y pensados para convertir visitas en oportunidades reales." />
-    <meta property="og:image" content="/assets/images/novemodel.png" />
+        <meta property="og:title" content="AuraWebs | Agencia Digital de Desarrollo Web y SEO" />
+        <meta property="og:description" content="AuraWebs crea experiencias digitales rápidas, medibles y orientadas a conversión para marcas que quieren crecer con mejor tecnología y estrategia." />
+    <meta property="og:image" content="https://aurawebs.site/assets/images/optimized/Web3-1200.webp" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://aurawebs.site/es/index.html" />
-        <meta property="twitter:title" content="Diseño Web en Medellín | AuraWebs" />
-        <meta property="twitter:description" content="AuraWebs crea sitios web rápidos, optimizados para SEO y pensados para convertir visitas en oportunidades reales." />
-    <meta property="twitter:image" content="/assets/images/novemodel.png" />
+        <meta property="twitter:title" content="AuraWebs | Agencia Digital de Desarrollo Web y SEO" />
+        <meta property="twitter:description" content="AuraWebs crea experiencias digitales rápidas, medibles y orientadas a conversión para marcas que quieren crecer con mejor tecnología y estrategia." />
+    <meta property="twitter:image" content="https://aurawebs.site/assets/images/optimized/Web3-1200.webp" />
+    <meta property="twitter:image:alt" content="AuraWebs - dise?o web y desarrollo digital" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/assets/images/novemodel.png" />
 
     <!-- Tailwind CDN -->
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Paytone+One&display=swap"
-      rel="stylesheet"
-    />
 
     <!-- Tailwind Config -->
     <!-- SEO: Canonical & Hreflang -->
@@ -66,9 +74,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "WebDesignAgency",
+        "@type": ["Organization", "ProfessionalService"],
         "name": "AuraWebs",
-        "image": "https://aurawebs.site/assets/images/novemodel.png",
+        "image": "https://aurawebs.site/assets/images/optimized/Web3-1200.webp",
         "@id": "https://aurawebs.site/",
         "url": "https://aurawebs.site/",
         "telephone": "+573217466755",
@@ -85,8 +93,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         },
         "sameAs": ["https://www.instagram.com/theaurawebs/"],
         "priceRange": "$",
-        "description": "Agencia de diseño de páginas web y desarrollo de software en Medellín. Especialistas en React, Tailwind, Next.js y estrategias de SEO local.",
-        "areaServed": "Medellín, Colombia",
+        "description": "Agencia digital de desarrollo web, SEO técnico y experiencias de conversión. Especialistas en React, Tailwind, Next.js y crecimiento digital.",
+        "areaServed": "Colombia",
         "services": [
           "Diseño Web",
           "Desarrollo Frontend",
@@ -129,9 +137,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             style="animation-delay: 4s"
           ></div>
           <canvas class="absolute inset-0 z-10 opacity-90"></canvas>
-          <div
-            class="absolute inset-0 opacity-[0.03] bg-[url(&#x27;https://www.transparenttextures.com/patterns/stardust.png&#x27;)] mix-blend-overlay z-20"
-          ></div>
+
           <div
             class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.6)_100%)] z-20"
           ></div>
@@ -145,7 +151,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 class="flex items-center space-x-3 group"
                 href="/es/index.html"
                 data-discover="true"
-                ><img decoding="async" src="/assets/images/optimized/novemodel-128.webp" srcset="/assets/images/optimized/novemodel-64.webp 64w, /assets/images/optimized/novemodel-128.webp 128w, /assets/images/optimized/novemodel-256.webp 256w" sizes="40px" alt="AuraWebs - Agencia de Diseño Web en Medellín" width="40" height="40" fetchpriority="high" class="w-10 h-10 group-hover:drop-shadow-[0_0_15px_rgba(124,58,237,0.8)] transition-all duration-300" /><span
+                ><img decoding="async" src="/assets/images/optimized/novemodel-128.webp" srcset="/assets/images/optimized/novemodel-64.webp 64w, /assets/images/optimized/novemodel-128.webp 128w, /assets/images/optimized/novemodel-256.webp 256w" sizes="40px" alt="AuraWebs - Agencia digital de desarrollo web" width="40" height="40" fetchpriority="high" class="w-10 h-10 group-hover:drop-shadow-[0_0_15px_rgba(124,58,237,0.8)] transition-all duration-300" /><span
                   class="text-xl font-bold tracking-tight text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-aura-violet transition-all"
                   >Aura<span class="font-light opacity-80">Webs</span></span
                 ></a
@@ -290,20 +296,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <span
                       class="animate-fade-in-up"
                       style="animation-delay: 0.1s"
-                      >Diseño Web en</span
+                      >AuraWebs</span
                     ><span
                       class="inline-block bg-clip-text text-transparent bg-gradient-to-r from-aura-purple via-aura-magenta to-aura-cyan animate-gradient-x px-2 pb-1 animate-fade-in-up"
                       style="animation-delay: 0.3s"
-                      >Medellín</span
+                      >Agencia Digital</span
                     >
                   </h1>
                   <p
                     class="text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto leading-relaxed animate-fade-in-up"
                     style="animation-delay: 0.5s"
                   >
-                    Tu negocio merece una página web que venda. Combinamos
-                    diseño estético de vanguardia con precisión técnica y SEO
-                    local para destacar tu marca.
+                    Creamos experiencias digitales rápidas, medibles y
+                    orientadas a conversión. Combinamos diseño, tecnología y SEO
+                    técnico para que tu marca crezca con claridad.
                   </p>
                   <div
                     class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 animate-fade-in-up"
@@ -456,12 +462,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h3
                       class="text-2xl font-bold mb-4 group-hover:text-aura-cyan transition-colors"
                     >
-                      Posicionamiento SEO Local
+                      Posicionamiento SEO Técnico
                     </h3>
                     <p class="text-gray-400">
                       El SEO técnico está integrado desde el inicio. Optimizamos
-                      la estructura y velocidad para que tu negocio domine las
-                      búsquedas en Medellín.
+                      estructura, velocidad y contenido para que cada página
+                      tenga una intención clara y medible.
                     </p>
                   </div>
                 </div>
@@ -772,7 +778,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   class="flex items-center space-x-3"
                   href="/es/index.html"
                   data-discover="true"
-                  ><img decoding="async" src="/assets/images/optimized/novemodel-64.webp" srcset="/assets/images/optimized/novemodel-64.webp 64w, /assets/images/optimized/novemodel-128.webp 128w" sizes="32px" alt="AuraWebs - Agencia de Diseño Web en Medellín" width="32" height="32" loading="lazy" class="w-8 h-8" /><span class="text-xl font-bold tracking-tight text-white"
+                  ><img decoding="async" src="/assets/images/optimized/novemodel-64.webp" srcset="/assets/images/optimized/novemodel-64.webp 64w, /assets/images/optimized/novemodel-128.webp 128w" sizes="32px" alt="AuraWebs - Agencia digital de desarrollo web" width="32" height="32" loading="lazy" class="w-8 h-8" /><span class="text-xl font-bold tracking-tight text-white"
                     >Aura<span class="font-light opacity-80">Webs</span></span
                   ></a
                 >
@@ -825,9 +831,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <li>
                     <a
                       class="hover:text-aura-magenta transition-colors"
-                      href="/es/servicios.html"
+                      href="/es/medellin.html"
                       data-discover="true"
-                      >Diseño Web</a
+                      >Diseño Web Medellín</a
                     >
                   </li>
                   <li>

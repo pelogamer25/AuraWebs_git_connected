@@ -2,11 +2,23 @@
 <html lang="en" class="dark">
   <head>
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NR57SF7S');</script>
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+window.addEventListener('load', function () {
+  var loadGtm = function () {
+    var gtmScript = document.createElement('script');
+    gtmScript.async = true;
+    gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-NR57SF7S';
+    document.head.appendChild(gtmScript);
+  };
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(loadGtm, { timeout: 2500 });
+  } else {
+    setTimeout(loadGtm, 1500);
+  }
+});
+</script>
 <!-- End Google Tag Manager -->
     <!-- Google verification -->
     <meta
@@ -30,17 +42,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
         <meta property="og:url" content="https://aurawebs.site/en/web-design.html" />
         <meta property="og:title" content="Premium Web Design Services | AuraWebs" />
         <meta property="og:description" content="Premium web design services for brands that need faster, clearer, and more conversion-focused websites." />
-    <meta property="og:image" content="/assets/images/novemodel.png" />
+    <meta property="og:image" content="https://aurawebs.site/assets/images/optimized/Web3-1200.webp" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://aurawebs.site/en/web-design.html" />
         <meta property="twitter:title" content="Premium Web Design Services | AuraWebs" />
         <meta property="twitter:description" content="Premium web design services for brands that need faster, clearer, and more conversion-focused websites." />
-    <meta property="twitter:image" content="/assets/images/novemodel.png" />
+    <meta property="twitter:image" content="https://aurawebs.site/assets/images/optimized/Web3-1200.webp" />
+    <meta property="twitter:image:alt" content="AuraWebs - web design and digital development" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/assets/images/novemodel.png" />
@@ -85,9 +99,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             style="animation-delay: 4s"
           ></div>
           <canvas class="absolute inset-0 z-10 opacity-90"></canvas>
-          <div
-            class="absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] mix-blend-overlay z-20"
-          ></div>
+
           <div
             class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.6)_100%)] z-20"
           ></div>
