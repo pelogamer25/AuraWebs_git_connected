@@ -1,0 +1,30 @@
+{
+  "redirects": [
+    {
+      "source": "/diseno-web-medellin",
+      "destination": "/es/medellin.html",
+      "permanent": true
+    },
+    {
+      "source": "/diseño-web-medellin",
+      "destination": "/es/medellin.html",
+      "permanent": true
+    },
+    {
+      "source": "/es/medellin",
+      "destination": "/es/medellin.html",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "index, follow"
+        }
+      ]
+    }
+  ]
+}
