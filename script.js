@@ -363,4 +363,73 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   initLanguageSystem();
+
+  // --- 7. Design System: Scroll Reveal + Card Enhancements ---
+  const initDesignSystem = () => {
+    // Auto-apply card-hover to glass panels inside main (not nav/fixed)
+    document.querySelectorAll('main .glass-panel, main [class*="glass-panel"]').forEach(el => {
+      if (el.closest('nav') || el.classList.contains('rounded-full')) return;
+      el.classList.add('card-hover');
+    });
+
+    // Auto-apply input-glow to form inputs/selects/textareas
+    document.querySelectorAll('main input, main select, main textarea').forEach(el => {
+      el.classList.add('input-glow');
+    });
+
+    // Auto-apply btn-shimmer to gradient CTA buttons
+    document.querySelectorAll('main a[class*="from-aura-purple"], main button[class*="from-aura-purple"]').forEach(el => {
+      el.classList.add('btn-shimmer');
+    });
+
+    // Scroll reveal: eligible elements (grid/list cards and major sections)
+    const revealTargets = [
+      'main .space-y-6 > div',
+      'main .space-y-8 > div',
+      'main .grid > div',
+      'main .flex.flex-col.space-y-8 > *',
+    ];
+
+    const candidates = new Set();
+    revealTargets.forEach(sel => {
+      document.querySelectorAll(sel).forEach(el => {
+        if (el.closest('.fixed') || el.closest('nav') || el.tagName === 'A') return;
+        candidates.add(el);
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('revealed');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.06, rootMargin: '0px 0px -30px 0px' });
+
+    // Stagger reveal delays for sibling groups
+    const processedParents = new Map();
+    requestAnimationFrame(() => {
+      candidates.forEach(el => {
+        el.classList.add('reveal');
+        // Stagger siblings
+        const parent = el.parentElement;
+        if (!processedParents.has(parent)) processedParents.set(parent, 0);
+        const idx = processedParents.get(parent);
+        processedParents.set(parent, idx + 1);
+        const delay = Math.min(idx, 5);
+        if (delay > 0) el.classList.add(`reveal-d${delay}`);
+
+        // If already in viewport, reveal immediately (no FOUC)
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.98) {
+          el.classList.add('revealed');
+        } else {
+          observer.observe(el);
+        }
+      });
+    });
+  };
+
+  initDesignSystem();
 });
