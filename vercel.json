@@ -11,8 +11,43 @@
       "permanent": true
     },
     {
+      "source": "/diseno-web-en-medellin",
+      "destination": "/es/medellin.html",
+      "permanent": true
+    },
+    {
       "source": "/es/medellin",
       "destination": "/es/medellin.html",
+      "permanent": true
+    },
+    {
+      "source": "/landing-pages-medellin.html",
+      "destination": "/es/medellin/landing-pages-medellin.html",
+      "permanent": true
+    },
+    {
+      "source": "/desarrollo-web-medellin.html",
+      "destination": "/es/medellin/desarrollo-web-medellin.html",
+      "permanent": true
+    },
+    {
+      "source": "/seo-local-medellin.html",
+      "destination": "/es/medellin/seo-local-medellin.html",
+      "permanent": true
+    },
+    {
+      "source": "/mantenimiento-web-medellin.html",
+      "destination": "/es/medellin/mantenimiento-web-medellin.html",
+      "permanent": true
+    },
+    {
+      "source": "/redisenio-web-medellin.html",
+      "destination": "/es/medellin/redisenio-web-medellin.html",
+      "permanent": true
+    },
+    {
+      "source": "/cuanto-cuesta-pagina-web-medellin.html",
+      "destination": "/es/medellin/cuanto-cuesta-pagina-web-medellin.html",
       "permanent": true
     }
   ],
