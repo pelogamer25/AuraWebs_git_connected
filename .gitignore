@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 # Local app artifacts
-migrated_prompt_history/
+# (migrated_prompt_history moved to archive/)

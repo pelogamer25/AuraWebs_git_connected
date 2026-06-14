@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "npx serve . -p 3000",
-    "build": "mkdir -p dist && cp *.html *.css *.js dist/"
+    "css:build": "npx tailwindcss -i ./src/input.css -o ./styles.css --minify",
+    "css:watch": "npx tailwindcss -i ./src/input.css -o ./styles.css --watch"
   },
   "dependencies": {},
   "devDependencies": {}
