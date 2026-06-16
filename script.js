@@ -29,20 +29,32 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   const localizedRoutes = languageRouteMap[currentPath] || languageRouteMap['/'];
 
+  // 0. Scroll Progress Bar
+  const progressBar = document.createElement('div');
+  progressBar.id = 'scroll-progress';
+  document.body.prepend(progressBar);
+  const updateProgress = () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progressBar.style.width = pct + '%';
+  };
+  window.addEventListener('scroll', updateProgress, { passive: true });
+
   // 1. Navbar Scroll Effect
   const navbar = document.querySelector('nav');
   const navInner = navbar?.querySelector('.glass-panel');
-  
+
   if (navbar && navInner) {
     const handleScroll = () => {
       if (window.scrollY > 20) {
         navbar.classList.remove('py-6');
-        navbar.classList.add('py-4');
+        navbar.classList.add('py-4', 'scrolled');
         navInner.classList.remove('bg-opacity-30');
         navInner.classList.add('bg-opacity-60', 'shadow-lg', 'shadow-aura-purple/10');
       } else {
         navbar.classList.add('py-6');
-        navbar.classList.remove('py-4');
+        navbar.classList.remove('py-4', 'scrolled');
         navInner.classList.add('bg-opacity-30');
         navInner.classList.remove('bg-opacity-60', 'shadow-lg', 'shadow-aura-purple/10');
       }
@@ -308,12 +320,12 @@ document.addEventListener('DOMContentLoaded', () => {
       // Initial state is hidden below viewport (translate-y-full)
       banner.className = 'fixed bottom-0 left-0 w-full z-[100] bg-[#050115]/90 backdrop-blur-xl border-t border-white/10 p-4 transform translate-y-full transition-transform duration-[600ms] flex flex-col sm:flex-row items-center shadow-[0_-10px_40px_rgba(0,0,0,0.5)]';
       
-      const text = suggestedLang === 'es' 
-        ? 'Parece que hablas espa?ol. ?Prefieres navegar la versi?n en tu idioma?'
+      const text = suggestedLang === 'es'
+        ? 'Parece que hablas español. ¿Prefieres navegar la versión en tu idioma?'
         : 'It looks like you speak English. Would you prefer our English version?';
-        
-      const switchBtnText = suggestedLang === 'es' ? 'Cambiar a Espa?ol' : 'Switch to English';
-      const dismissText = suggestedLang === 'es' ? 'Continuar aqu?' : 'Stay here';
+
+      const switchBtnText = suggestedLang === 'es' ? 'Cambiar a Español' : 'Switch to English';
+      const dismissText = suggestedLang === 'es' ? 'Continuar aquí' : 'Stay here';
       const switchUrl = suggestedLang === 'es' ? localizedRoutes.es : localizedRoutes.en;
 
       banner.innerHTML = `
@@ -432,4 +444,44 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   initDesignSystem();
+
+  // --- 8. FAQ Accordion ---
+  const initFaqAccordion = () => {
+    // Support both .faq-item (new class) and plain glass-panel FAQ cards
+    document.querySelectorAll('.faq-item').forEach(item => {
+      const trigger = item.querySelector('.faq-trigger, h3, h4');
+      if (!trigger) return;
+      trigger.style.cursor = 'pointer';
+      trigger.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+        // Close all
+        document.querySelectorAll('.faq-item.open').forEach(o => o.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  };
+  initFaqAccordion();
+
+  // --- 9. Reveal elements explicitly marked with .reveal ---
+  const initStaticReveal = () => {
+    const staticRevealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+    if (!staticRevealEls.length) return;
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('revealed');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
+    staticRevealEls.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        el.classList.add('revealed');
+      } else {
+        obs.observe(el);
+      }
+    });
+  };
+  initStaticReveal();
 });

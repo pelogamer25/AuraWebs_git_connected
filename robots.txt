@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /dev/
+Disallow: /archive/
 Disallow: /migrated_prompt_history/
 Disallow: /*.cjs$
 
