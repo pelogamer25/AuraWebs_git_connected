@@ -6,3 +6,4 @@ Disallow: /migrated_prompt_history/
 Disallow: /*.cjs$
 
 Sitemap: https://aurawebs.site/sitemap.xml
+Llms: https://aurawebs.site/llms.txt

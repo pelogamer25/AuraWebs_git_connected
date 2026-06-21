@@ -21,6 +21,31 @@
       "permanent": true
     },
     {
+      "source": "/es/servicios",
+      "destination": "/es/servicios.html",
+      "permanent": true
+    },
+    {
+      "source": "/es/portafolio",
+      "destination": "/es/portafolio.html",
+      "permanent": true
+    },
+    {
+      "source": "/es/faq",
+      "destination": "/es/faq.html",
+      "permanent": true
+    },
+    {
+      "source": "/es/contacto",
+      "destination": "/es/contacto.html",
+      "permanent": true
+    },
+    {
+      "source": "/es/mapa-del-sitio",
+      "destination": "/es/mapa-del-sitio.html",
+      "permanent": true
+    },
+    {
       "source": "/landing-pages-medellin.html",
       "destination": "/es/medellin/landing-pages-medellin.html",
       "permanent": true

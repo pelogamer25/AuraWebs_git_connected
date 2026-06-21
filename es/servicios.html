@@ -68,7 +68,72 @@ window.addEventListener('load', function () {
     <link rel="alternate" hreflang="en" href="https://aurawebs.site/en/services.html" />
     <link rel="alternate" hreflang="es" href="https://aurawebs.site/es/servicios.html" />
     <link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/services.html" />
+<link rel="preload" href="../styles.css" as="style" />
 <link rel="stylesheet" href="../styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": ["LocalBusiness", "ProfessionalService"],
+            "@id": "https://aurawebs.site/#localbusiness",
+            "name": "AuraWebs",
+            "url": "https://aurawebs.site/",
+            "logo": "https://aurawebs.site/assets/images/optimized/novemodel-256.webp",
+            "image": "https://aurawebs.site/assets/images/optimized/Web3-1200.webp",
+            "telephone": "+573217466755",
+            "email": "aura@aurawebs.site",
+            "priceRange": "$$",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Medellín, Antioquia",
+              "addressLocality": "Medellín",
+              "addressRegion": "Antioquia",
+              "postalCode": "050010",
+              "addressCountry": "CO"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 6.2442,
+              "longitude": -75.5812
+            },
+            "areaServed": [
+              { "@type": "City", "name": "Medellín" },
+              { "@type": "AdministrativeArea", "name": "Antioquia" },
+              { "@type": "Country", "name": "Colombia" }
+            ],
+            "sameAs": ["https://www.instagram.com/theaurawebs/"]
+          },
+          {
+            "@type": "Service",
+            "@id": "https://aurawebs.site/es/servicios.html#diseno-web",
+            "name": "Servicios de diseño web en Medellín",
+            "serviceType": "Diseño web, desarrollo web, SEO técnico y landing pages",
+            "provider": { "@id": "https://aurawebs.site/#localbusiness" },
+            "areaServed": { "@type": "City", "name": "Medellín" },
+            "url": "https://aurawebs.site/es/servicios.html"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://aurawebs.site/es/servicios.html#breadcrumbs",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://aurawebs.site/es/index.html"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Servicios",
+                "item": "https://aurawebs.site/es/servicios.html"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->

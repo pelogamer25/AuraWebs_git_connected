@@ -69,6 +69,7 @@ window.addEventListener('load', function () {
     <link rel="alternate" hreflang="en" href="https://aurawebs.site/" />
     <link rel="alternate" hreflang="es" href="https://aurawebs.site/es/index.html" />
     <link rel="alternate" hreflang="x-default" href="https://aurawebs.site/" />
+<link rel="preload" href="../styles.css" as="style" />
 <link rel="stylesheet" href="../styles.css" />
 
     <!-- Schema.org Markup -->
@@ -80,15 +81,18 @@ window.addEventListener('load', function () {
         "alternateName": "AuraWebs Agency",
         "image": "https://aurawebs.site/assets/images/optimized/Web3-1200.webp",
         "@id": "https://aurawebs.site/#localbusiness",
-        "url": "https://aurawebs.site/es/index.html",
+        "url": "https://aurawebs.site/",
+        "logo": "https://aurawebs.site/assets/images/optimized/novemodel-256.webp",
         "telephone": "+573217466755",
         "email": "aura@aurawebs.site",
         "priceRange": "$$",
         "currenciesAccepted": "COP, USD",
         "address": {
           "@type": "PostalAddress",
+          "streetAddress": "Medellín, Antioquia",
           "addressLocality": "Medellín",
           "addressRegion": "Antioquia",
+          "postalCode": "050010",
           "addressCountry": "CO"
         },
         "geo": {
@@ -118,6 +122,22 @@ window.addEventListener('load', function () {
           "contactType": "sales",
           "areaServed": "CO",
           "availableLanguage": ["es", "en"]
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://aurawebs.site/#website",
+        "url": "https://aurawebs.site/",
+        "name": "AuraWebs",
+        "inLanguage": "es-CO",
+        "publisher": { "@id": "https://aurawebs.site/#localbusiness" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://aurawebs.site/es/mapa-del-sitio.html?q={search_term_string}",
+          "query-input": "required name=search_term_string"
         }
       }
     </script>
@@ -314,11 +334,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <span
                       class="animate-fade-in-up"
                       style="animation-delay: 0.1s"
-                      >AuraWebs</span
+                      >Agencia de Diseño Web</span
                     ><span
                       class="inline-block bg-clip-text text-transparent bg-gradient-to-r from-aura-purple via-aura-magenta to-aura-cyan animate-gradient-x px-2 pb-1 animate-fade-in-up"
                       style="animation-delay: 0.3s"
-                      >Agencia Digital</span
+                      >en Medellín</span
                     >
                   </h1>
                   <p
@@ -384,6 +404,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </section>
             <section class="py-32 relative">
               <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                  <h2 class="text-4xl md:text-5xl font-bold text-white">
+                    Servicios de Diseño Web en Medellín
+                  </h2>
+                  <p class="text-gray-400 mt-4 text-lg">
+                    Diseño, desarrollo y SEO técnico para empresas que necesitan un sitio rápido, claro y listo para convertir visitas en clientes.
+                  </p>
+                </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                   <div
                     class="glass-panel card-hover p-8 rounded-2xl transition-colors group reveal"
@@ -588,13 +616,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         class="flex flex-wrap gap-2 mt-4 opacity-0 h-0 group-hover:opacity-100 group-hover:h-auto transition-all duration-500 delay-200"
                       >
                         <span
-                          class="text-[10px] px-2 py-1 rounded-md bg-white/5 border border-white/10 text-gray-300"
+                          class="text-xs px-2 py-1 rounded-md bg-white/5 border border-white/10 text-gray-300"
                           >React Native</span
                         ><span
-                          class="text-[10px] px-2 py-1 rounded-md bg-white/5 border border-white/10 text-gray-300"
+                          class="text-xs px-2 py-1 rounded-md bg-white/5 border border-white/10 text-gray-300"
                           >Móvil</span
                         ><span
-                          class="text-[10px] px-2 py-1 rounded-md bg-white/5 border border-white/10 text-gray-300"
+                          class="text-xs px-2 py-1 rounded-md bg-white/5 border border-white/10 text-gray-300"
                           >UI/UX</span
                         >
                       </div>
@@ -657,13 +685,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         class="flex flex-wrap gap-2 mt-4 opacity-0 h-0 group-hover:opacity-100 group-hover:h-auto transition-all duration-500 delay-200"
                       >
                         <span
-                          class="text-[10px] px-2 py-1 rounded-md bg-white/5 border border-white/10 text-gray-300"
+                          class="text-xs px-2 py-1 rounded-md bg-white/5 border border-white/10 text-gray-300"
                           >Marca</span
                         ><span
-                          class="text-[10px] px-2 py-1 rounded-md bg-white/5 border border-white/10 text-gray-300"
+                          class="text-xs px-2 py-1 rounded-md bg-white/5 border border-white/10 text-gray-300"
                           >E-commerce</span
                         ><span
-                          class="text-[10px] px-2 py-1 rounded-md bg-white/5 border border-white/10 text-gray-300"
+                          class="text-xs px-2 py-1 rounded-md bg-white/5 border border-white/10 text-gray-300"
                           >Experiencia</span
                         >
                       </div>

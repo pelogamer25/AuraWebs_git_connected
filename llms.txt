@@ -1,0 +1,35 @@
+# AuraWebs
+
+AuraWebs is a web design and digital development agency based in Medellín, Colombia.
+
+## Primary Website
+
+- https://aurawebs.site/
+- Spanish home: https://aurawebs.site/es/index.html
+- Medellín service hub: https://aurawebs.site/es/medellin.html
+- Services: https://aurawebs.site/es/servicios.html
+- Portfolio: https://aurawebs.site/es/portafolio.html
+- Contact: https://aurawebs.site/es/contacto.html
+
+## Services
+
+- Web design in Medellín
+- Custom web development
+- Technical SEO and local SEO
+- Landing pages for campaigns
+- Website redesign and maintenance
+- Conversion-focused digital experiences
+
+## Business Details
+
+- Brand: AuraWebs
+- Alternate name: AuraWebs Agency
+- Location: Medellín, Antioquia, Colombia
+- Service area: Medellín, Antioquia, Colombia, and remote clients
+- Phone: +573217466755
+- Email: aura@aurawebs.site
+- Instagram: https://www.instagram.com/theaurawebs/
+
+## Entity Summary
+
+AuraWebs builds fast, responsive, SEO-ready websites for businesses that need stronger visibility, clearer messaging, and more qualified leads. The agency focuses on performance, modern frontend development, local SEO, UX, and measurable conversion paths.
