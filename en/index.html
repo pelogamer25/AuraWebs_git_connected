@@ -33,7 +33,7 @@ window.addEventListener('load', function () {
 
     <!-- SEO: Title & Description -->
         <title>Web Design Agency in Medellin | AuraWebs</title>
-    <meta name="robots" content="noindex,follow" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
         <meta name="description" content="AuraWebs builds high-performance websites, SEO-ready pages, and conversion-focused digital experiences for growing brands." />
     <meta
       name="keywords"
@@ -101,12 +101,16 @@ window.addEventListener('load', function () {
       "priceRange": "$",
       "description": "Web design and software development agency in Medellin. Especialistas en React, Tailwind, Next.js y estrategias de SEO local.",
       "areaServed": "Medellín, Colombia",
-      "services": [
-        "Web Design",
-        "Frontend Development",
-        "SEO Optimization",
-        "Brand Identity"
-      ]
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Web Design & Development Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Design" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Frontend Development" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO Optimization" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brand Identity" } }
+        ]
+      }
     }
     </script>
     <script type="application/ld+json">

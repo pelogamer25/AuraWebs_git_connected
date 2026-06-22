@@ -101,12 +101,16 @@ window.addEventListener('load', function () {
         "priceRange": "$",
         "description": "Digital web development, technical SEO, and conversion-focused experience agency. Specialists in React, Tailwind, Next.js, and measurable growth.",
         "areaServed": "Colombia",
-        "services": [
-          "Web Design",
-          "Frontend Development",
-          "SEO Optimization",
-          "Brand Identity"
-        ]
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Web Design & Development Services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Design" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Frontend Development" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO Optimization" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brand Identity" } }
+          ]
+        }
       }
     </script>
     <script type="application/ld+json">

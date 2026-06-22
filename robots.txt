@@ -5,5 +5,30 @@ Disallow: /archive/
 Disallow: /migrated_prompt_history/
 Disallow: /*.cjs$
 
+# AI crawlers — explicitly welcome for indexing and citation
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Gemini-Web
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
 Sitemap: https://aurawebs.site/sitemap.xml
 Llms: https://aurawebs.site/llms.txt
