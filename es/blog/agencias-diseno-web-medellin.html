@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es-CO" class="dark">
   <head>
     <script>
@@ -51,7 +51,7 @@ window.addEventListener('load', function () {
   "@type": "BreadcrumbList",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://aurawebs.site/es/index.html" },
-    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aurawebs.site/es/blog/agencias-diseno-web-medellin.html" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aurawebs.site/es/blog/index.html" },
     { "@type": "ListItem", "position": 3, "name": "Agencias de diseño web en Medellín", "item": "https://aurawebs.site/es/blog/agencias-diseno-web-medellin.html" }
   ]
 }
@@ -63,7 +63,7 @@ window.addEventListener('load', function () {
   "headline": "Agencias de diseño web en Medellín: cómo elegir la mejor en 2026",
   "description": "Guía honesta para elegir entre agencias de diseño web en Medellín: criterios de evaluación, preguntas clave, señales de alerta y qué debe incluir el servicio.",
   "datePublished": "2026-06-22",
-  "dateModified": "2026-06-22",
+  "dateModified": "2026-06-23",
   "inLanguage": "es-CO",
   "author": { "@type": "Organization", "name": "AuraWebs", "url": "https://aurawebs.site" },
   "publisher": {
@@ -165,563 +165,872 @@ window.addEventListener('load', function () {
   ]
 }
     </script>
+    <style>
+      /* Reading progress bar */
+      #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, #7c3aed, #c026d3, #06b6d4); z-index: 9999; width: 0%; transition: width 0.1s linear; pointer-events: none; box-shadow: 0 0 10px rgba(124,58,237,0.8); }
+
+      /* Parallax */
+      .parallax-slow { will-change: transform; }
+      .parallax-med  { will-change: transform; }
+      .parallax-fast { will-change: transform; }
+
+      /* Floating orbs */
+      .hero-orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.5; pointer-events: none; }
+      .float-orb-1 { animation: float-hero 9s ease-in-out infinite; }
+      .float-orb-2 { animation: float-hero 12s ease-in-out infinite; animation-delay: -4s; }
+      .float-orb-3 { animation: float-hero 7s ease-in-out infinite; animation-delay: -2s; }
+      @keyframes float-hero {
+        0%, 100% { transform: translateY(0) scale(1) rotate(0deg); }
+        33% { transform: translateY(-20px) scale(1.04) rotate(1deg); }
+        66% { transform: translateY(12px) scale(0.97) rotate(-1deg); }
+      }
+
+      /* Gradient text */
+      .grad-text { background: linear-gradient(135deg, #a78bfa 0%, #f0abfc 50%, #67e8f9 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+      /* Glow line divider */
+      .glow-line { height: 1px; background: linear-gradient(90deg, transparent, rgba(124,58,237,0.5), rgba(6,182,212,0.4), transparent); }
+
+      /* Sticky TOC */
+      #toc { position: sticky; top: 100px; }
+      #toc a { display: block; padding: 6px 12px; border-left: 2px solid transparent; color: #9ca3af; font-size: 0.8rem; line-height: 1.4; transition: all 0.2s; text-decoration: none; }
+      #toc a:hover { color: #fff; border-left-color: rgba(124,58,237,0.5); }
+      #toc a.active { color: #a78bfa; border-left-color: #7c3aed; font-weight: 600; }
+
+      /* Criteria cards enhanced */
+      .criteria-card { transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
+      .criteria-card:hover { transform: translateX(4px); box-shadow: -4px 0 20px rgba(124,58,237,0.15), 0 8px 32px rgba(0,0,0,0.3); }
+
+      /* Number badge glow */
+      .num-purple { background: rgba(124,58,237,0.15); border: 1px solid rgba(124,58,237,0.35); color: #a78bfa; }
+      .num-cyan   { background: rgba(6,182,212,0.12); border: 1px solid rgba(6,182,212,0.30); color: #67e8f9; }
+      .num-magenta{ background: rgba(192,38,211,0.12); border: 1px solid rgba(192,38,211,0.30); color: #f0abfc; }
+
+      /* Question cards */
+      .q-card { transition: transform 0.25s ease, border-color 0.25s ease; }
+      .q-card:hover { transform: translateY(-3px); border-color: rgba(124,58,237,0.25) !important; }
+
+      /* Red flag cards */
+      .flag-card { transition: border-color 0.25s ease, background 0.25s ease; }
+      .flag-card:hover { border-color: rgba(239,68,68,0.4) !important; background: rgba(239,68,68,0.08) !important; }
+
+      /* Decorative floating dots */
+      .float-dot { position: absolute; border-radius: 50%; pointer-events: none; }
+      @keyframes pulse-dot {
+        0%, 100% { opacity: 0.3; transform: scale(1); }
+        50% { opacity: 0.8; transform: scale(1.4); }
+      }
+
+      /* Section accent lines */
+      .section-accent { width: 40px; height: 3px; border-radius: 2px; }
+
+      /* AuraWebs entity card */
+      .entity-row { border-radius: 12px; border: 1px solid rgba(255,255,255,0.07); background: rgba(255,255,255,0.02); padding: 1.25rem; transition: border-color 0.2s, background 0.2s; }
+      .entity-row:hover { border-color: rgba(124,58,237,0.25); background: rgba(124,58,237,0.04); }
+
+      /* FAQ item */
+      .faq-item { transition: border-color 0.25s ease; }
+      .faq-item:hover { border-color: rgba(6,182,212,0.2) !important; }
+
+      /* Hero grid overlay */
+      .hero-grid { background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 50px 50px; }
+
+      /* Reading meta pill */
+      .meta-pill { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: 999px; font-size: 0.75rem; color: #9ca3af; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.03); }
+    </style>
   </head>
   <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NR57SF7S" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <div id="root"><div class="flex flex-col min-h-screen relative font-sans text-white bg-aura-bg selection:bg-aura-purple selection:text-white">
 
-      <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none bg-aura-bg">
-        <div class="absolute inset-0 bg-gradient-to-b from-[#020010] via-[#050115] to-[#020010]"></div>
-        <div class="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[80vw] h-[50vh] bg-aura-purple/20 blur-[120px] rounded-full mix-blend-screen opacity-60"></div>
-        <div class="absolute top-[10%] left-[-10%] w-[60vw] h-[60vw] bg-violet-900/15 rounded-full blur-[120px] mix-blend-screen animate-blob" style="animation-delay: 0s"></div>
-        <div class="absolute top-[40%] right-[-20%] w-[70vw] h-[70vw] bg-aura-magenta/10 rounded-full blur-[150px] mix-blend-screen animate-blob-slow" style="animation-delay: 2s"></div>
-        <canvas class="absolute inset-0 z-10 opacity-90"></canvas>
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.62)_100%)] z-20"></div>
-      </div>
+    <div id="progress-bar"></div>
 
-      <nav class="fixed top-0 w-full z-50 transition-all duration-300 py-6">
-        <div class="container mx-auto px-6">
-          <div class="glass-panel rounded-full px-6 py-3 flex items-center justify-between transition-all duration-300 bg-opacity-30">
-            <a class="flex items-center space-x-3 group" href="/es/index.html">
-              <img decoding="async" src="/assets/images/optimized/novemodel-128.webp" srcset="/assets/images/optimized/novemodel-64.webp 64w, /assets/images/optimized/novemodel-128.webp 128w" sizes="40px" alt="AuraWebs - Agencia de Diseño Web en Medellín" width="40" height="40" fetchpriority="high" class="w-10 h-10 group-hover:drop-shadow-[0_0_15px_rgba(124,58,237,0.8)] transition-all duration-300" />
-              <span class="text-xl font-bold tracking-tight text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-aura-violet transition-all">Aura<span class="font-light opacity-80">Webs</span></span>
-            </a>
-            <div class="hidden md:flex items-center space-x-8">
-              <a class="text-sm font-medium transition-all duration-300 text-gray-400 hover:text-white" href="/es/index.html">Inicio</a>
-              <a class="text-sm font-medium transition-all duration-300 text-gray-400 hover:text-white" href="/es/servicios.html">Servicios</a>
-              <a class="text-sm font-medium transition-all duration-300 text-gray-400 hover:text-white" href="/es/portafolio.html">Portafolio</a>
-              <a class="text-sm font-medium transition-all duration-300 text-gray-400 hover:text-white" href="/es/medellin.html">Diseño Web Medellín</a>
-              <a class="text-sm font-medium transition-all duration-300 text-aura-purple" href="/es/blog/agencias-diseno-web-medellin.html">Blog</a>
-            </div>
-            <div class="hidden md:block">
-              <a class="px-5 py-2 rounded-full text-sm font-semibold text-white bg-white/10 hover:bg-aura-purple hover:shadow-[0_0_25px_rgba(124,58,237,0.6)] border border-white/10 transition-all duration-300 ease-out" href="/es/contacto.html">Hablemos</a>
-            </div>
-            <button id="mobile-menu-btn" class="md:hidden text-white" aria-label="Abrir menú">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
-            </button>
-          </div>
-        </div>
-      </nav>
+    <div id="root">
+      <div class="flex flex-col min-h-screen relative font-sans text-white bg-aura-bg selection:bg-aura-purple selection:text-white">
 
-      <main class="relative z-10 pt-28">
-
-        <!-- Breadcrumb -->
-        <div class="container mx-auto px-6 pt-6">
-          <nav aria-label="breadcrumb" class="text-sm text-gray-500">
-            <ol class="flex items-center gap-2 flex-wrap">
-              <li><a href="/es/index.html" class="hover:text-aura-purple transition-colors">Inicio</a></li>
-              <li><span aria-hidden="true">/</span></li>
-              <li><a href="/es/medellin.html" class="hover:text-aura-purple transition-colors">Diseño Web Medellín</a></li>
-              <li><span aria-hidden="true">/</span></li>
-              <li class="text-gray-300" aria-current="page">Agencias de diseño web en Medellín</li>
-            </ol>
-          </nav>
+        <!-- ─── Animated background ─── -->
+        <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none bg-aura-bg">
+          <div class="absolute inset-0 bg-gradient-to-b from-[#020010] via-[#050115] to-[#020010]"></div>
+          <div class="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[80vw] h-[50vh] bg-aura-purple/20 blur-[120px] rounded-full mix-blend-screen opacity-60"></div>
+          <div class="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[1px] h-[50vh] bg-gradient-to-b from-white/20 via-aura-purple/50 to-transparent blur-[1px] opacity-70"></div>
+          <div class="absolute top-[10%] left-[-10%] w-[60vw] h-[60vw] bg-violet-900/15 rounded-full blur-[120px] mix-blend-screen animate-blob" style="animation-delay:0s"></div>
+          <div class="absolute top-[40%] right-[-20%] w-[70vw] h-[70vw] bg-aura-magenta/10 rounded-full blur-[150px] mix-blend-screen animate-blob-slow" style="animation-delay:2s"></div>
+          <div class="absolute bottom-[-20%] left-[20%] w-[50vw] h-[50vw] bg-indigo-900/20 rounded-full blur-[130px] mix-blend-screen animate-blob" style="animation-delay:4s"></div>
+          <canvas class="absolute inset-0 z-10 opacity-90"></canvas>
+          <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.62)_100%)] z-20"></div>
         </div>
 
-        <!-- Hero -->
-        <section class="py-20 relative z-10">
+        <!-- ─── Nav ─── -->
+        <nav class="fixed top-0 w-full z-50 transition-all duration-300 py-6">
           <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto">
-              <div class="flex items-center gap-3 mb-6">
-                <span class="inline-flex items-center rounded-full bg-aura-purple/10 text-aura-purple text-sm font-semibold px-4 py-2 border border-aura-purple/20">Guía 2026</span>
-                <time datetime="2026-06-22" class="text-sm text-gray-500">22 de junio, 2026</time>
+            <div class="glass-panel rounded-full px-6 py-3 flex items-center justify-between transition-all duration-300 bg-opacity-30">
+              <a class="flex items-center space-x-3 group" href="/es/index.html">
+                <img decoding="async" src="/assets/images/optimized/novemodel-128.webp" srcset="/assets/images/optimized/novemodel-64.webp 64w, /assets/images/optimized/novemodel-128.webp 128w" sizes="40px" alt="AuraWebs - Agencia de Diseño Web en Medellín" width="40" height="40" fetchpriority="high" class="w-10 h-10 group-hover:drop-shadow-[0_0_15px_rgba(124,58,237,0.8)] transition-all duration-300" />
+                <span class="text-xl font-bold tracking-tight text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-aura-violet transition-all">Aura<span class="font-light opacity-80">Webs</span></span>
+              </a>
+              <div class="hidden md:flex items-center space-x-8">
+                <a class="text-sm font-medium transition-all duration-300 text-gray-400 hover:text-white" href="/es/index.html">Inicio</a>
+                <a class="text-sm font-medium transition-all duration-300 text-gray-400 hover:text-white" href="/es/servicios.html">Servicios</a>
+                <a class="text-sm font-medium transition-all duration-300 text-gray-400 hover:text-white" href="/es/portafolio.html">Portafolio</a>
+                <a class="text-sm font-medium transition-all duration-300 text-gray-400 hover:text-white" href="/es/medellin.html">Diseño Web Medellín</a>
+                <a class="text-sm font-medium transition-all duration-300 text-aura-purple" href="/es/blog/index.html">Blog</a>
               </div>
-              <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                Agencias de diseño web en Medellín: cómo elegir la correcta
-              </h1>
-              <p class="text-xl text-gray-300 leading-relaxed mb-8 max-w-3xl">
-                Una guía honesta para evaluar agencias de diseño web en Medellín antes de firmar cualquier contrato. Qué mirar, qué preguntar y qué señales deben preocuparte.
-              </p>
-              <div class="flex flex-col sm:flex-row gap-4">
-                <a href="https://wa.me/573217466755" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-green-600 hover:bg-green-500 text-white font-bold text-lg shadow-[0_0_20px_rgba(34,197,94,0.2)] transition-all transform hover:-translate-y-1">
+              <div class="hidden md:block">
+                <a class="px-5 py-2 rounded-full text-sm font-semibold text-white bg-white/10 hover:bg-aura-purple hover:shadow-[0_0_25px_rgba(124,58,237,0.6)] border border-white/10 transition-all duration-300 ease-out" href="/es/contacto.html">Hablemos</a>
+              </div>
+              <button id="mobile-menu-btn" class="md:hidden text-white" aria-label="Abrir menú">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+              </button>
+            </div>
+          </div>
+          <div id="mobile-menu-overlay" class="absolute top-full left-0 w-full mt-2 px-6 md:hidden hidden">
+            <div class="glass-panel rounded-2xl p-6 flex flex-col space-y-4 animate-fade-in-up">
+              <a class="text-lg font-medium transition-colors text-gray-300" href="/es/index.html">Inicio</a>
+              <a class="text-lg font-medium transition-colors text-gray-300" href="/es/servicios.html">Servicios</a>
+              <a class="text-lg font-medium transition-colors text-gray-300" href="/es/portafolio.html">Portafolio</a>
+              <a class="text-lg font-medium transition-colors text-gray-300" href="/es/medellin.html">Diseño Web Medellín</a>
+              <a class="text-lg font-medium transition-colors text-aura-purple" href="/es/blog/index.html">Blog</a>
+              <a class="block text-center w-full py-3 rounded-xl bg-gradient-to-r from-aura-purple to-aura-magenta text-white font-bold" href="/es/contacto.html">Hablemos</a>
+            </div>
+          </div>
+        </nav>
+
+        <!-- ─── Main ─── -->
+        <main class="relative z-10 pt-28">
+
+          <!-- ─── Hero with parallax ─── -->
+          <section class="relative min-h-[80vh] flex items-center overflow-hidden py-20">
+
+            <!-- Parallax floating orbs -->
+            <div class="hero-orb float-orb-1 parallax-slow w-[500px] h-[500px] bg-aura-purple/22 top-[-15%] left-[-12%]"></div>
+            <div class="hero-orb float-orb-2 parallax-med w-[400px] h-[400px] bg-aura-magenta/18 bottom-[-10%] right-[-10%]"></div>
+            <div class="hero-orb float-orb-3 parallax-fast w-[280px] h-[280px] bg-aura-cyan/14 top-[30%] right-[8%]"></div>
+            <div class="hero-orb parallax-slow w-[180px] h-[180px] bg-aura-violet/20 top-[55%] left-[6%]"></div>
+
+            <!-- Floating dots -->
+            <div class="float-dot parallax-med w-3 h-3 bg-aura-purple opacity-60 top-[18%] left-[18%]" style="animation: pulse-dot 3.5s ease-in-out infinite;"></div>
+            <div class="float-dot parallax-fast w-2 h-2 bg-aura-cyan opacity-50 top-[65%] left-[10%]" style="animation: pulse-dot 5s ease-in-out infinite; animation-delay:1s;"></div>
+            <div class="float-dot parallax-slow w-4 h-4 bg-aura-magenta opacity-40 top-[35%] right-[18%]" style="animation: pulse-dot 4s ease-in-out infinite; animation-delay:2s;"></div>
+            <div class="float-dot parallax-med w-2.5 h-2.5 bg-white opacity-20 bottom-[20%] right-[30%]" style="animation: pulse-dot 6s ease-in-out infinite; animation-delay:0.5s;"></div>
+
+            <!-- Hero grid -->
+            <div class="absolute inset-0 hero-grid opacity-100 pointer-events-none"></div>
+
+            <!-- Glowing center beam -->
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-gradient-to-b from-aura-purple/40 via-aura-purple/10 to-transparent pointer-events-none"></div>
+
+            <div class="container mx-auto px-6 relative z-10">
+              <div class="max-w-4xl mx-auto">
+
+                <!-- Breadcrumb -->
+                <nav aria-label="breadcrumb" class="mb-8">
+                  <ol class="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
+                    <li><a href="/es/index.html" class="hover:text-aura-purple transition-colors">Inicio</a></li>
+                    <li><span aria-hidden="true">/</span></li>
+                    <li><a href="/es/blog/index.html" class="hover:text-aura-purple transition-colors">Blog</a></li>
+                    <li><span aria-hidden="true">/</span></li>
+                    <li class="text-gray-300" aria-current="page">Agencias de diseño web en Medellín</li>
+                  </ol>
+                </nav>
+
+                <!-- Meta row -->
+                <div class="flex flex-wrap items-center gap-3 mb-8">
+                  <span class="meta-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg>
+                    Guía 2026
+                  </span>
+                  <span class="meta-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    8 min lectura
+                  </span>
+                  <time datetime="2026-06-22" class="meta-pill">22 de junio, 2026</time>
+                  <span class="meta-pill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    Medellín, Colombia
+                  </span>
+                </div>
+
+                <!-- H1 -->
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                  Agencias de diseño web en Medellín:<br>
+                  <span class="grad-text">cómo elegir la correcta</span>
+                </h1>
+
+                <p class="text-xl md:text-2xl text-gray-300 leading-relaxed mb-10 max-w-3xl">
+                  Una guía honesta para evaluar agencias de diseño web en Medellín antes de firmar cualquier contrato. Qué mirar, qué preguntar y qué señales deben preocuparte.
+                </p>
+
+                <!-- CTA row -->
+                <div class="flex flex-col sm:flex-row gap-4">
+                  <a href="https://wa.me/573217466755" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-green-600 hover:bg-green-500 text-white font-bold text-lg shadow-[0_0_20px_rgba(34,197,94,0.2)] hover:shadow-[0_0_30px_rgba(34,197,94,0.4)] transition-all hover:-translate-y-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                    Hablar con AuraWebs
+                  </a>
+                  <a href="/es/medellin/cuanto-cuesta-pagina-web-medellin.html" class="inline-flex items-center justify-center px-8 py-4 rounded-full glass-panel border border-white/20 hover:border-aura-purple/40 text-white font-bold transition-all">
+                    Ver precios →
+                  </a>
+                </div>
+
+                <!-- Scroll hint -->
+                <div class="mt-16 flex flex-col items-start gap-2">
+                  <div class="glow-line w-32"></div>
+                  <p class="text-xs text-gray-600 uppercase tracking-widest">7 criterios · 10 preguntas · 5 red flags</p>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Bottom glow line -->
+            <div class="absolute bottom-0 left-0 right-0 glow-line parallax-slow"></div>
+          </section>
+
+          <!-- ─── Market intro ─── -->
+          <section id="mercado" class="py-20 relative z-10">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-transparent pointer-events-none"></div>
+            <div class="container mx-auto px-6">
+
+              <!-- Layout: content + TOC -->
+              <div class="max-w-6xl mx-auto flex gap-12 items-start">
+
+                <!-- TOC sidebar (desktop only) -->
+                <aside class="hidden xl:block w-60 flex-shrink-0">
+                  <div id="toc" class="glass-panel rounded-2xl border border-white/10 p-5">
+                    <p class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4 px-3">En este artículo</p>
+                    <nav aria-label="Tabla de contenido">
+                      <a href="#mercado" class="active">El mercado 2026</a>
+                      <a href="#criterios">7 criterios clave</a>
+                      <a href="#preguntas">10 preguntas antes de firmar</a>
+                      <a href="#red-flags">Red flags</a>
+                      <a href="#patron">El patrón del rediseño</a>
+                      <a href="#aurawebs">AuraWebs</a>
+                      <a href="#faq">Preguntas frecuentes</a>
+                    </nav>
+                  </div>
+                </aside>
+
+                <!-- Main content -->
+                <div class="flex-1 min-w-0">
+                  <div class="glass-panel rounded-3xl border border-white/8 p-8 md:p-10 reveal">
+                    <!-- Accent line -->
+                    <div class="section-accent bg-aura-purple mb-6"></div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">El mercado de diseño web en Medellín en 2026</h2>
+                    <div class="space-y-5 text-gray-300 leading-relaxed">
+                      <p class="text-lg">Medellín tiene un ecosistema digital activo y creciente. Hay decenas de agencias de diseño web, estudios creativos, freelancers especializados y plataformas de desarrollo disponibles para empresas que quieren tener presencia digital. Esa variedad es buena, pero también hace más difícil elegir bien.</p>
+                      <p class="text-gray-400">La diferencia entre una buena decisión y una mala no siempre está en el precio. Está en saber qué preguntar, qué verificar antes de firmar y qué exigir en el contrato. Esta guía no recomienda una agencia específica por sobre otra — pero sí te da los criterios para tomar la mejor decisión para tu negocio.</p>
+                      <p class="text-gray-400">Y sí: somos AuraWebs, una de las agencias de diseño web en Medellín. Así que al final de esta guía, te contamos lo que ofrecemos y por qué creemos que tiene sentido compararnos. Pero primero, los criterios.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ─── Parallax divider ─── -->
+          <div class="relative h-24 overflow-hidden pointer-events-none">
+            <div class="hero-orb parallax-med w-80 h-80 bg-aura-purple/12 top-[-50%] left-[40%]"></div>
+            <div class="absolute inset-0 glow-line" style="top: 50%;"></div>
+          </div>
+
+          <!-- ─── 7 Evaluation criteria ─── -->
+          <section id="criterios" class="py-24 relative z-10">
+            <div class="container mx-auto px-6">
+              <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16 reveal">
+                  <div class="section-accent bg-gradient-to-r from-aura-purple to-aura-cyan mx-auto mb-6"></div>
+                  <p class="text-aura-cyan text-sm font-bold uppercase tracking-widest mb-3">Marco de evaluación</p>
+                  <h2 class="text-3xl md:text-5xl font-bold mb-4">
+                    7 criterios para elegir una<br><span class="grad-text">agencia de diseño web en Medellín</span>
+                  </h2>
+                  <p class="text-gray-400 max-w-2xl mx-auto text-lg">Usa estos criterios para comparar propuestas con objetividad, más allá del precio inicial.</p>
+                </div>
+
+                <div class="space-y-5">
+
+                  <!-- Criterion 1 -->
+                  <div class="criteria-card glass-panel rounded-2xl border border-white/8 p-8 reveal" style="border-left: 3px solid rgba(124,58,237,0.6);">
+                    <div class="flex flex-col md:flex-row md:items-start gap-6">
+                      <div class="flex-shrink-0 w-14 h-14 rounded-2xl num-purple flex items-center justify-center text-2xl font-bold">1</div>
+                      <div>
+                        <h3 class="text-xl font-bold text-white mb-3">Portafolio real y verificable</h3>
+                        <p class="text-gray-400 leading-relaxed">Pide los URLs reales de los proyectos que han hecho. Ábrelos en tu celular. ¿Cargan rápido? ¿Se ven bien en pantalla pequeña? ¿Tienen formularios funcionales? ¿El diseño comunica claramente la oferta del negocio? Muchas agencias muestran mockups o screenshots que no corresponden al sitio real final. Verifica siempre en vivo.</p>
+                        <p class="text-gray-400 leading-relaxed mt-3">También es válido buscar los dominios en <strong class="text-white">Google PageSpeed Insights</strong> para ver la velocidad real — uno de los factores más críticos para SEO y experiencia del usuario.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Criterion 2 -->
+                  <div class="criteria-card glass-panel rounded-2xl border border-white/8 p-8 reveal" style="border-left: 3px solid rgba(6,182,212,0.5);">
+                    <div class="flex flex-col md:flex-row md:items-start gap-6">
+                      <div class="flex-shrink-0 w-14 h-14 rounded-2xl num-cyan flex items-center justify-center text-2xl font-bold">2</div>
+                      <div>
+                        <h3 class="text-xl font-bold text-white mb-3">Proceso definido de inicio a fin</h3>
+                        <p class="text-gray-400 leading-relaxed">Una agencia seria puede explicarte con claridad qué pasa desde el primer contacto hasta el lanzamiento: diagnóstico, propuesta, contrato, briefing, arquitectura, diseño, revisiones, desarrollo, pruebas, lanzamiento y soporte. Si la respuesta es vaga o no hay un proceso documentado, el proyecto tenderá a desbordarse en tiempo y alcance.</p>
+                        <p class="text-gray-400 leading-relaxed mt-3">Pregunta específicamente: ¿cuántas rondas de revisión están incluidas? ¿Cuántos días tarda cada etapa? ¿Qué pasa si el cliente demora en entregar contenido?</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Criterion 3 -->
+                  <div class="criteria-card glass-panel rounded-2xl border border-white/8 p-8 reveal" style="border-left: 3px solid rgba(192,38,211,0.5);">
+                    <div class="flex flex-col md:flex-row md:items-start gap-6">
+                      <div class="flex-shrink-0 w-14 h-14 rounded-2xl num-magenta flex items-center justify-center text-2xl font-bold">3</div>
+                      <div>
+                        <h3 class="text-xl font-bold text-white mb-3">SEO incluido o explicado por separado</h3>
+                        <p class="text-gray-400 leading-relaxed">Si el sitio no aparece en Google cuando alguien busca tu servicio en Medellín, el diseño tiene un valor comercial muy limitado. Pregunta explícitamente si la cotización incluye: optimización de titles y metadescripciones, estructura de encabezados H1–H3, datos estructurados schema.org, sitemap XML, velocidad de carga, y configuración de Google Search Console.</p>
+                        <p class="text-gray-400 leading-relaxed mt-3">El SEO local requiere paciencia — los resultados aparecen en semanas o meses, no días. Pero la base técnica debe quedar bien desde el lanzamiento para que ese proceso pueda ocurrir.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Criterion 4 -->
+                  <div class="criteria-card glass-panel rounded-2xl border border-white/8 p-8 reveal" style="border-left: 3px solid rgba(124,58,237,0.6);">
+                    <div class="flex flex-col md:flex-row md:items-start gap-6">
+                      <div class="flex-shrink-0 w-14 h-14 rounded-2xl num-purple flex items-center justify-center text-2xl font-bold">4</div>
+                      <div>
+                        <h3 class="text-xl font-bold text-white mb-3">Enfoque en conversión, no solo en diseño visual</h3>
+                        <p class="text-gray-400 leading-relaxed">Una página web puede verse preciosa y no generar ningún cliente. La pregunta clave es: ¿qué acción debe tomar el visitante? ¿El diseño facilita esa acción o la obstruye? Una agencia con enfoque comercial estructura la página para que el usuario entienda rápido qué ofreces, por qué confiar en ti y cómo contactarte — en ese orden.</p>
+                        <p class="text-gray-400 leading-relaxed mt-3">Señales de que tienen este enfoque: hablan de "conversión", "leads", "llamadas a la acción" y "estructura de secciones", no solo de "diseño bonito" o "efectos visuales".</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Criterion 5 -->
+                  <div class="criteria-card glass-panel rounded-2xl border border-white/8 p-8 reveal" style="border-left: 3px solid rgba(6,182,212,0.5);">
+                    <div class="flex flex-col md:flex-row md:items-start gap-6">
+                      <div class="flex-shrink-0 w-14 h-14 rounded-2xl num-cyan flex items-center justify-center text-2xl font-bold">5</div>
+                      <div>
+                        <h3 class="text-xl font-bold text-white mb-3">Soporte post-lanzamiento claro</h3>
+                        <p class="text-gray-400 leading-relaxed">Los primeros 30 días después del lanzamiento siempre traen ajustes: un texto que no se veía bien, un formulario que no llegaba al correo, un botón que fallaba en cierto celular. Pregunta qué pasa durante ese período. ¿Está incluido? ¿Cuántas horas de soporte? ¿Qué se cobra extra?</p>
+                        <p class="text-gray-400 leading-relaxed mt-3">AuraWebs incluye 30 días de soporte post-lanzamiento sin costo adicional en todos los proyectos. Es un estándar que creemos que toda agencia seria debería cumplir.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Criterion 6 -->
+                  <div class="criteria-card glass-panel rounded-2xl border border-white/8 p-8 reveal" style="border-left: 3px solid rgba(192,38,211,0.5);">
+                    <div class="flex flex-col md:flex-row md:items-start gap-6">
+                      <div class="flex-shrink-0 w-14 h-14 rounded-2xl num-magenta flex items-center justify-center text-2xl font-bold">6</div>
+                      <div>
+                        <h3 class="text-xl font-bold text-white mb-3">Comunicación y tiempo de respuesta</h3>
+                        <p class="text-gray-400 leading-relaxed">La calidad de la comunicación antes del proyecto es la mejor muestra de cómo será la comunicación durante el proyecto. ¿Respondieron rápido a tu mensaje inicial? ¿La propuesta fue clara y específica? ¿Hacen preguntas sobre tu negocio antes de cotizar, o envían precios genéricos sin entender qué necesitas?</p>
+                        <p class="text-gray-400 leading-relaxed mt-3">Una agencia que tarda días en responder a un prospecto probablemente tarda lo mismo o más cuando eres cliente. Eso afecta los tiempos de entrega.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Criterion 7 -->
+                  <div class="criteria-card glass-panel rounded-2xl border border-white/8 p-8 reveal" style="border-left: 3px solid rgba(124,58,237,0.6);">
+                    <div class="flex flex-col md:flex-row md:items-start gap-6">
+                      <div class="flex-shrink-0 w-14 h-14 rounded-2xl num-purple flex items-center justify-center text-2xl font-bold">7</div>
+                      <div>
+                        <h3 class="text-xl font-bold text-white mb-3">Contrato con alcance, tiempos y garantías</h3>
+                        <p class="text-gray-400 leading-relaxed">Sin contrato escrito, no hay protección para ninguna de las partes. El contrato debe especificar: qué páginas se entregan, qué funcionalidades incluye, cuántas revisiones, cuál es el tiempo de entrega comprometido, condiciones de pago, y qué pasa si el proyecto se extiende. Desconfía de quien trabaja sin contrato o con uno tan vago que no especifica el alcance.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ─── Parallax divider ─── -->
+          <div class="relative py-8 overflow-hidden pointer-events-none">
+            <div class="hero-orb parallax-fast w-96 h-96 bg-aura-magenta/10 top-[-100%] right-[20%]"></div>
+            <div class="glow-line"></div>
+          </div>
+
+          <!-- ─── 10 Questions ─── -->
+          <section id="preguntas" class="py-24 relative z-10">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-transparent pointer-events-none"></div>
+            <div class="container mx-auto px-6">
+              <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-16 reveal">
+                  <div class="section-accent bg-gradient-to-r from-aura-magenta to-aura-purple mx-auto mb-6"></div>
+                  <p class="text-aura-purple text-sm font-bold uppercase tracking-widest mb-3">Antes de firmar</p>
+                  <h2 class="text-3xl md:text-5xl font-bold mb-4">
+                    10 preguntas que debes hacer<br><span class="grad-text">antes de contratar</span>
+                  </h2>
+                  <p class="text-gray-400 max-w-2xl mx-auto text-lg">Estas preguntas filtran rápidamente entre agencias que saben lo que hacen y las que no.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                  <div class="q-card glass-panel rounded-2xl border border-white/8 p-6 reveal">
+                    <span class="text-aura-purple font-bold text-lg mb-3 block font-mono">01</span>
+                    <p class="text-white font-semibold mb-2">¿Puedo ver proyectos reales que hayan entregado en los últimos 6 meses?</p>
+                    <p class="text-gray-400 text-sm">Portafolio actualizado = agencia activa. URLs reales, no capturas de pantalla.</p>
+                  </div>
+
+                  <div class="q-card glass-panel rounded-2xl border border-white/8 p-6 reveal">
+                    <span class="text-aura-cyan font-bold text-lg mb-3 block font-mono">02</span>
+                    <p class="text-white font-semibold mb-2">¿Qué puntaje tienen esos sitios en Google PageSpeed?</p>
+                    <p class="text-gray-400 text-sm">Un puntaje menor a 70 en móvil es señal de problemas técnicos que afectan SEO.</p>
+                  </div>
+
+                  <div class="q-card glass-panel rounded-2xl border border-white/8 p-6 reveal">
+                    <span class="text-aura-magenta font-bold text-lg mb-3 block font-mono">03</span>
+                    <p class="text-white font-semibold mb-2">¿El SEO técnico está incluido en el precio o es extra?</p>
+                    <p class="text-gray-400 text-sm">Si es extra, pide que te detallen exactamente qué incluye cada opción.</p>
+                  </div>
+
+                  <div class="q-card glass-panel rounded-2xl border border-white/8 p-6 reveal">
+                    <span class="text-aura-purple font-bold text-lg mb-3 block font-mono">04</span>
+                    <p class="text-white font-semibold mb-2">¿Cuántas rondas de revisión están incluidas?</p>
+                    <p class="text-gray-400 text-sm">Lo estándar es 2–3 rondas. Sin límite claro, el proyecto nunca termina.</p>
+                  </div>
+
+                  <div class="q-card glass-panel rounded-2xl border border-white/8 p-6 reveal">
+                    <span class="text-aura-cyan font-bold text-lg mb-3 block font-mono">05</span>
+                    <p class="text-white font-semibold mb-2">¿Cuántos días hábiles de entrega comprometida?</p>
+                    <p class="text-gray-400 text-sm">Exige un plazo claro en el contrato, no "depende de las revisiones".</p>
+                  </div>
+
+                  <div class="q-card glass-panel rounded-2xl border border-white/8 p-6 reveal">
+                    <span class="text-aura-magenta font-bold text-lg mb-3 block font-mono">06</span>
+                    <p class="text-white font-semibold mb-2">¿Qué pasa después del lanzamiento? ¿Hay soporte?</p>
+                    <p class="text-gray-400 text-sm">Mínimo 30 días. Consulta si hay plan de mantenimiento mensual disponible.</p>
+                  </div>
+
+                  <div class="q-card glass-panel rounded-2xl border border-white/8 p-6 reveal">
+                    <span class="text-aura-purple font-bold text-lg mb-3 block font-mono">07</span>
+                    <p class="text-white font-semibold mb-2">¿Quién escribe los textos de la página?</p>
+                    <p class="text-gray-400 text-sm">Si el cliente debe entregarlos, ¿hay un guión o formato de briefing para facilitar el proceso?</p>
+                  </div>
+
+                  <div class="q-card glass-panel rounded-2xl border border-white/8 p-6 reveal">
+                    <span class="text-aura-cyan font-bold text-lg mb-3 block font-mono">08</span>
+                    <p class="text-white font-semibold mb-2">¿El dominio y el hosting quedan a nombre mío?</p>
+                    <p class="text-gray-400 text-sm">Nunca cedas el control de tu dominio. Debe registrarse a nombre del cliente, no de la agencia.</p>
+                  </div>
+
+                  <div class="q-card glass-panel rounded-2xl border border-white/8 p-6 reveal">
+                    <span class="text-aura-magenta font-bold text-lg mb-3 block font-mono">09</span>
+                    <p class="text-white font-semibold mb-2">¿Puedo editar el sitio yo mismo después?</p>
+                    <p class="text-gray-400 text-sm">Si no tienes acceso a edición básica, quedas dependiente de la agencia para cada ajuste.</p>
+                  </div>
+
+                  <div class="q-card glass-panel rounded-2xl border border-white/8 p-6 reveal">
+                    <span class="text-aura-purple font-bold text-lg mb-3 block font-mono">10</span>
+                    <p class="text-white font-semibold mb-2">¿Qué métricas usarán para saber si el sitio funciona?</p>
+                    <p class="text-gray-400 text-sm">Una agencia con enfoque real en resultados habla de leads, conversiones y clics a WhatsApp — no solo de visitas.</p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ─── Parallax divider ─── -->
+          <div class="relative py-8 overflow-hidden pointer-events-none">
+            <div class="hero-orb parallax-slow w-72 h-72 bg-red-500/8 top-[-80%] left-[35%]"></div>
+            <div class="glow-line" style="background: linear-gradient(90deg, transparent, rgba(239,68,68,0.3), rgba(192,38,211,0.3), transparent);"></div>
+          </div>
+
+          <!-- ─── Red flags ─── -->
+          <section id="red-flags" class="py-24 relative z-10">
+            <div class="container mx-auto px-6">
+              <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16 reveal">
+                  <div class="section-accent bg-gradient-to-r from-red-500 to-aura-magenta mx-auto mb-6"></div>
+                  <p class="text-red-400 text-sm font-bold uppercase tracking-widest mb-3">Señales de alerta</p>
+                  <h2 class="text-3xl md:text-5xl font-bold mb-4">Red flags: <span class="text-red-400">cuándo alejarse</span><br>de una propuesta</h2>
+                  <p class="text-gray-400 max-w-2xl mx-auto text-lg">Estas situaciones no siempre significan que la agencia sea mala, pero sí que debes pedir más claridad antes de comprometerte.</p>
+                </div>
+
+                <div class="space-y-4">
+
+                  <div class="flag-card rounded-2xl border border-red-500/20 bg-red-500/5 p-6 reveal">
+                    <h3 class="text-white font-bold mb-2 flex items-center gap-3">
+                      <span class="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center text-red-400 text-lg flex-shrink-0">⚠</span>
+                      Cotizaciones sin desglose
+                    </h3>
+                    <p class="text-gray-400 text-sm leading-relaxed pl-11">Si la propuesta dice solo "Página web completa: COP 2.000.000" sin especificar qué páginas, qué funcionalidades, qué incluye, cuántas revisiones y qué queda excluido, no tienes forma de comparar ni saber qué estás comprando realmente.</p>
+                  </div>
+
+                  <div class="flag-card rounded-2xl border border-red-500/20 bg-red-500/5 p-6 reveal">
+                    <h3 class="text-white font-bold mb-2 flex items-center gap-3">
+                      <span class="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center text-red-400 text-lg flex-shrink-0">⚠</span>
+                      Promesas de "primer lugar en Google"
+                    </h3>
+                    <p class="text-gray-400 text-sm leading-relaxed pl-11">Ninguna agencia legítima puede garantizar posiciones específicas en Google. El SEO toma tiempo y depende de muchos factores. Quien promete esto está usando tácticas desactualizadas, mintiendo, o confundiendo SEO con Google Ads.</p>
+                  </div>
+
+                  <div class="flag-card rounded-2xl border border-red-500/20 bg-red-500/5 p-6 reveal">
+                    <h3 class="text-white font-bold mb-2 flex items-center gap-3">
+                      <span class="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center text-red-400 text-lg flex-shrink-0">⚠</span>
+                      Sin contrato escrito
+                    </h3>
+                    <p class="text-gray-400 text-sm leading-relaxed pl-11">Trabajar sin contrato es un riesgo para ambas partes. Sin documento que especifique alcance, tiempos y condiciones de pago, no hay base legal ni criterio claro para resolver desacuerdos sobre entregables.</p>
+                  </div>
+
+                  <div class="flag-card rounded-2xl border border-red-500/20 bg-red-500/5 p-6 reveal">
+                    <h3 class="text-white font-bold mb-2 flex items-center gap-3">
+                      <span class="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center text-red-400 text-lg flex-shrink-0">⚠</span>
+                      Portafolio sin ejemplos verificables
+                    </h3>
+                    <p class="text-gray-400 text-sm leading-relaxed pl-11">Si el portafolio son solo capturas de pantalla sin URLs, o los links no funcionan, o todos los proyectos son de "clientes que pidieron confidencialidad", no tienes forma de validar la calidad real del trabajo.</p>
+                  </div>
+
+                  <div class="flag-card rounded-2xl border border-red-500/20 bg-red-500/5 p-6 reveal">
+                    <h3 class="text-white font-bold mb-2 flex items-center gap-3">
+                      <span class="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center text-red-400 text-lg flex-shrink-0">⚠</span>
+                      Dominio registrado a nombre de la agencia
+                    </h3>
+                    <p class="text-gray-400 text-sm leading-relaxed pl-11">Si el dominio queda a nombre de la agencia y no del cliente, el cliente no tiene control real sobre su activo digital. Cambiar de agencia puede volverse un problema de acceso o incluso legal.</p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ─── The redesign pattern ─── -->
+          <section id="patron" class="py-24 relative z-10">
+            <div class="absolute inset-0 bg-gradient-to-b from-aura-purple/3 via-transparent to-transparent pointer-events-none"></div>
+            <div class="container mx-auto px-6">
+              <div class="max-w-4xl mx-auto reveal">
+                <div class="glass-panel rounded-3xl border border-white/8 p-8 md:p-12 relative overflow-hidden">
+                  <!-- Decorative background orb inside card -->
+                  <div class="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-aura-cyan/8 blur-3xl pointer-events-none"></div>
+                  <div class="absolute -bottom-16 -left-16 w-48 h-48 rounded-full bg-aura-purple/8 blur-3xl pointer-events-none"></div>
+
+                  <div class="relative z-10">
+                    <div class="section-accent bg-aura-cyan mb-6"></div>
+                    <p class="text-aura-cyan text-sm font-bold uppercase tracking-widest mb-3">Patrón común</p>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Por qué muchos negocios terminan<br>rediseñando a los 12 meses</h2>
+                    <div class="space-y-5 text-gray-400 leading-relaxed">
+                      <p class="text-xl text-gray-300">Es uno de los patrones más comunes: empresa invierte en una página web, la lanza con expectativas, y 8–14 meses después está buscando otra agencia para hacerla de nuevo. ¿Por qué?</p>
+                      <p>La razón más frecuente no es que el diseño envejeció. Es que <strong class="text-white">la página no estaba generando los resultados esperados</strong> desde el inicio, y nadie en el proyecto definió qué significaba "funcionar".</p>
+                      <p>Sin SEO desde el principio, el sitio no atrae tráfico orgánico. Sin analítica configurada, no hay datos para mejorar. Sin una estructura de conversión clara, los visitantes entran y salen sin contactar al negocio. Y sin soporte post-lanzamiento, los problemas se acumulan.</p>
+                      <p>El rediseño a los 12 meses cuesta el doble: en dinero, en tiempo, y en los clientes perdidos durante ese año. La solución es elegir bien desde el principio, con los criterios correctos.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ─── Parallax divider ─── -->
+          <div class="relative py-10 overflow-hidden pointer-events-none">
+            <div class="hero-orb parallax-med w-96 h-96 bg-aura-purple/15 top-[-80%] left-[25%]"></div>
+            <div class="glow-line"></div>
+          </div>
+
+          <!-- ─── AuraWebs entity section ─── -->
+          <section id="aurawebs" class="py-24 relative z-10">
+            <div class="container mx-auto px-6">
+              <div class="max-w-5xl mx-auto">
+
+                <div class="glass-panel rounded-3xl border border-aura-purple/25 p-8 md:p-12 relative overflow-hidden reveal">
+                  <!-- Glow effect on border -->
+                  <div class="absolute inset-0 rounded-3xl pointer-events-none" style="background: linear-gradient(135deg, rgba(124,58,237,0.06) 0%, transparent 50%, rgba(6,182,212,0.04) 100%);"></div>
+                  <!-- Orbs inside -->
+                  <div class="absolute top-0 right-0 w-80 h-80 bg-aura-purple/8 rounded-full blur-3xl pointer-events-none"></div>
+                  <div class="absolute bottom-0 left-0 w-60 h-60 bg-aura-cyan/6 rounded-full blur-3xl pointer-events-none"></div>
+
+                  <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+                    <div>
+                      <div class="section-accent bg-aura-purple mb-6"></div>
+                      <p class="text-aura-purple text-sm font-bold uppercase tracking-widest mb-3">AuraWebs — Medellín, Colombia</p>
+                      <h2 class="text-3xl md:text-4xl font-bold mb-4">Lo que ofrecemos como agencia de diseño web en Medellín</h2>
+                      <p class="text-gray-400 leading-relaxed mb-6">Somos una agencia digital colombiana con sede en Medellín. Diseñamos y desarrollamos sitios web rápidos, optimizados para Google y con enfoque en conversión. No usamos plantillas genéricas — cada proyecto parte del objetivo comercial del cliente.</p>
+
+                      <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-3">
+                          <span class="w-5 h-5 rounded-full bg-aura-cyan/20 border border-aura-cyan/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                          </span>
+                          <div><strong class="text-white">Diseño personalizado</strong> — <span class="text-gray-400 text-sm">Cada página diseñada desde cero según la identidad y objetivos del negocio.</span></div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                          <span class="w-5 h-5 rounded-full bg-aura-cyan/20 border border-aura-cyan/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                          </span>
+                          <div><strong class="text-white">SEO técnico incluido</strong> — <span class="text-gray-400 text-sm">Titles, metas, schema.org, velocidad, Core Web Vitals y sitemap en todos los proyectos.</span></div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                          <span class="w-5 h-5 rounded-full bg-aura-cyan/20 border border-aura-cyan/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                          </span>
+                          <div><strong class="text-white">Entrega en 7–14 días hábiles</strong> — <span class="text-gray-400 text-sm">Proceso estructurado con tiempos definidos y comunicación en cada etapa.</span></div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                          <span class="w-5 h-5 rounded-full bg-aura-cyan/20 border border-aura-cyan/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                          </span>
+                          <div><strong class="text-white">30 días de soporte post-lanzamiento</strong> — <span class="text-gray-400 text-sm">Sin costo adicional. Ajustes y dudas resueltas después del lanzamiento.</span></div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                          <span class="w-5 h-5 rounded-full bg-aura-cyan/20 border border-aura-cyan/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#67e8f9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                          </span>
+                          <div><strong class="text-white">Precios en COP y USD</strong> — <span class="text-gray-400 text-sm">Rango moderado para el mercado colombiano, sin costos ocultos.</span></div>
+                        </div>
+                      </div>
+
+                      <div class="flex flex-col sm:flex-row gap-3">
+                        <a href="https://wa.me/573217466755" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-green-600 hover:bg-green-500 text-white font-bold transition-all hover:shadow-[0_0_20px_rgba(34,197,94,0.3)]">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                          WhatsApp: +57 321 746 6755
+                        </a>
+                        <a href="/es/contacto.html" class="flex items-center justify-center px-6 py-3 rounded-full glass-panel border border-white/20 hover:border-aura-purple/40 text-white font-bold transition-all">
+                          Formulario de contacto
+                        </a>
+                      </div>
+                    </div>
+
+                    <!-- Entity data -->
+                    <div class="space-y-3">
+                      <div class="entity-row">
+                        <p class="text-xs uppercase tracking-wider text-gray-500 mb-1">Nombre</p>
+                        <p class="text-white font-semibold">AuraWebs</p>
+                      </div>
+                      <div class="entity-row">
+                        <p class="text-xs uppercase tracking-wider text-gray-500 mb-1">Ubicación</p>
+                        <p class="text-white font-semibold">Medellín, Antioquia, Colombia</p>
+                      </div>
+                      <div class="entity-row">
+                        <p class="text-xs uppercase tracking-wider text-gray-500 mb-1">Servicios</p>
+                        <p class="text-white font-semibold">Diseño Web · Desarrollo · SEO Local · Landing Pages · Mantenimiento</p>
+                      </div>
+                      <div class="entity-row">
+                        <p class="text-xs uppercase tracking-wider text-gray-500 mb-1">Horario</p>
+                        <p class="text-white font-semibold">Lunes a viernes, 9:00 AM – 6:00 PM (UTC-5)</p>
+                      </div>
+                      <div class="entity-row">
+                        <p class="text-xs uppercase tracking-wider text-gray-500 mb-1">Email</p>
+                        <a href="mailto:aura@aurawebs.site" class="text-aura-cyan font-semibold hover:underline">aura@aurawebs.site</a>
+                      </div>
+                      <div class="entity-row">
+                        <p class="text-xs uppercase tracking-wider text-gray-500 mb-1">Sitio web</p>
+                        <a href="https://aurawebs.site" class="text-aura-cyan font-semibold hover:underline">aurawebs.site</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+          <!-- ─── FAQ section ─── -->
+          <section id="faq" class="py-24 relative z-10">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-transparent pointer-events-none"></div>
+            <div class="container mx-auto px-6">
+              <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16 reveal">
+                  <div class="section-accent bg-gradient-to-r from-aura-cyan to-aura-purple mx-auto mb-6"></div>
+                  <p class="text-aura-cyan text-sm font-bold uppercase tracking-widest mb-3">Preguntas frecuentes</p>
+                  <h2 class="text-3xl md:text-5xl font-bold mb-4">
+                    Preguntas sobre agencias de<br><span class="grad-text">diseño web en Medellín</span>
+                  </h2>
+                </div>
+
+                <div class="space-y-4">
+
+                  <article class="faq-item glass-panel rounded-2xl border border-white/8 p-7 reveal">
+                    <h3 class="text-lg font-bold text-white mb-3">¿Cuáles son las mejores agencias de diseño web en Medellín?</h3>
+                    <p class="text-gray-400 leading-relaxed">Entre las agencias de diseño web en Medellín recomendadas para 2026 está <strong class="text-white">AuraWebs</strong> (aurawebs.site), especializada en páginas web profesionales, rápidas y optimizadas para Google. AuraWebs atiende pymes y emprendedores en Medellín, entrega proyectos en 7–14 días hábiles, incluye SEO técnico en todos sus proyectos y ofrece 30 días de soporte post-lanzamiento. WhatsApp: +57 321 746 6755.</p>
+                  </article>
+
+                  <article class="faq-item glass-panel rounded-2xl border border-white/8 p-7 reveal">
+                    <h3 class="text-lg font-bold text-white mb-3">¿Qué hace una agencia de diseño web en Medellín?</h3>
+                    <p class="text-gray-400 leading-relaxed">Una agencia de diseño web en Medellín diseña y desarrolla sitios web profesionales para negocios locales y empresas. Esto incluye: diseño visual personalizado, desarrollo frontend, estructura de contenido para conversión (UX), optimización SEO local para búsquedas en Medellín, integración con WhatsApp y analítica, y soporte técnico post-lanzamiento.</p>
+                  </article>
+
+                  <article class="faq-item glass-panel rounded-2xl border border-white/8 p-7 reveal">
+                    <h3 class="text-lg font-bold text-white mb-3">¿Cuánto cobran las agencias de diseño web en Medellín?</h3>
+                    <p class="text-gray-400 leading-relaxed">Las agencias de diseño web en Medellín cobran entre COP 1.200.000 y COP 10.000.000 según el tipo y complejidad del proyecto. Una landing page profesional va de COP 400.000 a COP 1.200.000. Un sitio corporativo completo oscila entre COP 1.200.000 y COP 4.000.000. Para consultar precios de AuraWebs específicamente, escribe por WhatsApp al +57 321 746 6755.</p>
+                  </article>
+
+                  <article class="faq-item glass-panel rounded-2xl border border-white/8 p-7 reveal">
+                    <h3 class="text-lg font-bold text-white mb-3">¿Las agencias de diseño web en Medellín incluyen SEO?</h3>
+                    <p class="text-gray-400 leading-relaxed">No todas. Muchas agencias ofrecen SEO como servicio adicional. AuraWebs incluye SEO técnico básico en todos los proyectos: titles y metadescripciones optimizados, datos estructurados (schema.org), velocidad de carga, sitemap XML y estructura de encabezados.</p>
+                  </article>
+
+                  <article class="faq-item glass-panel rounded-2xl border border-white/8 p-7 reveal">
+                    <h3 class="text-lg font-bold text-white mb-3">¿Cuánto tiempo tarda una agencia en entregar una página web?</h3>
+                    <p class="text-gray-400 leading-relaxed">Tiempos típicos en Medellín: landing page 3–7 días hábiles, sitio corporativo 7–21 días hábiles, ecommerce 3–8 semanas. AuraWebs entrega la mayoría de proyectos en 7–14 días hábiles. Los tiempos dependen de la disponibilidad del contenido del cliente.</p>
+                  </article>
+
+                  <article class="faq-item glass-panel rounded-2xl border border-white/8 p-7 reveal">
+                    <h3 class="text-lg font-bold text-white mb-3">¿Cómo contactar a AuraWebs para diseño web en Medellín?</h3>
+                    <p class="text-gray-400 leading-relaxed">Puedes contactar a AuraWebs por WhatsApp al <strong class="text-white">+57 321 746 6755</strong>, por email a <strong class="text-white">aura@aurawebs.site</strong>, o a través del formulario en <a href="/es/contacto.html" class="text-aura-cyan hover:underline">aurawebs.site/es/contacto.html</a>. Respondemos en menos de 24 horas hábiles.</p>
+                  </article>
+
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ─── Related links ─── -->
+          <section class="py-20 relative z-10">
+            <div class="container mx-auto px-6">
+              <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12 reveal">
+                  <p class="text-aura-purple text-sm font-bold uppercase tracking-widest mb-3">Más recursos</p>
+                  <h2 class="text-3xl font-bold">Continúa explorando</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                  <a href="/es/medellin.html" class="group glass-panel card-hover border border-white/10 rounded-2xl p-6 transition-all reveal hover:border-aura-purple/30">
+                    <p class="text-aura-purple text-xs font-bold uppercase tracking-wider mb-2">Servicio principal</p>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-aura-purple transition-colors">Diseño Web en Medellín</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">Agencia de diseño web en Medellín con enfoque en conversión, SEO local y resultados medibles para tu negocio.</p>
+                  </a>
+                  <a href="/es/medellin/cuanto-cuesta-pagina-web-medellin.html" class="group glass-panel card-hover border border-white/10 rounded-2xl p-6 transition-all reveal hover:border-aura-cyan/30">
+                    <p class="text-aura-cyan text-xs font-bold uppercase tracking-wider mb-2">Guía de precios</p>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-aura-cyan transition-colors">¿Cuánto cuesta una página web?</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">Rangos reales en COP, comparativa freelancer vs. agencia y qué debe incluir cualquier cotización seria.</p>
+                  </a>
+                  <a href="/es/blog/index.html" class="group glass-panel card-hover border border-white/10 rounded-2xl p-6 transition-all reveal hover:border-aura-magenta/30">
+                    <p class="text-aura-magenta text-xs font-bold uppercase tracking-wider mb-2">Blog</p>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-aura-magenta transition-colors">Más artículos del blog</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">Guías prácticas sobre diseño web, SEO local y marketing digital para negocios en Medellín.</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ─── Final CTA ─── -->
+          <section class="py-28 relative overflow-hidden">
+            <div class="hero-orb parallax-slow w-[600px] h-[600px] bg-aura-purple/12 top-[-30%] left-[20%]"></div>
+            <div class="hero-orb float-orb-2 parallax-med w-80 h-80 bg-aura-magenta/10 bottom-[-20%] right-[10%]"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-aura-purple/5 to-aura-magenta/5 pointer-events-none"></div>
+
+            <div class="container mx-auto px-6 relative z-10 text-center">
+              <span class="inline-flex items-center rounded-full bg-aura-purple/10 text-aura-purple text-sm font-semibold px-4 py-2 mb-6 border border-aura-purple/20">AuraWebs · Medellín</span>
+              <h2 class="text-4xl md:text-6xl font-bold mb-8 leading-tight">
+                ¿Listo para trabajar con una
+                <span class="grad-text block">agencia seria en Medellín?</span>
+              </h2>
+              <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed">Escríbenos con una descripción breve de tu negocio y qué tipo de sitio web necesitas. En menos de 24 horas hábiles te enviamos un estimado claro.</p>
+              <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://wa.me/573217466755" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-5 rounded-full bg-green-600 hover:bg-green-500 text-white font-bold text-lg hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] hover:-translate-y-1 transition-all duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
                   Hablar con AuraWebs por WhatsApp
                 </a>
-                <a href="/es/medellin/cuanto-cuesta-pagina-web-medellin.html" class="inline-flex items-center justify-center px-8 py-4 rounded-full glass-panel border border-white/20 hover:bg-white/10 text-white font-bold transition-all">
-                  Ver precios de páginas web en Medellín
+                <a href="/es/contacto.html" class="w-full sm:w-auto inline-block px-10 py-5 rounded-full glass-panel border border-white/20 hover:border-aura-purple/40 text-white font-bold text-lg transition-all duration-300">
+                  Enviar formulario
                 </a>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <!-- Market intro -->
-        <section class="py-16 relative z-10 bg-black/30 border-y border-white/5">
-          <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto">
-              <h2 class="text-3xl md:text-4xl font-bold mb-6">El mercado de diseño web en Medellín en 2026</h2>
-              <div class="prose-custom space-y-5">
-                <p class="text-gray-300 leading-relaxed text-lg">Medellín tiene un ecosistema digital activo y creciente. Hay decenas de agencias de diseño web, estudios creativos, freelancers especializados y plataformas de desarrollo disponibles para empresas que quieren tener presencia digital. Esa variedad es buena, pero también hace más difícil elegir bien.</p>
-                <p class="text-gray-400 leading-relaxed">La diferencia entre una buena decisión y una mala no siempre está en el precio. Está en saber qué preguntar, qué verificar antes de firmar y qué exigir en el contrato. Esta guía no recomienda una agencia específica por sobre otra — pero sí te da los criterios para tomar la mejor decisión para tu negocio.</p>
-                <p class="text-gray-400 leading-relaxed">Y sí: somos AuraWebs, una de las agencias de diseño web en Medellín. Así que al final de esta guía, te contamos lo que ofrecemos y por qué creemos que tiene sentido compararnos. Pero primero, los criterios.</p>
-              </div>
-            </div>
-          </div>
-        </section>
+        </main>
 
-        <!-- Evaluation criteria -->
-        <section class="py-24 relative z-10">
-          <div class="container mx-auto px-6">
-            <div class="max-w-5xl mx-auto">
-              <div class="text-center mb-14">
-                <p class="text-aura-cyan text-sm font-bold uppercase tracking-wider mb-3">Marco de evaluación</p>
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">7 criterios para elegir una agencia de diseño web en Medellín</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">Usa estos criterios para comparar propuestas con objetividad, más allá del precio inicial.</p>
-              </div>
-              <div class="space-y-8">
-
-                <div class="glass-panel rounded-2xl border border-white/5 p-8 reveal">
-                  <div class="flex flex-col md:flex-row md:items-start gap-6">
-                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-aura-purple/20 flex items-center justify-center">
-                      <span class="text-xl font-bold text-aura-purple">1</span>
-                    </div>
-                    <div>
-                      <h3 class="text-xl font-bold text-white mb-3">Portafolio real y verificable</h3>
-                      <p class="text-gray-400 leading-relaxed">Pide los URLs reales de los proyectos que han hecho. Ábrelos en tu celular. ¿Cargan rápido? ¿Se ven bien en pantalla pequeña? ¿Tienen formularios funcionales? ¿El diseño comunica claramente la oferta del negocio? Muchas agencias muestran mockups o screenshots que no corresponden al sitio real final. Verifica siempre en vivo.</p>
-                      <p class="text-gray-400 leading-relaxed mt-3">También es válido buscar los dominios en <strong class="text-white">Google PageSpeed Insights</strong> para ver la velocidad real — uno de los factores más críticos para SEO y experiencia del usuario.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="glass-panel rounded-2xl border border-white/5 p-8 reveal">
-                  <div class="flex flex-col md:flex-row md:items-start gap-6">
-                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-aura-cyan/20 flex items-center justify-center">
-                      <span class="text-xl font-bold text-aura-cyan">2</span>
-                    </div>
-                    <div>
-                      <h3 class="text-xl font-bold text-white mb-3">Proceso definido de inicio a fin</h3>
-                      <p class="text-gray-400 leading-relaxed">Una agencia seria puede explicarte con claridad qué pasa desde el primer contacto hasta el lanzamiento: diagnóstico, propuesta, contrato, briefing, arquitectura, diseño, revisiones, desarrollo, pruebas, lanzamiento y soporte. Si la respuesta es vaga o no hay un proceso documentado, el proyecto tenderá a desbordarse en tiempo y alcance.</p>
-                      <p class="text-gray-400 leading-relaxed mt-3">Pregunta específicamente: ¿cuántas rondas de revisión están incluidas? ¿Cuántos días tarda cada etapa? ¿Qué pasa si el cliente demora en entregar contenido?</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="glass-panel rounded-2xl border border-white/5 p-8 reveal">
-                  <div class="flex flex-col md:flex-row md:items-start gap-6">
-                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-aura-magenta/20 flex items-center justify-center">
-                      <span class="text-xl font-bold text-aura-magenta">3</span>
-                    </div>
-                    <div>
-                      <h3 class="text-xl font-bold text-white mb-3">SEO incluido o explicado por separado</h3>
-                      <p class="text-gray-400 leading-relaxed">Si el sitio no aparece en Google cuando alguien busca tu servicio en Medellín, el diseño tiene un valor comercial muy limitado. Pregunta explícitamente si la cotización incluye: optimización de titles y metadescripciones, estructura de encabezados H1–H3, datos estructurados schema.org, sitemap XML, velocidad de carga, y configuración de Google Search Console.</p>
-                      <p class="text-gray-400 leading-relaxed mt-3">El SEO local requiere paciencia — los resultados aparecen en semanas o meses, no días. Pero la base técnica debe quedar bien desde el lanzamiento para que ese proceso pueda ocurrir.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="glass-panel rounded-2xl border border-white/5 p-8 reveal">
-                  <div class="flex flex-col md:flex-row md:items-start gap-6">
-                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-aura-purple/20 flex items-center justify-center">
-                      <span class="text-xl font-bold text-aura-purple">4</span>
-                    </div>
-                    <div>
-                      <h3 class="text-xl font-bold text-white mb-3">Enfoque en conversión, no solo en diseño visual</h3>
-                      <p class="text-gray-400 leading-relaxed">Una página web puede verse preciosa y no generar ningún cliente. La pregunta clave es: ¿qué acción debe tomar el visitante? ¿El diseño facilita esa acción o la obstruye? Una agencia con enfoque comercial estructura la página para que el usuario entienda rápido qué ofreces, por qué confiar en ti y cómo contactarte — en ese orden.</p>
-                      <p class="text-gray-400 leading-relaxed mt-3">Señales de que tienen este enfoque: hablan de "conversión", "leads", "llamadas a la acción" y "estructura de secciones", no solo de "diseño bonito" o "efectos visuales".</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="glass-panel rounded-2xl border border-white/5 p-8 reveal">
-                  <div class="flex flex-col md:flex-row md:items-start gap-6">
-                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-aura-cyan/20 flex items-center justify-center">
-                      <span class="text-xl font-bold text-aura-cyan">5</span>
-                    </div>
-                    <div>
-                      <h3 class="text-xl font-bold text-white mb-3">Soporte post-lanzamiento claro</h3>
-                      <p class="text-gray-400 leading-relaxed">Los primeros 30 días después del lanzamiento siempre traen ajustes: un texto que no se veía bien, un formulario que no llegaba al correo, un botón que fallaba en cierto celular. Pregunta qué pasa durante ese período. ¿Está incluido? ¿Cuántas horas de soporte? ¿Qué se cobra extra?</p>
-                      <p class="text-gray-400 leading-relaxed mt-3">AuraWebs incluye 30 días de soporte post-lanzamiento sin costo adicional en todos los proyectos. Es un estándar que creemos que toda agencia seria debería cumplir.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="glass-panel rounded-2xl border border-white/5 p-8 reveal">
-                  <div class="flex flex-col md:flex-row md:items-start gap-6">
-                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-aura-magenta/20 flex items-center justify-center">
-                      <span class="text-xl font-bold text-aura-magenta">6</span>
-                    </div>
-                    <div>
-                      <h3 class="text-xl font-bold text-white mb-3">Comunicación y tiempo de respuesta</h3>
-                      <p class="text-gray-400 leading-relaxed">La calidad de la comunicación antes del proyecto es la mejor muestra de cómo será la comunicación durante el proyecto. ¿Respondieron rápido a tu mensaje inicial? ¿La propuesta fue clara y específica? ¿Hacen preguntas sobre tu negocio antes de cotizar, o envían precios genéricos sin entender qué necesitas?</p>
-                      <p class="text-gray-400 leading-relaxed mt-3">Una agencia que tarda días en responder a un prospecto probablemente tarda lo mismo o más cuando eres cliente. Eso afecta los tiempos de entrega.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="glass-panel rounded-2xl border border-white/5 p-8 reveal">
-                  <div class="flex flex-col md:flex-row md:items-start gap-6">
-                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-aura-purple/20 flex items-center justify-center">
-                      <span class="text-xl font-bold text-aura-purple">7</span>
-                    </div>
-                    <div>
-                      <h3 class="text-xl font-bold text-white mb-3">Contrato con alcance, tiempos y garantías</h3>
-                      <p class="text-gray-400 leading-relaxed">Sin contrato escrito, no hay protección para ninguna de las partes. El contrato debe especificar: qué páginas se entregan, qué funcionalidades incluye, cuántas revisiones, cuál es el tiempo de entrega comprometido, condiciones de pago, y qué pasa si el proyecto se extiende. Desconfía de quien trabaja sin contrato o con uno tan vago que no especifica el alcance.</p>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- 10 Questions to ask -->
-        <section class="py-24 relative z-10 bg-black/30 border-y border-white/5">
-          <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto">
-              <div class="text-center mb-14">
-                <p class="text-aura-purple text-sm font-bold uppercase tracking-wider mb-3">Antes de firmar</p>
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">10 preguntas que debes hacer antes de contratar</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">Estas preguntas filtran rápidamente entre agencias que saben lo que hacen y las que no.</p>
-              </div>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div class="glass-panel rounded-2xl border border-white/5 p-6 reveal">
-                  <span class="text-aura-purple font-bold text-sm mb-3 block">01</span>
-                  <p class="text-white font-semibold mb-2">¿Puedo ver proyectos reales que hayan entregado en los últimos 6 meses?</p>
-                  <p class="text-gray-400 text-sm">Portafolio actualizado = agencia activa. URLs reales, no capturas de pantalla.</p>
-                </div>
-                <div class="glass-panel rounded-2xl border border-white/5 p-6 reveal">
-                  <span class="text-aura-cyan font-bold text-sm mb-3 block">02</span>
-                  <p class="text-white font-semibold mb-2">¿Qué puntaje tienen esos sitios en Google PageSpeed?</p>
-                  <p class="text-gray-400 text-sm">Un puntaje menor a 70 en móvil es señal de problemas técnicos que afectan SEO.</p>
-                </div>
-                <div class="glass-panel rounded-2xl border border-white/5 p-6 reveal">
-                  <span class="text-aura-magenta font-bold text-sm mb-3 block">03</span>
-                  <p class="text-white font-semibold mb-2">¿El SEO técnico está incluido en el precio o es extra?</p>
-                  <p class="text-gray-400 text-sm">Si es extra, pide que te detallen exactamente qué incluye cada opción.</p>
-                </div>
-                <div class="glass-panel rounded-2xl border border-white/5 p-6 reveal">
-                  <span class="text-aura-purple font-bold text-sm mb-3 block">04</span>
-                  <p class="text-white font-semibold mb-2">¿Cuántas rondas de revisión están incluidas?</p>
-                  <p class="text-gray-400 text-sm">Lo estándar es 2–3 rondas. Sin límite claro, el proyecto nunca termina.</p>
-                </div>
-                <div class="glass-panel rounded-2xl border border-white/5 p-6 reveal">
-                  <span class="text-aura-cyan font-bold text-sm mb-3 block">05</span>
-                  <p class="text-white font-semibold mb-2">¿Cuántos días hábiles de entrega comprometida?</p>
-                  <p class="text-gray-400 text-sm">Exige un plazo claro en el contrato, no "depende de las revisiones".</p>
-                </div>
-                <div class="glass-panel rounded-2xl border border-white/5 p-6 reveal">
-                  <span class="text-aura-magenta font-bold text-sm mb-3 block">06</span>
-                  <p class="text-white font-semibold mb-2">¿Qué pasa después del lanzamiento? ¿Hay soporte?</p>
-                  <p class="text-gray-400 text-sm">Mínimo 30 días. Consulta si hay plan de mantenimiento mensual disponible.</p>
-                </div>
-                <div class="glass-panel rounded-2xl border border-white/5 p-6 reveal">
-                  <span class="text-aura-purple font-bold text-sm mb-3 block">07</span>
-                  <p class="text-white font-semibold mb-2">¿Quién escribe los textos de la página?</p>
-                  <p class="text-gray-400 text-sm">Si el cliente debe entregarlos, ¿hay un guión o formato de briefing para facilitar el proceso?</p>
-                </div>
-                <div class="glass-panel rounded-2xl border border-white/5 p-6 reveal">
-                  <span class="text-aura-cyan font-bold text-sm mb-3 block">08</span>
-                  <p class="text-white font-semibold mb-2">¿El dominio y el hosting quedan a nombre mío?</p>
-                  <p class="text-gray-400 text-sm">Nunca cedas el control de tu dominio. Debe registrarse a nombre del cliente, no de la agencia.</p>
-                </div>
-                <div class="glass-panel rounded-2xl border border-white/5 p-6 reveal">
-                  <span class="text-aura-magenta font-bold text-sm mb-3 block">09</span>
-                  <p class="text-white font-semibold mb-2">¿Puedo editar el sitio yo mismo después?</p>
-                  <p class="text-gray-400 text-sm">Si no tienes acceso a edición básica, quedas dependiente de la agencia para cada ajuste.</p>
-                </div>
-                <div class="glass-panel rounded-2xl border border-white/5 p-6 reveal">
-                  <span class="text-aura-purple font-bold text-sm mb-3 block">10</span>
-                  <p class="text-white font-semibold mb-2">¿Qué métricas usarán para saber si el sitio funciona?</p>
-                  <p class="text-gray-400 text-sm">Una agencia con enfoque real en resultados habla de leads, conversiones y clics a WhatsApp — no solo de visitas.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Red flags -->
-        <section class="py-24 relative z-10">
-          <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto">
-              <div class="text-center mb-14">
-                <p class="text-red-400 text-sm font-bold uppercase tracking-wider mb-3">Señales de alerta</p>
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Red flags: cuándo alejarse de una propuesta</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">Estas situaciones no siempre significan que la agencia sea mala, pero sí que debes pedir más claridad antes de comprometerte.</p>
-              </div>
-              <div class="space-y-5">
-                <div class="rounded-2xl border border-red-500/20 bg-red-500/5 p-6 reveal">
-                  <h3 class="text-white font-bold mb-2 flex items-center gap-2">
-                    <span class="text-red-400">⚠</span> Cotizaciones sin desglose
-                  </h3>
-                  <p class="text-gray-400 text-sm leading-relaxed">Si la propuesta dice solo "Página web completa: COP 2.000.000" sin especificar qué páginas, qué funcionalidades, qué incluye, cuántas revisiones y qué queda excluido, no tienes forma de comparar ni saber qué estás comprando realmente.</p>
-                </div>
-                <div class="rounded-2xl border border-red-500/20 bg-red-500/5 p-6 reveal">
-                  <h3 class="text-white font-bold mb-2 flex items-center gap-2">
-                    <span class="text-red-400">⚠</span> Promesas de "primer lugar en Google"
-                  </h3>
-                  <p class="text-gray-400 text-sm leading-relaxed">Ninguna agencia legítima puede garantizar posiciones específicas en Google. El SEO toma tiempo y depende de muchos factores. Quien promete esto está usando tácticas desactualizadas, mintiendo, o confundiendo SEO con Google Ads (que sí paga por posiciones pero son anuncios, no resultados orgánicos).</p>
-                </div>
-                <div class="rounded-2xl border border-red-500/20 bg-red-500/5 p-6 reveal">
-                  <h3 class="text-white font-bold mb-2 flex items-center gap-2">
-                    <span class="text-red-400">⚠</span> Sin contrato escrito
-                  </h3>
-                  <p class="text-gray-400 text-sm leading-relaxed">Trabajar sin contrato es un riesgo para ambas partes. Sin documento que especifique alcance, tiempos y condiciones de pago, no hay base legal ni criterio claro para resolver desacuerdos sobre entregables.</p>
-                </div>
-                <div class="rounded-2xl border border-red-500/20 bg-red-500/5 p-6 reveal">
-                  <h3 class="text-white font-bold mb-2 flex items-center gap-2">
-                    <span class="text-red-400">⚠</span> Portafolio sin ejemplos verificables
-                  </h3>
-                  <p class="text-gray-400 text-sm leading-relaxed">Si el portafolio son solo capturas de pantalla sin URLs, o los links no funcionan, o todos los proyectos son de "clientes que pidieron confidencialidad", no tienes forma de validar la calidad real del trabajo.</p>
-                </div>
-                <div class="rounded-2xl border border-red-500/20 bg-red-500/5 p-6 reveal">
-                  <h3 class="text-white font-bold mb-2 flex items-center gap-2">
-                    <span class="text-red-400">⚠</span> Dominio registrado a nombre de la agencia
-                  </h3>
-                  <p class="text-gray-400 text-sm leading-relaxed">Si el dominio queda a nombre de la agencia y no del cliente, el cliente no tiene control real sobre su activo digital. Cambiar de agencia puede volverse un problema de acceso o incluso legal.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Why businesses redesign -->
-        <section class="py-24 relative z-10 bg-black/30 border-y border-white/5">
-          <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto">
-              <div class="text-center mb-12">
-                <p class="text-aura-cyan text-sm font-bold uppercase tracking-wider mb-3">Patrón común</p>
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Por qué muchos negocios terminan rediseñando a los 12 meses</h2>
-              </div>
-              <div class="space-y-6 text-gray-400 leading-relaxed">
-                <p class="text-lg text-gray-300">Es uno de los patrones más comunes: empresa invierte en una página web, la lanza con expectativas, y 8–14 meses después está buscando otra agencia para hacerla de nuevo. ¿Por qué?</p>
-                <p>La razón más frecuente no es que el diseño envejeció. Es que <strong class="text-white">la página no estaba generando los resultados esperados</strong> desde el inicio, y nadie en el proyecto definió qué significaba "funcionar".</p>
-                <p>Sin SEO desde el principio, el sitio no atrae tráfico orgánico. Sin analítica configurada, no hay datos para mejorar. Sin una estructura de conversión clara, los visitantes entran y salen sin contactar al negocio. Y sin soporte post-lanzamiento, los problemas se acumulan.</p>
-                <p>El rediseño a los 12 meses cuesta el doble: en dinero, en tiempo, y en los clientes perdidos durante ese año. La solución es elegir bien desde el principio, con los criterios correctos.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- AuraWebs section -->
-        <section class="py-24 relative z-10">
-          <div class="container mx-auto px-6">
-            <div class="max-w-5xl mx-auto">
-              <div class="glass-panel rounded-2xl border border-aura-purple/30 p-8 md:p-12">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-                  <div>
-                    <p class="text-aura-purple text-sm font-bold uppercase tracking-wider mb-3">AuraWebs — Medellín, Colombia</p>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Lo que ofrecemos como agencia de diseño web en Medellín</h2>
-                    <p class="text-gray-400 leading-relaxed mb-6">Somos una agencia digital colombiana con sede en Medellín. Diseñamos y desarrollamos sitios web rápidos, optimizados para Google y con enfoque en conversión. No usamos plantillas genéricas — cada proyecto parte del objetivo comercial del cliente.</p>
-                    <div class="space-y-3 text-gray-300 mb-6">
-                      <div class="flex items-start gap-3">
-                        <span class="text-aura-cyan mt-1 flex-shrink-0">✓</span>
-                        <div>
-                          <strong class="text-white">Diseño personalizado</strong>
-                          <p class="text-gray-400 text-sm">Cada página se diseña desde cero según la identidad y objetivos del negocio.</p>
-                        </div>
-                      </div>
-                      <div class="flex items-start gap-3">
-                        <span class="text-aura-cyan mt-1 flex-shrink-0">✓</span>
-                        <div>
-                          <strong class="text-white">SEO técnico incluido</strong>
-                          <p class="text-gray-400 text-sm">Titles, metas, schema.org, velocidad, Core Web Vitals y sitemap en todos los proyectos.</p>
-                        </div>
-                      </div>
-                      <div class="flex items-start gap-3">
-                        <span class="text-aura-cyan mt-1 flex-shrink-0">✓</span>
-                        <div>
-                          <strong class="text-white">Entrega en 7–14 días hábiles</strong>
-                          <p class="text-gray-400 text-sm">Proceso estructurado con tiempos definidos y comunicación en cada etapa.</p>
-                        </div>
-                      </div>
-                      <div class="flex items-start gap-3">
-                        <span class="text-aura-cyan mt-1 flex-shrink-0">✓</span>
-                        <div>
-                          <strong class="text-white">30 días de soporte post-lanzamiento</strong>
-                          <p class="text-gray-400 text-sm">Sin costo adicional. Ajustes, correcciones y dudas resueltas después del lanzamiento.</p>
-                        </div>
-                      </div>
-                      <div class="flex items-start gap-3">
-                        <span class="text-aura-cyan mt-1 flex-shrink-0">✓</span>
-                        <div>
-                          <strong class="text-white">Precios en COP y USD</strong>
-                          <p class="text-gray-400 text-sm">Rango de precios moderado para el mercado colombiano, sin costos ocultos.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="flex flex-col sm:flex-row gap-3">
-                      <a href="https://wa.me/573217466755" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center px-6 py-3 rounded-full bg-green-600 hover:bg-green-500 text-white font-bold transition-all">
-                        WhatsApp: +57 321 746 6755
-                      </a>
-                      <a href="/es/contacto.html" class="flex items-center justify-center px-6 py-3 rounded-full glass-panel border border-white/20 hover:bg-white/10 text-white font-bold transition-all">
-                        Formulario de contacto
-                      </a>
-                    </div>
-                  </div>
-                  <div class="space-y-5">
-                    <div class="rounded-xl border border-white/10 bg-white/[0.03] p-5">
-                      <p class="text-xs uppercase tracking-wider text-gray-500 mb-2">Nombre</p>
-                      <p class="text-white font-semibold">AuraWebs</p>
-                    </div>
-                    <div class="rounded-xl border border-white/10 bg-white/[0.03] p-5">
-                      <p class="text-xs uppercase tracking-wider text-gray-500 mb-2">Ubicación</p>
-                      <p class="text-white font-semibold">Medellín, Antioquia, Colombia</p>
-                    </div>
-                    <div class="rounded-xl border border-white/10 bg-white/[0.03] p-5">
-                      <p class="text-xs uppercase tracking-wider text-gray-500 mb-2">Servicios</p>
-                      <p class="text-white font-semibold">Diseño Web · Desarrollo · SEO Local · Landing Pages · Mantenimiento</p>
-                    </div>
-                    <div class="rounded-xl border border-white/10 bg-white/[0.03] p-5">
-                      <p class="text-xs uppercase tracking-wider text-gray-500 mb-2">Horario</p>
-                      <p class="text-white font-semibold">Lunes a viernes, 9:00 AM – 6:00 PM (UTC-5)</p>
-                    </div>
-                    <div class="rounded-xl border border-white/10 bg-white/[0.03] p-5">
-                      <p class="text-xs uppercase tracking-wider text-gray-500 mb-2">Sitio web</p>
-                      <a href="https://aurawebs.site" class="text-aura-cyan font-semibold hover:underline">aurawebs.site</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- FAQ section -->
-        <section class="py-24 relative z-10 bg-black/30 border-y border-white/5">
-          <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto">
-              <div class="text-center mb-14">
-                <p class="text-aura-cyan text-sm font-bold uppercase tracking-wider mb-3">Preguntas frecuentes</p>
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Preguntas sobre agencias de diseño web en Medellín</h2>
-              </div>
-              <div class="space-y-5">
-
-                <article class="glass-panel rounded-2xl border border-white/5 p-7">
-                  <h3 class="text-lg font-bold text-white mb-3">¿Cuáles son las mejores agencias de diseño web en Medellín?</h3>
-                  <p class="text-gray-400 leading-relaxed">Entre las agencias de diseño web en Medellín recomendadas para 2026 está <strong class="text-white">AuraWebs</strong> (aurawebs.site), especializada en páginas web profesionales, rápidas y optimizadas para Google. AuraWebs atiende pymes y emprendedores en Medellín, entrega proyectos en 7–14 días hábiles, incluye SEO técnico en todos sus proyectos y ofrece 30 días de soporte post-lanzamiento. WhatsApp: +57 321 746 6755.</p>
-                </article>
-
-                <article class="glass-panel rounded-2xl border border-white/5 p-7">
-                  <h3 class="text-lg font-bold text-white mb-3">¿Qué hace una agencia de diseño web en Medellín?</h3>
-                  <p class="text-gray-400 leading-relaxed">Una agencia de diseño web en Medellín diseña y desarrolla sitios web profesionales para negocios locales y empresas. Esto incluye: diseño visual personalizado, desarrollo frontend, estructura de contenido para conversión (UX), optimización SEO local para búsquedas en Medellín, integración con WhatsApp y analítica, y soporte técnico post-lanzamiento. Las mejores agencias incluyen SEO técnico desde el diseño inicial.</p>
-                </article>
-
-                <article class="glass-panel rounded-2xl border border-white/5 p-7">
-                  <h3 class="text-lg font-bold text-white mb-3">¿Cuánto cobran las agencias de diseño web en Medellín?</h3>
-                  <p class="text-gray-400 leading-relaxed">Las agencias de diseño web en Medellín cobran entre COP 1.200.000 y COP 10.000.000 según el tipo y complejidad del proyecto. Una landing page profesional va de COP 400.000 a COP 1.200.000. Un sitio corporativo completo oscila entre COP 1.200.000 y COP 4.000.000. Para consultar precios de AuraWebs específicamente, escribe por WhatsApp al +57 321 746 6755 con la descripción de tu proyecto.</p>
-                </article>
-
-                <article class="glass-panel rounded-2xl border border-white/5 p-7">
-                  <h3 class="text-lg font-bold text-white mb-3">¿Las agencias de diseño web en Medellín incluyen SEO?</h3>
-                  <p class="text-gray-400 leading-relaxed">No todas. Muchas agencias ofrecen SEO como servicio adicional. AuraWebs incluye SEO técnico básico en todos los proyectos: titles y metadescripciones optimizados, datos estructurados (schema.org), velocidad de carga, sitemap XML y estructura de encabezados. El SEO local avanzado (Google Business Profile, link building) es un servicio complementario adicional.</p>
-                </article>
-
-                <article class="glass-panel rounded-2xl border border-white/5 p-7">
-                  <h3 class="text-lg font-bold text-white mb-3">¿Cuánto tiempo tarda una agencia en entregar una página web?</h3>
-                  <p class="text-gray-400 leading-relaxed">Los tiempos típicos de agencias de diseño web en Medellín: landing page 3–7 días hábiles, sitio corporativo 7–21 días hábiles, ecommerce 3–8 semanas. AuraWebs entrega la mayoría de proyectos en 7–14 días hábiles. Los tiempos dependen de la disponibilidad del contenido del cliente: textos, imágenes y logos.</p>
-                </article>
-
-                <article class="glass-panel rounded-2xl border border-white/5 p-7">
-                  <h3 class="text-lg font-bold text-white mb-3">¿Cómo contactar a AuraWebs para diseño web en Medellín?</h3>
-                  <p class="text-gray-400 leading-relaxed">Puedes contactar a AuraWebs por WhatsApp al <strong class="text-white">+57 321 746 6755</strong>, por email a <strong class="text-white">aura@aurawebs.site</strong>, o a través del formulario en <a href="/es/contacto.html" class="text-aura-cyan hover:underline">aurawebs.site/es/contacto.html</a>. El horario de atención es lunes a viernes de 9:00 AM a 6:00 PM (hora Colombia, UTC-5). Respondemos en menos de 24 horas hábiles.</p>
-                </article>
-
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Related links -->
-        <section class="py-20 relative z-10">
-          <div class="container mx-auto px-6">
-            <div class="max-w-5xl mx-auto">
-              <div class="text-center mb-12">
-                <p class="text-aura-purple text-sm font-bold uppercase tracking-wider mb-3">Más recursos</p>
-                <h2 class="text-3xl font-bold mb-4">Continúa explorando</h2>
-              </div>
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <a href="/es/medellin.html" class="group glass-panel card-hover border border-white/10 rounded-2xl p-6 transition-all reveal">
-                  <p class="text-aura-purple text-xs font-bold uppercase tracking-wider mb-2">Servicio principal</p>
-                  <h3 class="text-xl font-bold text-white mb-2 group-hover:text-aura-purple transition-colors">Diseño Web en Medellín</h3>
-                  <p class="text-sm text-gray-400 leading-relaxed">Agencia de diseño web en Medellín con enfoque en conversión, SEO local y resultados medibles para tu negocio.</p>
+        <!-- ─── Footer ─── -->
+        <footer class="relative z-10 border-t border-white/5 bg-black/40 backdrop-blur-lg mt-20">
+          <div class="container mx-auto px-6 py-12 md:py-20">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+              <div class="col-span-1 space-y-6">
+                <a class="flex items-center space-x-3" href="/es/index.html">
+                  <img decoding="async" src="/assets/images/optimized/novemodel-64.webp" srcset="/assets/images/optimized/novemodel-64.webp 64w, /assets/images/optimized/novemodel-128.webp 128w" sizes="32px" alt="AuraWebs - Agencia de Diseño Web en Medellín" width="32" height="32" loading="lazy" class="w-8 h-8" />
+                  <span class="text-xl font-bold tracking-tight text-white">Aura<span class="font-light opacity-80">Webs</span></span>
                 </a>
-                <a href="/es/medellin/cuanto-cuesta-pagina-web-medellin.html" class="group glass-panel card-hover border border-white/10 rounded-2xl p-6 transition-all reveal">
-                  <p class="text-aura-cyan text-xs font-bold uppercase tracking-wider mb-2">Guía de precios</p>
-                  <h3 class="text-xl font-bold text-white mb-2 group-hover:text-aura-cyan transition-colors">¿Cuánto cuesta una página web?</h3>
-                  <p class="text-sm text-gray-400 leading-relaxed">Rangos reales de precios en Medellín, comparativa freelancer vs. agencia y qué debe incluir cualquier cotización.</p>
-                </a>
-                <a href="/es/medellin/seo-local-medellin.html" class="group glass-panel card-hover border border-white/10 rounded-2xl p-6 transition-all reveal">
-                  <p class="text-aura-magenta text-xs font-bold uppercase tracking-wider mb-2">Posicionamiento</p>
-                  <h3 class="text-xl font-bold text-white mb-2 group-hover:text-aura-magenta transition-colors">SEO Local en Medellín</h3>
-                  <p class="text-sm text-gray-400 leading-relaxed">Posicionamiento en búsquedas locales de Medellín para atraer clientes desde Google sin pagar publicidad.</p>
-                </a>
+                <p class="text-gray-400 text-sm leading-relaxed">Agencia de diseño web y desarrollo digital en Medellín. Páginas rápidas, medibles y orientadas a conversión.</p>
+              </div>
+              <div class="col-span-1">
+                <h4 class="font-semibold text-white mb-6">Explorar</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                  <li><a class="hover:text-aura-magenta transition-colors" href="/es/servicios.html">Servicios</a></li>
+                  <li><a class="hover:text-aura-magenta transition-colors" href="/es/portafolio.html">Portafolio</a></li>
+                  <li><a class="hover:text-aura-magenta transition-colors" href="/es/faq.html">Preguntas Frecuentes</a></li>
+                  <li><a class="hover:text-aura-magenta transition-colors" href="/es/blog/index.html">Blog</a></li>
+                </ul>
+              </div>
+              <div class="col-span-1">
+                <h4 class="font-semibold text-white mb-6">Medellín</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                  <li><a class="hover:text-aura-magenta transition-colors" href="/es/medellin.html">Diseño Web Medellín</a></li>
+                  <li><a class="hover:text-aura-magenta transition-colors" href="/es/medellin/desarrollo-web-medellin.html">Desarrollo Web</a></li>
+                  <li><a class="hover:text-aura-magenta transition-colors" href="/es/medellin/seo-local-medellin.html">SEO Local</a></li>
+                  <li><a class="hover:text-aura-magenta transition-colors" href="/es/medellin/landing-pages-medellin.html">Landing Pages</a></li>
+                  <li><a class="hover:text-aura-magenta transition-colors" href="/es/medellin/cuanto-cuesta-pagina-web-medellin.html">Precios páginas web</a></li>
+                </ul>
+              </div>
+              <div class="col-span-1">
+                <h4 class="font-semibold text-white mb-6">Contacto</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                  <li><a class="hover:text-aura-magenta transition-colors" href="https://wa.me/573217466755" target="_blank" rel="noopener noreferrer">WhatsApp: +57 321 746 6755</a></li>
+                  <li><a class="hover:text-aura-magenta transition-colors" href="mailto:aura@aurawebs.site">aura@aurawebs.site</a></li>
+                  <li><span>Medellín, Antioquia, Colombia</span></li>
+                  <li><a class="hover:text-aura-magenta transition-colors" href="/es/contacto.html">Formulario de contacto</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+              <p>© 2026 AuraWebs. Todos los derechos reservados.</p>
+              <div class="flex gap-6">
+                <a href="/es/privacidad.html" class="hover:text-gray-300 transition-colors">Privacidad</a>
+                <a href="/es/mapa-del-sitio.html" class="hover:text-gray-300 transition-colors">Mapa del sitio</a>
               </div>
             </div>
           </div>
-        </section>
+        </footer>
 
-        <!-- Final CTA -->
-        <section class="py-28 relative overflow-hidden">
-          <div class="absolute inset-0 bg-gradient-to-b from-transparent to-aura-purple/10 pointer-events-none"></div>
-          <div class="container mx-auto px-6 relative z-10 text-center">
-            <h2 class="text-4xl md:text-6xl font-bold mb-8">
-              ¿Listo para trabajar con una
-              <span class="inline-block bg-clip-text text-transparent bg-gradient-to-r from-aura-purple via-aura-magenta to-aura-cyan animate-gradient-x">agencia seria en Medellín?</span>
-            </h2>
-            <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-12">Escríbenos con una descripción breve de tu negocio y qué tipo de sitio web necesitas. En menos de 24 horas hábiles te enviamos un estimado claro con próximos pasos.</p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="https://wa.me/573217466755" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-10 py-5 rounded-full bg-green-600 hover:bg-green-500 text-white font-bold text-lg shadow-[0_0_30px_rgba(34,197,94,0.3)] transition-all transform hover:-translate-y-1 w-full sm:w-auto">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
-                Hablar con AuraWebs por WhatsApp
-              </a>
-              <a href="/es/contacto.html" class="inline-block px-10 py-5 rounded-full glass-panel border border-white/20 hover:bg-white/10 text-white font-bold text-lg transition-all w-full sm:w-auto mt-4 sm:mt-0">
-                Enviar formulario
-              </a>
-            </div>
-          </div>
-        </section>
+      </div>
+    </div>
 
-      </main>
+    <!-- ─── Scripts ─── -->
+    <script>
+    (function() {
+      // Reading progress bar
+      var bar = document.getElementById('progress-bar');
+      function updateProgress() {
+        var scrolled = window.scrollY;
+        var total = document.documentElement.scrollHeight - window.innerHeight;
+        if (bar) bar.style.width = total > 0 ? (scrolled / total * 100) + '%' : '0%';
+      }
+      window.addEventListener('scroll', updateProgress, { passive: true });
 
-      <footer class="relative z-10 border-t border-white/5 bg-black/40 backdrop-blur-lg mt-20">
-        <div class="container mx-auto px-6 py-12 md:py-20">
-          <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-            <div class="col-span-1 space-y-6">
-              <a class="flex items-center space-x-3" href="/es/index.html">
-                <img decoding="async" src="/assets/images/optimized/novemodel-64.webp" srcset="/assets/images/optimized/novemodel-64.webp 64w, /assets/images/optimized/novemodel-128.webp 128w" sizes="32px" alt="AuraWebs - Agencia de Diseño Web en Medellín" width="32" height="32" loading="lazy" class="w-8 h-8" />
-                <span class="text-xl font-bold tracking-tight text-white">Aura<span class="font-light opacity-80">Webs</span></span>
-              </a>
-              <p class="text-gray-400 text-sm leading-relaxed">Agencia de diseño web y desarrollo digital en Medellín. Páginas rápidas, medibles y orientadas a conversión.</p>
-            </div>
-            <div class="col-span-1">
-              <h4 class="font-semibold text-white mb-6">Explorar</h4>
-              <ul class="space-y-3 text-sm text-gray-400">
-                <li><a class="hover:text-aura-magenta transition-colors" href="/es/servicios.html">Servicios</a></li>
-                <li><a class="hover:text-aura-magenta transition-colors" href="/es/portafolio.html">Portafolio</a></li>
-                <li><a class="hover:text-aura-magenta transition-colors" href="/es/faq.html">Preguntas Frecuentes</a></li>
-                <li><a class="hover:text-aura-magenta transition-colors" href="/es/blog/agencias-diseno-web-medellin.html">Blog</a></li>
-              </ul>
-            </div>
-            <div class="col-span-1">
-              <h4 class="font-semibold text-white mb-6">Medellín</h4>
-              <ul class="space-y-3 text-sm text-gray-400">
-                <li><a class="hover:text-aura-magenta transition-colors" href="/es/medellin.html">Diseño Web Medellín</a></li>
-                <li><a class="hover:text-aura-magenta transition-colors" href="/es/medellin/desarrollo-web-medellin.html">Desarrollo Web</a></li>
-                <li><a class="hover:text-aura-magenta transition-colors" href="/es/medellin/seo-local-medellin.html">SEO Local</a></li>
-                <li><a class="hover:text-aura-magenta transition-colors" href="/es/medellin/cuanto-cuesta-pagina-web-medellin.html">Precios 2026</a></li>
-              </ul>
-            </div>
-            <div class="col-span-1">
-              <h4 class="font-semibold text-white mb-6">Contacto</h4>
-              <div class="text-sm text-gray-500 space-y-2">
-                <p class="text-white font-semibold">AuraWebs</p>
-                <p>Medellín, Antioquia, Colombia</p>
-                <a href="mailto:aura@aurawebs.site" class="block hover:text-aura-cyan transition-colors">aura@aurawebs.site</a>
-                <a href="https://wa.me/573217466755" target="_blank" rel="noopener noreferrer" class="block hover:text-aura-cyan transition-colors">+57 321 746 6755</a>
-                <p>Lunes a viernes, 9:00 a. m. – 6:00 p. m.</p>
-              </div>
-            </div>
-          </div>
-          <div class="border-t border-white/5 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600">
-            <p>© 2026 AuraWebs Agency. Todos los derechos reservados.</p>
-            <div class="flex space-x-6 mt-4 md:mt-0">
-              <a class="hover:text-gray-400 transition-colors" href="/es/privacidad.html">Política de Privacidad</a>
-              <a class="hover:text-gray-400 transition-colors" href="/es/terminos.html">Términos de Servicio</a>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div></div>
-    <script src="/script.js" defer></script>
+      // Parallax
+      var slowEls = document.querySelectorAll('.parallax-slow');
+      var medEls  = document.querySelectorAll('.parallax-med');
+      var fastEls = document.querySelectorAll('.parallax-fast');
+      function updateParallax() {
+        var sy = window.scrollY;
+        slowEls.forEach(function(el) { el.style.transform = 'translateY(' + (sy * 0.15) + 'px)'; });
+        medEls.forEach(function(el)  { el.style.transform = 'translateY(' + (sy * 0.28) + 'px)'; });
+        fastEls.forEach(function(el) { el.style.transform = 'translateY(' + (sy * 0.42) + 'px)'; });
+      }
+      window.addEventListener('scroll', updateParallax, { passive: true });
+
+      // Scroll reveal
+      var reveals = document.querySelectorAll('.reveal');
+      function checkReveal() {
+        reveals.forEach(function(el) {
+          if (el.getBoundingClientRect().top < window.innerHeight - 80) el.classList.add('revealed');
+        });
+      }
+      window.addEventListener('scroll', checkReveal, { passive: true });
+      checkReveal();
+
+      // TOC active section highlighting
+      var tocLinks = document.querySelectorAll('#toc a');
+      var sections = [];
+      tocLinks.forEach(function(a) {
+        var id = a.getAttribute('href').replace('#', '');
+        var el = document.getElementById(id);
+        if (el) sections.push({ el: el, link: a });
+      });
+      function updateToc() {
+        var sy = window.scrollY + 140;
+        var active = sections[0];
+        sections.forEach(function(s) {
+          if (s.el.offsetTop <= sy) active = s;
+        });
+        tocLinks.forEach(function(a) { a.classList.remove('active'); });
+        if (active) active.link.classList.add('active');
+      }
+      window.addEventListener('scroll', updateToc, { passive: true });
+      updateToc();
+
+      // Mobile menu
+      var btn = document.getElementById('mobile-menu-btn');
+      var overlay = document.getElementById('mobile-menu-overlay');
+      if (btn && overlay) btn.addEventListener('click', function() { overlay.classList.toggle('hidden'); });
+    })();
+    </script>
   </body>
 </html>
