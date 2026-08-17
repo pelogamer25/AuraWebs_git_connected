@@ -46,6 +46,26 @@
       "permanent": true
     },
     {
+      "source": "/diseno-web-bogota",
+      "destination": "/es/bogota.html",
+      "permanent": true
+    },
+    {
+      "source": "/diseño-web-bogota",
+      "destination": "/es/bogota.html",
+      "permanent": true
+    },
+    {
+      "source": "/diseno-web-en-bogota",
+      "destination": "/es/bogota.html",
+      "permanent": true
+    },
+    {
+      "source": "/es/bogota",
+      "destination": "/es/bogota.html",
+      "permanent": true
+    },
+    {
       "source": "/es/servicios",
       "destination": "/es/servicios.html",
       "permanent": true
