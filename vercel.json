@@ -1,6 +1,31 @@
 {
   "redirects": [
     {
+      "source": "/contact.html",
+      "destination": "/en/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/faq.html",
+      "destination": "/en/faq.html",
+      "permanent": true
+    },
+    {
+      "source": "/services.html",
+      "destination": "/en/services.html",
+      "permanent": true
+    },
+    {
+      "source": "/showcase.html",
+      "destination": "/en/showcase.html",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap.html",
+      "destination": "/en/sitemap.html",
+      "permanent": true
+    },
+    {
       "source": "/diseno-web-medellin",
       "destination": "/es/medellin.html",
       "permanent": true
@@ -77,15 +102,6 @@
     }
   ],
   "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Robots-Tag",
-          "value": "index, follow"
-        }
-      ]
-    },
     {
       "source": "/archive/(.*)",
       "headers": [
