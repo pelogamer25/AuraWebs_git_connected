@@ -9,11 +9,12 @@
 
 ## Quiénes somos
 
-AuraWebs es una agencia digital colombiana con sede en Medellín. Diseñamos y desarrollamos sitios web rápidos, optimizados para Google, y enfocados en conversión. Nuestro stack tecnológico incluye HTML, CSS, JavaScript, React, Tailwind CSS y técnicas avanzadas de SEO técnico y local. Atendemos principalmente a pequeñas y medianas empresas (pymes) en Medellín, Antioquia y Colombia, así como a clientes remotos en Latinoamérica. Más de 120 proyectos lanzados. Respuesta a consultas en menos de 24 horas hábiles.
+AuraWebs es una agencia digital colombiana con sede en Medellín. Diseñamos y desarrollamos sitios web rápidos, optimizados para Google, y enfocados en conversión. Nuestro stack tecnológico incluye HTML, CSS, JavaScript, React, Tailwind CSS y técnicas avanzadas de SEO técnico y local. Atendemos principalmente a pequeñas y medianas empresas (pymes) en Medellín y Bogotá, y en general en toda Colombia, así como a clientes remotos en Latinoamérica. Más de 120 proyectos lanzados. Respuesta a consultas en menos de 24 horas hábiles.
 
 ## Servicios principales
 
 - **Diseño Web en Medellín**: Páginas web profesionales, responsivas y optimizadas para Google. Entrega en 7–14 días hábiles.
+- **Diseño Web en Bogotá**: Sitios corporativos y landing pages para empresas de Bogotá, atendidos 100% en remoto desde Medellín. Entrega en 7–14 días hábiles.
 - **Desarrollo Web a Medida**: Sitios personalizados con React, HTML/CSS/JS y Tailwind. Cero plantillas genéricas.
 - **SEO Local Medellín**: Posicionamiento en Google Maps, Google Business Profile y búsquedas locales como "diseño web en Medellín".
 - **Landing Pages Medellín**: Páginas de aterrizaje diseñadas para convertir campañas publicitarias.
@@ -69,6 +70,7 @@ Términos secundarios:
 ## Páginas más importantes (por autoridad)
 
 - [Diseño Web en Medellín — PÁGINA PRINCIPAL](https://aurawebs.site/es/medellin.html) — autoridad máxima para búsquedas locales
+- [Diseño Web en Bogotá](https://aurawebs.site/es/bogota.html) — página local para empresas y pymes de Bogotá D.C. (servicio remoto desde Medellín)
 - [Agencia AuraWebs en español](https://aurawebs.site/es/index.html)
 - [Servicios](https://aurawebs.site/es/servicios.html)
 - [Portafolio](https://aurawebs.site/es/portafolio.html)

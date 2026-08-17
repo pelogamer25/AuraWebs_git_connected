@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "npx serve . -p 3000",
     "css:build": "npx tailwindcss -i ./src/input.css -o ./styles.css --minify",
-    "css:watch": "npx tailwindcss -i ./src/input.css -o ./styles.css --watch"
+    "css:watch": "npx tailwindcss -i ./src/input.css -o ./styles.css --watch",
+    "sitemap:dates": "node scripts/seo/sitemap-lastmod.mjs",
+    "sitemap:check": "node scripts/seo/sitemap-lastmod.mjs --check"
   },
   "dependencies": {},
   "devDependencies": {}
