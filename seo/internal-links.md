@@ -12,9 +12,9 @@ anchor text.
 
 | Page | Inbound | Outbound |
 |---|---:|---:|
-| `es/index.html` | 94 | 43 |
-| `es/medellin.html` | 29 | 16 |
-| `es/servicios.html` | 54 | 3 |
+| `es/index.html` | 108 | 43 |
+| `es/medellin.html` | 30 | 37 |
+| `es/servicios.html` | 99 | 25 |
 | `es/bogota.html` | 5 | 24 |
 | `es/medellin/index.html` | 16 | 24 |
 | `es/medellin/desarrollo-web-medellin.html` | 25 | 23 |
@@ -23,16 +23,16 @@ anchor text.
 | `es/medellin/mantenimiento-web-medellin.html` | 5 | 23 |
 | `es/medellin/redisenio-web-medellin.html` | 8 | 23 |
 | `es/medellin/cuanto-cuesta-pagina-web-medellin.html` | 39 | 27 |
-| `es/portafolio.html` | 51 | 3 |
-| `es/contacto.html` | 76 | 2 |
-| `es/faq.html` | 35 | 3 |
-| `es/blog/index.html` | 45 | 39 |
+| `es/portafolio.html` | 71 | 25 |
+| `es/contacto.html` | 89 | 24 |
+| `es/faq.html` | 55 | 25 |
+| `es/blog/index.html` | 58 | 39 |
 
 ---
 
 ## Anchor text pointing at each money page
 
-### → `es/medellin.html`  (29 inbound)
+### → `es/medellin.html`  (30 inbound)
 
 | # | Anchor text |
 |---:|---|
@@ -57,20 +57,20 @@ anchor text.
 | 1 | Diseño Web en Bogotá |
 | 1 | diseño web en Bogotá |
 
-### → `es/servicios.html`  (54 inbound)
+### → `es/servicios.html`  (99 inbound)
 
 | # | Anchor text |
 |---:|---|
-| 45 | Servicios |
+| 65 | Servicios |
+| 8 | Optimización SEO |
+| 7 | Identidad de Marca |
+| 6 | Diseño Web |
+| 6 | Desarrollo Frontend |
 | 1 | Todos los servicios |
 | 1 | Ver servicio |
-| 1 | Diseño Web |
 | 1 | Desarrollo Web |
-| 1 | Optimización SEO |
 | 1 | Desarrollo de Apps |
 | 1 | Analítica |
-| 1 | Servicios Portafolio Preguntas Frecuentes Mapa del Sitio Especialidades Diseño Web Medellín Des |
-| 1 | Servicios Portafolio Preguntas Frecuentes Mapa del Sitio Especialidades Diseño Web Desarrollo O |
 
 ### → `es/medellin/cuanto-cuesta-pagina-web-medellin.html`  (39 inbound)
 
