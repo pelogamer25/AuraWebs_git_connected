@@ -71,7 +71,7 @@ page and broad agency intent to the home page — do not mix them.
 
 | # | Keyword | Vol | Comp | Idx | Owner page |
 |---|---|---:|---|---:|---|
-| 1 | `agencias de diseño web` | 500 | Baja | 22 | es/index.html |
+| 1 | `agencias de diseño web` | 500 | Baja | 22 | es/blog/agencias-diseno-web-medellin.html |
 | 2 | `agencia de diseño` | 500 | Baja | 16 | es/index.html |
 | 3 | `diseño de sitios web` | 500 | Baja | 21 | es/servicios.html |
 | 4 | `desarrollo de paginas web` | 500 | Media | 55 | es/medellin/desarrollo-web-medellin.html |
@@ -104,7 +104,8 @@ total (once in a header, once in the body sentence below it).
 
 | Page | Primary | Support terms |
 |---|---|---|
-| `es/index.html` | agencias de diseño web | agencia de diseño, diseño y desarrollo web |
+| `es/index.html` | agencia de diseño | agencia de diseño y desarrollo web |
+| `es/blog/agencias-diseno-web-medellin.html` | agencias de diseño web | mejores agencias de diseño web |
 | `es/medellin.html` | diseño de paginas web en medellin | diseño paginas web medellin, sitios web en medellin |
 | `es/servicios.html` | diseño de sitios web | diseño de paginas web, paginas web profesionales |
 | `es/medellin/desarrollo-web-medellin.html` | desarrollo de paginas web medellin | desarrolladores web medellin, desarrollo web en medellin |
@@ -133,6 +134,24 @@ High volume, wrong intent — chasing these would bring traffic that never conve
 
 The whole "gratis / crear / wix / canva" cluster is the largest volume block in the
 export and is worth **nothing** to an agency selling custom builds.
+
+---
+
+## Where exact match was deliberately not forced
+
+The guardrail is explicit: if forced to choose between a keyword and natural language,
+natural language wins. Three pages keep a header that does **not** contain the target
+verbatim, because the exact phrase is stilted Spanish:
+
+| Page | Target | Kept instead | Why |
+|---|---|---|---|
+| `es/medellin/seo-local-medellin.html` | `posicionar pagina web en google` | H1 stays "SEO local en Medellín"; target moved to an H2, "Cómo posicionar tu página web en Google" | The H1 is the page's own strong term. The H2 carries the target with a natural "tu". |
+| `es/medellin/cuanto-cuesta-…html` | `precio crear pagina web` | "Rangos de precio para crear una página web en Medellín" | The bare phrase is not how anyone writes Spanish; the H1 question matches how people actually search. |
+| `es/blog/tienda-online-medellin.html` | `diseño de tiendas virtuales en medellin` | H1 stays; target placed on the closing CTA header | Buyer-intent term belongs where the reader is asked to hire, not on an informational H1. |
+
+Also note `es/medellin.html` keeps "Diseño Web en Medellín" in its **H1** (preserving the
+role split against `es/index.html`) while its **title** now leads with the measured
+500-volume term. The page owns both.
 
 ---
 
