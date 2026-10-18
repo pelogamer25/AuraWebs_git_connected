@@ -201,7 +201,7 @@ window.addEventListener('load', function () {
       .testi-card:hover { transform: translateY(-4px); border-color: rgba(124,58,237,0.25) !important; }
 
       /* CTA glow button */
-      .cta-btn-primary { background: linear-gradient(135deg, #7c3aed, #c026d3); box-shadow: 0 0 30px rgba(124,58,237,0.35); transition: all 0.3s ease; }
+      .cta-btn-primary { background: linear-gradient(135deg, #7c3aed, #c026d3); box-shadow: 0 0 30px rgba(124,58,237,0.35); transition: 0.3s ease; transition-property: color, background-color, border-color, opacity, box-shadow, transform, filter; }
       .cta-btn-primary:hover { box-shadow: 0 0 50px rgba(124,58,237,0.6); transform: translateY(-3px); }
 
       /* Scroll indicator */
@@ -321,23 +321,11 @@ window.addEventListener('load', function () {
           <!-- ═══════════════════════════════════════════
                HERO — full screen, parallax orbs, rings
           ══════════════════════════════════════════════ -->
-          <section class="relative min-h-screen flex items-center overflow-hidden pt-20">
+          <section class="relative min-h-screen flex items-center overflow-hidden pt-32 pb-20 md:pt-28">
 
             <!-- Parallax orbs -->
-            <div class="hero-orb float-a parallax-slow w-[580px] h-[580px] bg-aura-purple/22 top-[-18%] left-[-14%]"></div>
-            <div class="hero-orb float-b parallax-med  w-[420px] h-[420px] bg-aura-magenta/16 bottom-[-12%] right-[-10%]"></div>
-            <div class="hero-orb float-c parallax-fast w-[300px] h-[300px] bg-aura-cyan/14 top-[25%] right-[5%]"></div>
-            <div class="hero-orb float-a parallax-med  w-[200px] h-[200px] bg-aura-violet/18 top-[60%] left-[4%]"></div>
-
-            <!-- Floating dots -->
-            <div class="float-dot parallax-slow  w-3 h-3 bg-aura-purple opacity-60 top-[22%] left-[16%]" style="animation:pulse-dot 4s ease-in-out infinite;"></div>
-            <div class="float-dot parallax-fast  w-2 h-2 bg-aura-cyan   opacity-45 top-[68%] left-[8%]"  style="animation:pulse-dot 6s ease-in-out infinite;animation-delay:1s;"></div>
-            <div class="float-dot parallax-med   w-4 h-4 bg-aura-magenta opacity-35 top-[30%] right-[14%]" style="animation:pulse-dot 5s ease-in-out infinite;animation-delay:2s;"></div>
-            <div class="float-dot parallax-slow  w-2 h-2 bg-white       opacity-15 bottom-[25%] right-[28%]" style="animation:pulse-dot 7s ease-in-out infinite;animation-delay:0.5s;"></div>
-
-            <!-- Decorative rotating rings -->
-            <div class="deco-ring parallax-slow border-aura-purple/12 w-[700px] h-[700px] top-1/2 left-1/2" style="margin-top:-350px;margin-left:-350px;"></div>
-            <div class="deco-ring deco-ring-rev border-aura-cyan/8 w-[900px] h-[900px] top-1/2 left-1/2" style="margin-top:-450px;margin-left:-450px;"></div>
+            <div class="hero-orb float-a parallax-slow w-[580px] h-[580px] bg-aura-purple/[0.22] top-[-18%] left-[-14%]"></div>
+            <div class="hero-orb float-b parallax-med w-[420px] h-[420px] bg-aura-magenta/[0.16] bottom-[-12%] right-[-10%]"></div>
 
             <!-- Grid -->
             <div class="absolute inset-0 hero-grid pointer-events-none"></div>
@@ -349,36 +337,36 @@ window.addEventListener('load', function () {
               <div class="max-w-5xl mx-auto text-center">
 
                 <!-- Status badge -->
-                <div class="inline-flex items-center px-4 py-2 rounded-full border border-white/12 bg-white/5 backdrop-blur-md mb-10 animate-fade-in-up">
+                <div class="inline-flex items-center px-4 py-2 rounded-full border border-white/[0.12] bg-white/5 backdrop-blur-md mb-10 animate-fade-in-up">
                   <span class="w-2 h-2 rounded-full bg-green-400 mr-2.5 animate-pulse"></span>
                   <span class="text-xs font-semibold text-gray-300 uppercase tracking-widest">Disponibles para nuevos proyectos</span>
                 </div>
 
                 <!-- H1 -->
-                <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-tight mb-8 animate-fade-in-up" style="animation-delay:0.15s;">
-                  Agencia de Diseño<br>
-                  <span class="grad-text">y Desarrollo Web</span>
+                <h1 class="h1-display mb-8 animate-fade-in-up" style="animation-delay:0.15s;">
+                  Agencia de diseño<br>
+                  <span class="grad-text">y desarrollo web</span>
                 </h1>
 
                 <!-- Subline -->
-                <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-12 animate-fade-in-up" style="animation-delay:0.35s;">
-                  Creamos experiencias digitales rápidas, medibles y orientadas a conversión.<br class="hidden md:block"> Combinamos diseño, tecnología y SEO técnico para que tu marca crezca con claridad.
-                  <br class="hidden md:block"><a href="/es/medellin.html" class="grad-text font-semibold hover:underline">¿Buscas diseño web en Medellín? →</a>
-                  <span class="text-gray-600 mx-2 hidden md:inline">·</span><a href="/es/bogota.html" class="grad-text font-semibold hover:underline">¿En Bogotá? →</a>
+                <p class="text-lg md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-10 animate-fade-in-up text-pretty" style="animation-delay:0.35s;">
+                  Creamos experiencias digitales rápidas, medibles y orientadas a conversión. Combinamos diseño, tecnología y SEO técnico para que tu marca crezca con claridad.
                 </p>
 
                 <!-- CTAs -->
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in-up" style="animation-delay:0.55s;">
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style="animation-delay:0.55s;">
                   <a href="https://wa.me/573217466755?text=Hola%20AuraWebs%2C%20quiero%20cotizar%20un%20proyecto.%20(Vengo%20de%3A%20Agencia%20de%20Dise%C3%B1o%20y%20Desarrollo%20Web)" target="_blank" rel="noopener noreferrer"
-                     class="w-full sm:w-auto flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-green-600 hover:bg-green-500 text-white font-bold text-lg hover:shadow-[0_0_30px_rgba(34,197,94,0.4)] hover:-translate-y-1 transition-all duration-300">
+                     class="btn-wa w-full sm:w-auto px-8 py-4 text-lg">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
-                    Consulta Gratis por WhatsApp
+                    Cotiza gratis por WhatsApp
                   </a>
-                  <a class="w-full sm:w-auto px-8 py-4 rounded-full glass-panel border border-white/20 hover:border-aura-purple/50 text-white font-bold text-lg transition-all duration-300 hover:-translate-y-1 text-center" href="/es/portafolio.html">Ver Portafolio →</a>
+                  <a class="w-full sm:w-auto px-8 py-4 rounded-full glass-panel border border-white/20 hover:border-aura-purple/50 text-white font-bold text-lg transition duration-300 hover:-translate-y-1 text-center" href="/es/portafolio.html">Ver portafolio</a>
                 </div>
+                <p class="mt-6 mb-14 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-0 text-sm md:text-base animate-fade-in-up" style="animation-delay:0.65s;"><a href="/es/medellin.html" class="whitespace-nowrap font-semibold text-aura-violet hover:text-white transition-colors">¿Buscas diseño web en Medellín? →</a><span class="hidden sm:inline text-gray-600 mx-3" aria-hidden="true">·</span><a href="/es/bogota.html" class="whitespace-nowrap font-semibold text-aura-violet hover:text-white transition-colors">¿En Bogotá? →</a></p>
+
 
                 <!-- Trust stats strip -->
-                <div class="flex flex-wrap items-center justify-center gap-8 md:gap-12 animate-fade-in-up" style="animation-delay:0.75s;">
+                <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 md:gap-x-12 animate-fade-in-up" style="animation-delay:0.75s;">
                   <div class="flex items-center gap-2 text-gray-500">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
                     <span class="text-sm">SEO técnico incluido</span>
@@ -403,14 +391,6 @@ window.addEventListener('load', function () {
               </div>
             </div>
 
-            <!-- Scroll indicator -->
-            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
-              <span class="text-xs text-gray-500 uppercase tracking-widest">Explorar</span>
-              <div class="w-5 h-8 rounded-full border border-white/30 flex justify-center pt-1.5">
-                <div class="w-1 h-2 bg-white rounded-full scroll-dot"></div>
-              </div>
-            </div>
-
             <!-- Bottom glow line -->
             <div class="absolute bottom-0 left-0 right-0 glow-line parallax-slow"></div>
           </section>
@@ -423,28 +403,28 @@ window.addEventListener('load', function () {
             <div class="container mx-auto px-6">
               <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
 
-                <div class="stat-card glass-panel rounded-2xl border border-white/8 p-8 text-center reveal">
+                <div class="stat-card glass-panel rounded-2xl border border-white/[0.08] p-8 text-center reveal">
                   <div class="stat-num text-4xl md:text-5xl font-bold text-white mb-2">
                     <span data-count="98">0</span><span class="text-aura-purple">%</span>
                   </div>
                   <div class="text-xs text-gray-500 uppercase tracking-wider">Retención de Clientes</div>
                 </div>
 
-                <div class="stat-card glass-panel rounded-2xl border border-white/8 p-8 text-center reveal reveal-d1">
+                <div class="stat-card glass-panel rounded-2xl border border-white/[0.08] p-8 text-center reveal reveal-d1">
                   <div class="stat-num text-4xl md:text-5xl font-bold text-white mb-2">
                     <span data-count="120">0</span><span class="text-aura-magenta">+</span>
                   </div>
                   <div class="text-xs text-gray-500 uppercase tracking-wider">Proyectos Entregados</div>
                 </div>
 
-                <div class="stat-card glass-panel rounded-2xl border border-white/8 p-8 text-center reveal reveal-d2">
+                <div class="stat-card glass-panel rounded-2xl border border-white/[0.08] p-8 text-center reveal reveal-d2">
                   <div class="stat-num text-4xl md:text-5xl font-bold text-white mb-2">
                     <span data-count="3">0</span><span class="text-aura-cyan">x</span>
                   </div>
                   <div class="text-xs text-gray-500 uppercase tracking-wider">Crecimiento de Tráfico</div>
                 </div>
 
-                <div class="stat-card glass-panel rounded-2xl border border-white/8 p-8 text-center reveal reveal-d3">
+                <div class="stat-card glass-panel rounded-2xl border border-white/[0.08] p-8 text-center reveal reveal-d3">
                   <div class="stat-num text-4xl md:text-5xl font-bold text-white mb-2">
                     7<span class="text-gray-500 text-3xl font-normal">días</span>
                   </div>
@@ -464,7 +444,7 @@ window.addEventListener('load', function () {
               <div class="text-center mb-20 reveal">
                 <div class="section-accent bg-gradient-to-r from-aura-purple to-aura-cyan mx-auto mb-6"></div>
                 <p class="text-aura-cyan text-sm font-bold uppercase tracking-widest mb-3">Lo que hacemos</p>
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">Servicios de Diseño Web<br><span class="grad-text">en Medellín</span></h2>
+                <h2 class="h2-section mb-4">Servicios de diseño web en Medellín</h2>
                 <p class="text-gray-400 max-w-2xl mx-auto text-lg">Diseño, desarrollo y SEO técnico para empresas que necesitan un sitio rápido, claro y listo para convertir visitas en clientes.</p>
               </div>
 
@@ -472,32 +452,32 @@ window.addEventListener('load', function () {
 
                 <!-- Card 1: Diseño -->
                 <div class="svc-card svc-card-top-purple glass-panel rounded-2xl p-8 group reveal">
-                  <div class="w-14 h-14 rounded-2xl bg-aura-purple/20 border border-aura-purple/30 flex items-center justify-center mb-6 text-aura-purple group-hover:scale-110 group-hover:icon-glow-purple transition-all duration-300">
+                  <div class="w-14 h-14 rounded-2xl bg-aura-purple/20 border border-aura-purple/30 flex items-center justify-center mb-6 text-aura-purple group-hover:scale-110 group-hover:icon-glow-purple transition duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path></svg>
                   </div>
-                  <h3 class="text-2xl font-bold mb-4 group-hover:text-aura-purple transition-colors">Diseño Web Vanguardista</h3>
+                  <h3 class="text-2xl font-bold mb-4 group-hover:text-aura-purple transition-colors">Diseño web vanguardista</h3>
                   <p class="text-gray-400 leading-relaxed mb-6">Creamos experiencias digitales inmersivas que capturan la esencia de tu marca y convierten visitantes en clientes. Cada píxel tiene un propósito.</p>
-                  <a href="/es/servicios.html" class="text-aura-purple text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">Ver servicio <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+                  <a href="/es/servicios.html" class="text-aura-purple text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition">Ver servicio <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
                 </div>
 
                 <!-- Card 2: Desarrollo (elevated) -->
                 <div class="svc-card svc-card-top-magenta glass-panel rounded-2xl p-8 group md:-translate-y-6 reveal reveal-d1">
-                  <div class="w-14 h-14 rounded-2xl bg-aura-magenta/20 border border-aura-magenta/30 flex items-center justify-center mb-6 text-aura-magenta group-hover:scale-110 transition-all duration-300">
+                  <div class="w-14 h-14 rounded-2xl bg-aura-magenta/20 border border-aura-magenta/30 flex items-center justify-center mb-6 text-aura-magenta group-hover:scale-110 transition duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6"></path><path d="m8 6-6 6 6 6"></path></svg>
                   </div>
-                  <h3 class="text-2xl font-bold mb-4 group-hover:text-aura-magenta transition-colors">Desarrollo Web a Medida</h3>
+                  <h3 class="text-2xl font-bold mb-4 group-hover:text-aura-magenta transition-colors">Desarrollo web a medida</h3>
                   <p class="text-gray-400 leading-relaxed mb-6">Construimos con tecnologías modernas. Sitios web rápidos, escalables y con animaciones de alta precisión. Cero plantillas genéricas.</p>
-                  <a href="/es/medellin/desarrollo-web-medellin.html" class="text-aura-magenta text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">Ver servicio <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+                  <a href="/es/medellin/desarrollo-web-medellin.html" class="text-aura-magenta text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition">Ver servicio <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
                 </div>
 
                 <!-- Card 3: SEO -->
                 <div class="svc-card svc-card-top-cyan glass-panel rounded-2xl p-8 group reveal reveal-d2">
-                  <div class="w-14 h-14 rounded-2xl bg-aura-cyan/15 border border-aura-cyan/25 flex items-center justify-center mb-6 text-aura-cyan group-hover:scale-110 transition-all duration-300">
+                  <div class="w-14 h-14 rounded-2xl bg-aura-cyan/15 border border-aura-cyan/25 flex items-center justify-center mb-6 text-aura-cyan group-hover:scale-110 transition duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h6v6"></path><path d="m22 7-8.5 8.5-5-5L2 17"></path></svg>
                   </div>
-                  <h3 class="text-2xl font-bold mb-4 group-hover:text-aura-cyan transition-colors">Posicionamiento SEO Técnico</h3>
+                  <h3 class="text-2xl font-bold mb-4 group-hover:text-aura-cyan transition-colors">Posicionamiento SEO técnico</h3>
                   <p class="text-gray-400 leading-relaxed mb-6">El SEO está integrado desde el inicio. Optimizamos estructura, velocidad y contenido para que cada página tenga una intención clara y medible.</p>
-                  <a href="/es/medellin/seo-local-medellin.html" class="text-aura-cyan text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">Ver servicio <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+                  <a href="/es/medellin/seo-local-medellin.html" class="text-aura-cyan text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition">Ver servicio <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
                 </div>
 
               </div>
@@ -509,12 +489,12 @@ window.addEventListener('load', function () {
           ══════════════════════════════════════════════ -->
           <section class="py-28 relative z-10 overflow-hidden">
             <div class="hero-orb float-a parallax-med w-80 h-80 bg-aura-cyan/10 top-[5%] left-[-6%]"></div>
-            <div class="absolute inset-0 bg-gradient-to-b from-aura-purple/4 via-transparent to-transparent pointer-events-none"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-aura-purple/[0.04] via-transparent to-transparent pointer-events-none"></div>
             <div class="container mx-auto px-6">
               <div class="text-center mb-20 reveal">
                 <div class="section-accent bg-gradient-to-r from-aura-magenta to-aura-purple mx-auto mb-6"></div>
                 <p class="text-aura-purple text-sm font-bold uppercase tracking-widest mb-3">Nuestro proceso</p>
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">Así trabajamos</h2>
+                <h2 class="h2-section mb-4">Así trabajamos</h2>
                 <p class="text-gray-400 max-w-xl mx-auto">De la primera llamada al lanzamiento: un proceso claro, sin sorpresas y con comunicación en cada etapa.</p>
               </div>
 
@@ -547,7 +527,7 @@ window.addEventListener('load', function () {
 
           <!-- Parallax divider -->
           <div class="relative py-4 overflow-hidden pointer-events-none">
-            <div class="hero-orb parallax-fast w-72 h-72 bg-aura-purple/12 top-[-100%] left-[40%]"></div>
+            <div class="hero-orb parallax-fast w-72 h-72 bg-aura-purple/[0.12] top-[-100%] left-[40%]"></div>
             <div class="glow-line"></div>
           </div>
 
@@ -560,9 +540,9 @@ window.addEventListener('load', function () {
                 <div class="reveal">
                   <div class="section-accent bg-aura-purple mb-4"></div>
                   <p class="text-aura-purple text-sm font-bold uppercase tracking-widest mb-3">Nuestro trabajo</p>
-                  <h2 class="text-4xl md:text-5xl font-bold">
-                    Proyectos <span class="grad-text-warm">Destacados</span>
-                  </h2>
+                  <h2 class="h2-section">
+ Proyectos destacados
+ </h2>
                   <p class="text-gray-400 mt-3">Un vistazo a nuestro trabajo en diseño y desarrollo web.</p>
                 </div>
                 <a class="hidden md:flex items-center gap-2 text-aura-purple hover:text-white transition-colors font-semibold reveal" href="/es/portafolio.html">
@@ -574,55 +554,55 @@ window.addEventListener('load', function () {
               <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
                 <!-- Project 1: Neato -->
-                <div class="portfolio-card group relative rounded-3xl overflow-hidden border border-white/5 hover:border-aura-purple/40 transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_24px_60px_rgba(0,0,0,0.5),0_0_40px_rgba(124,58,237,0.1)] reveal">
+                <div class="portfolio-card group relative rounded-3xl overflow-hidden border border-white/5 hover:border-aura-purple/40 transition duration-500 hover:-translate-y-3 hover:shadow-[0_24px_60px_rgba(0,0,0,0.5),0_0_40px_rgba(124,58,237,0.1)] reveal">
                   <div class="aspect-[4/3] overflow-hidden">
-                    <div class="absolute inset-0 bg-aura-purple/10 mix-blend-overlay z-10 group-hover:bg-transparent transition-all duration-500"></div>
+                    <div class="absolute inset-0 bg-aura-purple/10 mix-blend-overlay z-10 group-hover:bg-transparent transition duration-500"></div>
                     <img decoding="async" src="/assets/images/optimized/neato-800.webp" srcset="/assets/images/optimized/neato-480.webp 480w, /assets/images/optimized/neato-800.webp 800w, /assets/images/optimized/neato-1200.webp 1200w" sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 520px" alt="Neato Handyman App - Desarrollo Web y Apps en Medellín" width="1600" height="1200" loading="lazy" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out grayscale group-hover:grayscale-0" />
                   </div>
                   <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black via-black/80 to-transparent pt-20 z-20">
                     <div class="flex justify-between items-end">
                       <div>
                         <p class="text-aura-magenta text-xs font-bold tracking-wider mb-2 uppercase">Servicio On-Demand</p>
-                        <h3 class="text-2xl font-bold text-white mb-1 group-hover:text-glow transition-all">Neato Handyman App</h3>
+                        <h3 class="text-2xl font-bold text-white mb-1 group-hover:text-glow transition">Neato Handyman App</h3>
                         <p class="text-gray-400 text-sm opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-20 transition-all duration-500 delay-100 overflow-hidden">
                           Plataforma móvil completa para servicios de mantenimiento bajo demanda, diseñada para una experiencia de usuario impecable.
                         </p>
                       </div>
-                      <div class="p-3 rounded-full bg-white/10 group-hover:bg-aura-purple text-white transition-all duration-300 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 flex-shrink-0 ml-4">
+                      <div class="p-3 rounded-full bg-white/10 group-hover:bg-aura-purple text-white transition duration-300 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 flex-shrink-0 ml-4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
                       </div>
                     </div>
                     <div class="flex flex-wrap gap-2 mt-4 opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-12 transition-all duration-500 delay-200 overflow-hidden">
-                      <span class="text-xs px-2.5 py-1 rounded-full bg-white/8 border border-white/12 text-gray-300">React Native</span>
-                      <span class="text-xs px-2.5 py-1 rounded-full bg-white/8 border border-white/12 text-gray-300">Móvil</span>
-                      <span class="text-xs px-2.5 py-1 rounded-full bg-white/8 border border-white/12 text-gray-300">UI/UX</span>
+                      <span class="text-xs px-2.5 py-1 rounded-full bg-white/[0.08] border border-white/[0.12] text-gray-300">React Native</span>
+                      <span class="text-xs px-2.5 py-1 rounded-full bg-white/[0.08] border border-white/[0.12] text-gray-300">Móvil</span>
+                      <span class="text-xs px-2.5 py-1 rounded-full bg-white/[0.08] border border-white/[0.12] text-gray-300">UI/UX</span>
                     </div>
                   </div>
                 </div>
 
                 <!-- Project 2: SunVault Solar -->
-                <div class="portfolio-card group relative rounded-3xl overflow-hidden border border-white/5 hover:border-aura-cyan/40 transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_24px_60px_rgba(0,0,0,0.5),0_0_40px_rgba(6,182,212,0.08)] reveal reveal-d1">
+                <div class="portfolio-card group relative rounded-3xl overflow-hidden border border-white/5 hover:border-aura-cyan/40 transition duration-500 hover:-translate-y-3 hover:shadow-[0_24px_60px_rgba(0,0,0,0.5),0_0_40px_rgba(6,182,212,0.08)] reveal reveal-d1">
                   <div class="aspect-[4/3] overflow-hidden">
-                    <div class="absolute inset-0 bg-aura-purple/10 mix-blend-overlay z-10 group-hover:bg-transparent transition-all duration-500"></div>
+                    <div class="absolute inset-0 bg-aura-purple/10 mix-blend-overlay z-10 group-hover:bg-transparent transition duration-500"></div>
                     <img decoding="async" src="/assets/images/optimized/solar-800.webp" srcset="/assets/images/optimized/solar-480.webp 480w, /assets/images/optimized/solar-800.webp 800w, /assets/images/optimized/solar-1024.webp 1024w" sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 520px" alt="SunVault Solar - Diseño Web Interactivo" width="1024" height="768" loading="lazy" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out grayscale group-hover:grayscale-0" />
                   </div>
                   <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black via-black/80 to-transparent pt-20 z-20">
                     <div class="flex justify-between items-end">
                       <div>
                         <p class="text-aura-cyan text-xs font-bold tracking-wider mb-2 uppercase">Tecnología Energética</p>
-                        <h3 class="text-2xl font-bold text-white mb-1 group-hover:text-glow transition-all">SunVault Solar</h3>
+                        <h3 class="text-2xl font-bold text-white mb-1 group-hover:text-glow transition">SunVault Solar</h3>
                         <p class="text-gray-400 text-sm opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-20 transition-all duration-500 delay-100 overflow-hidden">
                           Interfaz de gestión de energía solar con visualización 3D de la casa, monitoreo de baterías y seguimiento de eficiencia.
                         </p>
                       </div>
-                      <div class="p-3 rounded-full bg-white/10 group-hover:bg-aura-cyan text-white transition-all duration-300 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 flex-shrink-0 ml-4">
+                      <div class="p-3 rounded-full bg-white/10 group-hover:bg-aura-cyan text-white transition duration-300 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 flex-shrink-0 ml-4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
                       </div>
                     </div>
                     <div class="flex flex-wrap gap-2 mt-4 opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-12 transition-all duration-500 delay-200 overflow-hidden">
-                      <span class="text-xs px-2.5 py-1 rounded-full bg-white/8 border border-white/12 text-gray-300">Branding</span>
-                      <span class="text-xs px-2.5 py-1 rounded-full bg-white/8 border border-white/12 text-gray-300">E-commerce</span>
-                      <span class="text-xs px-2.5 py-1 rounded-full bg-white/8 border border-white/12 text-gray-300">Experiencia</span>
+                      <span class="text-xs px-2.5 py-1 rounded-full bg-white/[0.08] border border-white/[0.12] text-gray-300">Branding</span>
+                      <span class="text-xs px-2.5 py-1 rounded-full bg-white/[0.08] border border-white/[0.12] text-gray-300">E-commerce</span>
+                      <span class="text-xs px-2.5 py-1 rounded-full bg-white/[0.08] border border-white/[0.12] text-gray-300">Experiencia</span>
                     </div>
                   </div>
                 </div>
@@ -640,7 +620,7 @@ window.addEventListener('load', function () {
 
           <!-- Parallax divider -->
           <div class="relative py-6 overflow-hidden pointer-events-none">
-            <div class="hero-orb parallax-med w-96 h-96 bg-aura-magenta/8 top-[-100%] right-[20%]"></div>
+            <div class="hero-orb parallax-med w-96 h-96 bg-aura-magenta/[0.08] top-[-100%] right-[20%]"></div>
             <div class="glow-line" style="background:linear-gradient(90deg,transparent,rgba(192,38,211,0.4),rgba(6,182,212,0.3),transparent);"></div>
           </div>
 
@@ -652,7 +632,7 @@ window.addEventListener('load', function () {
               <div class="text-center mb-16 reveal">
                 <div class="section-accent bg-gradient-to-r from-aura-cyan to-aura-magenta mx-auto mb-6"></div>
                 <p class="text-aura-magenta text-sm font-bold uppercase tracking-widest mb-3">Clientes</p>
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">Lo que dicen<br><span class="grad-text">nuestros clientes</span></h2>
+                <h2 class="h2-section mb-4">Lo que dicen nuestros clientes</h2>
                 <a href="https://share.google/Fkr1ktjHatnBFGnVD" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-3 glass-panel rounded-full border border-white/10 px-5 py-2.5 hover:border-aura-purple/50 transition-colors">
                   <span class="text-2xl font-extrabold text-white leading-none">5,0</span>
                   <span class="text-amber-400 tracking-tight" aria-hidden="true">★★★★★</span>
@@ -711,18 +691,18 @@ window.addEventListener('load', function () {
           ══════════════════════════════════════════════ -->
           <section class="py-28 relative z-10 overflow-hidden">
             <div class="hero-orb float-b parallax-slow w-[500px] h-[500px] bg-aura-purple/10 top-[5%] left-[30%]"></div>
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-aura-purple/3 to-transparent pointer-events-none"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-aura-purple/[0.03] to-transparent pointer-events-none"></div>
             <div class="container mx-auto px-6 relative z-10">
               <div class="max-w-5xl mx-auto">
                 <div class="text-center mb-16 reveal">
                   <span class="inline-flex items-center justify-center rounded-full bg-aura-purple/10 text-aura-purple text-xs font-bold px-4 py-2 mb-4 border border-aura-purple/20 uppercase tracking-wider">Servicios en Medellín</span>
-                  <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Diseño web para empresas<br><span class="grad-text">de Medellín</span></h2>
+                  <h2 class="h2-section text-white mb-4">Diseño web para empresas de Medellín</h2>
                   <p class="text-gray-400 text-lg max-w-xl mx-auto">Páginas optimizadas para negocios locales, landing pages, SEO y rediseños con enfoque en resultados reales.</p>
                 </div>
 
                 <div class="grid gap-5 md:grid-cols-3">
 
-                  <a href="/es/medellin/desarrollo-web-medellin.html" class="cluster-link group glass-panel block rounded-2xl border border-white/10 p-7 hover:border-aura-purple/35 hover:bg-aura-purple/8 reveal">
+                  <a href="/es/medellin/desarrollo-web-medellin.html" class="cluster-link group glass-panel block rounded-2xl border border-white/10 p-7 hover:border-aura-purple/35 hover:bg-aura-purple/[0.08] reveal">
                     <div class="w-10 h-10 rounded-xl bg-aura-purple/15 border border-aura-purple/25 flex items-center justify-center mb-4 text-aura-purple group-hover:scale-110 transition-transform">
                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 18 6-6-6-6"></path><path d="m8 6-6 6 6 6"></path></svg>
                     </div>
@@ -730,8 +710,8 @@ window.addEventListener('load', function () {
                     <p class="text-gray-400 text-sm">Sitios a medida con rendimiento, SEO y experiencia local.</p>
                   </a>
 
-                  <a href="/es/medellin/landing-pages-medellin.html" class="cluster-link group glass-panel block rounded-2xl border border-white/10 p-7 hover:border-aura-magenta/35 hover:bg-aura-magenta/6 reveal reveal-d1">
-                    <div class="w-10 h-10 rounded-xl bg-aura-magenta/12 border border-aura-magenta/20 flex items-center justify-center mb-4 text-aura-magenta group-hover:scale-110 transition-transform">
+                  <a href="/es/medellin/landing-pages-medellin.html" class="cluster-link group glass-panel block rounded-2xl border border-white/10 p-7 hover:border-aura-magenta/35 hover:bg-aura-magenta/[0.06] reveal reveal-d1">
+                    <div class="w-10 h-10 rounded-xl bg-aura-magenta/[0.12] border border-aura-magenta/20 flex items-center justify-center mb-4 text-aura-magenta group-hover:scale-110 transition-transform">
                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path></svg>
                     </div>
                     <h3 class="text-lg font-bold text-white mb-2 group-hover:text-aura-magenta transition-colors">Landing Pages Medellín</h3>
@@ -739,14 +719,14 @@ window.addEventListener('load', function () {
                   </a>
 
                   <a href="/es/medellin/seo-local-medellin.html" class="cluster-link group glass-panel block rounded-2xl border border-white/10 p-7 hover:border-aura-cyan/30 hover:bg-aura-cyan/5 reveal reveal-d2">
-                    <div class="w-10 h-10 rounded-xl bg-aura-cyan/12 border border-aura-cyan/20 flex items-center justify-center mb-4 text-aura-cyan group-hover:scale-110 transition-transform">
+                    <div class="w-10 h-10 rounded-xl bg-aura-cyan/[0.12] border border-aura-cyan/20 flex items-center justify-center mb-4 text-aura-cyan group-hover:scale-110 transition-transform">
                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 7h6v6"></path><path d="m22 7-8.5 8.5-5-5L2 17"></path></svg>
                     </div>
                     <h3 class="text-lg font-bold text-white mb-2 group-hover:text-aura-cyan transition-colors">SEO Local Medellín</h3>
                     <p class="text-gray-400 text-sm">Mejora tu visibilidad en búsquedas de servicios locales en Medellín.</p>
                   </a>
 
-                  <a href="/es/medellin/mantenimiento-web-medellin.html" class="cluster-link group glass-panel block rounded-2xl border border-white/10 p-7 hover:border-aura-purple/35 hover:bg-aura-purple/8 reveal reveal-d1">
+                  <a href="/es/medellin/mantenimiento-web-medellin.html" class="cluster-link group glass-panel block rounded-2xl border border-white/10 p-7 hover:border-aura-purple/35 hover:bg-aura-purple/[0.08] reveal reveal-d1">
                     <div class="w-10 h-10 rounded-xl bg-aura-purple/15 border border-aura-purple/25 flex items-center justify-center mb-4 text-aura-purple group-hover:scale-110 transition-transform">
                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
                     </div>
@@ -754,8 +734,8 @@ window.addEventListener('load', function () {
                     <p class="text-gray-400 text-sm">Soporte, seguridad y actualizaciones para tu sitio en Medellín.</p>
                   </a>
 
-                  <a href="/es/medellin/redisenio-web-medellin.html" class="cluster-link group glass-panel block rounded-2xl border border-white/10 p-7 hover:border-aura-magenta/35 hover:bg-aura-magenta/6 reveal reveal-d2">
-                    <div class="w-10 h-10 rounded-xl bg-aura-magenta/12 border border-aura-magenta/20 flex items-center justify-center mb-4 text-aura-magenta group-hover:scale-110 transition-transform">
+                  <a href="/es/medellin/redisenio-web-medellin.html" class="cluster-link group glass-panel block rounded-2xl border border-white/10 p-7 hover:border-aura-magenta/35 hover:bg-aura-magenta/[0.06] reveal reveal-d2">
+                    <div class="w-10 h-10 rounded-xl bg-aura-magenta/[0.12] border border-aura-magenta/20 flex items-center justify-center mb-4 text-aura-magenta group-hover:scale-110 transition-transform">
                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"></path><path d="M16 16h5v5"></path></svg>
                     </div>
                     <h3 class="text-lg font-bold text-white mb-2 group-hover:text-aura-magenta transition-colors">Rediseño Web Medellín</h3>
@@ -763,7 +743,7 @@ window.addEventListener('load', function () {
                   </a>
 
                   <a href="/es/medellin/cuanto-cuesta-pagina-web-medellin.html" class="cluster-link group glass-panel block rounded-2xl border border-white/10 p-7 hover:border-aura-cyan/30 hover:bg-aura-cyan/5 reveal reveal-d3">
-                    <div class="w-10 h-10 rounded-xl bg-aura-cyan/12 border border-aura-cyan/20 flex items-center justify-center mb-4 text-aura-cyan group-hover:scale-110 transition-transform">
+                    <div class="w-10 h-10 rounded-xl bg-aura-cyan/[0.12] border border-aura-cyan/20 flex items-center justify-center mb-4 text-aura-cyan group-hover:scale-110 transition-transform">
                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" x2="12" y1="2" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
                     </div>
                     <h3 class="text-lg font-bold text-white mb-2 group-hover:text-aura-cyan transition-colors">Costo de una página web</h3>
@@ -777,7 +757,7 @@ window.addEventListener('load', function () {
 
           <!-- Parallax divider -->
           <div class="relative py-4 overflow-hidden pointer-events-none">
-            <div class="hero-orb parallax-slow w-80 h-80 bg-aura-cyan/8 top-[-80%] left-[25%]"></div>
+            <div class="hero-orb parallax-slow w-80 h-80 bg-aura-cyan/[0.08] top-[-80%] left-[25%]"></div>
             <div class="glow-line" style="background:linear-gradient(90deg,transparent,rgba(6,182,212,0.4),rgba(124,58,237,0.4),transparent);"></div>
           </div>
 
@@ -785,35 +765,34 @@ window.addEventListener('load', function () {
                FINAL CTA — big impact section
           ══════════════════════════════════════════════ -->
           <section class="py-36 relative overflow-hidden">
-            <div class="hero-orb float-a parallax-slow w-[700px] h-[700px] bg-aura-purple/14 top-[-30%] left-[15%]"></div>
-            <div class="hero-orb float-b parallax-med  w-[400px] h-[400px] bg-aura-magenta/10 bottom-[-15%] right-[8%]"></div>
+            <div class="hero-orb float-a parallax-slow w-[700px] h-[700px] bg-aura-purple/[0.14] top-[-30%] left-[15%]"></div>
+            <div class="hero-orb float-b parallax-med w-[400px] h-[400px] bg-aura-magenta/10 bottom-[-15%] right-[8%]"></div>
             <div class="hero-orb float-c parallax-fast w-[250px] h-[250px] bg-aura-cyan/10 top-[20%] right-[-5%]"></div>
 
             <!-- Spinning decorative ring -->
-            <div class="deco-ring border-aura-purple/8 w-[800px] h-[800px] top-1/2 left-1/2 pointer-events-none" style="margin-top:-400px;margin-left:-400px;"></div>
 
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-aura-purple/6 to-aura-magenta/6 pointer-events-none"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-aura-purple/[0.06] to-aura-magenta/[0.06] pointer-events-none"></div>
             <div class="absolute inset-0 hero-grid opacity-50 pointer-events-none"></div>
 
             <div class="container mx-auto px-6 relative z-10 text-center">
               <span class="inline-flex items-center rounded-full bg-aura-purple/10 text-aura-purple text-sm font-bold px-5 py-2 mb-8 border border-aura-purple/20 uppercase tracking-wider">AuraWebs · Medellín, Colombia</span>
-              <h2 class="text-5xl md:text-7xl font-bold mb-8 leading-tight">
-                Impulsa tu
-                <span class="grad-text block">Presencia Digital</span>
-              </h2>
+              <h2 class="h2-section mb-8">
+ Impulsa tu
+ presencia digital
+ </h2>
               <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-14 leading-relaxed">
                 Transformemos tu presencia online en un activo poderoso. Escríbenos con una descripción breve de tu proyecto y te respondemos en menos de 24 horas con un estimado claro.
               </p>
 
               <!-- CTA buttons -->
               <div class="flex flex-col sm:flex-row justify-center items-center gap-5">
-                <a class="w-full sm:w-auto flex items-center justify-center gap-3 px-10 py-5 rounded-full bg-green-600 hover:bg-green-500 text-white font-bold text-lg hover:shadow-[0_0_40px_rgba(34,197,94,0.4)] hover:-translate-y-2 transition-all duration-300"
+                <a class="btn-wa w-full sm:w-auto flex px-10 py-5 text-lg"
                    href="https://wa.me/573217466755?text=Hola%20AuraWebs%2C%20quiero%20cotizar%20un%20proyecto.%20(Vengo%20de%3A%20Agencia%20de%20Dise%C3%B1o%20y%20Desarrollo%20Web)" target="_blank" rel="noopener noreferrer">
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
-                  Agenda tu Consultoría por WhatsApp
+                  Cotiza gratis por WhatsApp
                 </a>
-                <a class="w-full sm:w-auto px-10 py-5 rounded-full glass-panel border border-white/20 hover:border-aura-purple/50 text-white font-bold text-lg hover:-translate-y-2 transition-all duration-300 text-center"
-                   href="/es/contacto.html">Comenzar Proyecto</a>
+                <a class="w-full sm:w-auto px-10 py-5 rounded-full glass-panel border border-white/20 hover:border-aura-purple/50 text-white font-bold text-lg hover:-translate-y-2 transition duration-300 text-center"
+                   href="/es/contacto.html">Comenzar proyecto</a>
               </div>
 
               <!-- Bottom trust bar -->
@@ -863,6 +842,7 @@ window.addEventListener('load', function () {
           <li><a href="/es/medellin/redisenio-web-medellin.html">Rediseño web</a></li>
           <li><a href="/es/medellin/mantenimiento-web-medellin.html">Mantenimiento web</a></li>
           <li><a href="/es/bogota.html">Diseño web en Bogotá</a></li>
+          <li><a href="/es/medellin/index.html">Servicios en Medellín</a></li>
           <li><a href="/es/servicios.html">Todos los servicios</a></li>
         </ul>
       </nav>

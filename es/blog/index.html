@@ -333,7 +333,7 @@ window.addEventListener('load', function () {
               </div>
 
               <!-- H1 -->
-              <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight tracking-tight">
+              <h1 class="h1-page mb-6">
                 <span class="text-white block">Conocimiento</span>
                 <span class="grad-text block">que posiciona</span>
               </h1>
@@ -380,9 +380,9 @@ window.addEventListener('load', function () {
                   <!-- Visual panel -->
                   <div class="md:w-[42%] min-h-[260px] md:min-h-0 relative overflow-hidden flex-shrink-0 card-top-purple">
                     <!-- Decorative ring -->
-                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full border border-aura-purple/30 group-hover:border-aura-purple/60 transition-all duration-700"></div>
-                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full border border-white/5 group-hover:border-white/10 transition-all duration-700" style="animation-delay:0.5s"></div>
-                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full border border-aura-magenta/10 group-hover:border-aura-magenta/20 transition-all duration-700" style="animation-delay:1s"></div>
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full border border-aura-purple/30 group-hover:border-aura-purple/60 transition duration-700"></div>
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full border border-white/5 group-hover:border-white/10 transition duration-700" style="animation-delay:0.5s"></div>
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full border border-aura-magenta/10 group-hover:border-aura-magenta/20 transition duration-700" style="animation-delay:1s"></div>
                     <!-- Center icon -->
                     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-2xl bg-aura-purple/20 border border-aura-purple/30 flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform duration-500">
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-aura-purple"><rect width="20" height="14" x="2" y="3" rx="2"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg>
@@ -685,11 +685,11 @@ window.addEventListener('load', function () {
               <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">¿Buscas el servicio, no solo la guía?</h2>
               <p class="text-gray-400 max-w-xl mx-auto mb-8">Diseñamos páginas web profesionales para negocios en Medellín con SEO técnico incluido y entrega en 7–14 días.</p>
               <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="https://wa.me/573217466755?text=Hola%20AuraWebs%2C%20quiero%20cotizar%20un%20proyecto.%20(Vengo%20de%3A%20Blog%20AuraWebs%20%E2%80%94%20Dise%C3%B1o%20Web%20y%20SEO%20en%20Medell%C3%ADn)" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-green-600 hover:bg-green-500 text-white font-bold transition-all hover:shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:-translate-y-1">
+                <a href="https://wa.me/573217466755?text=Hola%20AuraWebs%2C%20quiero%20cotizar%20un%20proyecto.%20(Vengo%20de%3A%20Blog%20AuraWebs%20%E2%80%94%20Dise%C3%B1o%20Web%20y%20SEO%20en%20Medell%C3%ADn)" target="_blank" rel="noopener noreferrer" class="btn-wa inline-flex px-8 py-4">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
                   WhatsApp: +57 321 746 6755
                 </a>
-                <a href="/es/medellin.html" class="inline-flex items-center justify-center px-8 py-4 rounded-full glass-panel border border-white/20 hover:bg-white/10 text-white font-bold transition-all">
+                <a href="/es/medellin.html" class="inline-flex items-center justify-center px-8 py-4 rounded-full glass-panel border border-white/20 hover:bg-white/10 text-white font-bold transition">
                   Ver diseño web Medellín →
                 </a>
               </div>
@@ -702,23 +702,22 @@ window.addEventListener('load', function () {
             <div class="absolute inset-0 bg-gradient-to-b from-transparent via-aura-purple/5 to-aura-magenta/5 pointer-events-none"></div>
             <!-- Parallax orbs -->
             <div class="hero-orb parallax-slow w-96 h-96 bg-aura-purple/15 top-[-20%] left-[30%]"></div>
-            <div class="hero-orb hero-orb-3 parallax-fast w-72 h-72 bg-aura-magenta/12 bottom-[-10%] right-[20%]"></div>
+            <div class="hero-orb hero-orb-3 parallax-fast w-72 h-72 bg-aura-magenta/[0.12] bottom-[-10%] right-[20%]"></div>
 
             <div class="container mx-auto px-6 relative z-10 text-center">
               <span class="inline-flex items-center rounded-full badge-purple text-sm font-semibold px-4 py-2 mb-6">AuraWebs · Medellín</span>
-              <h2 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                ¿Listo para tener una web que<br>
-                <span class="grad-text">realmente funcione?</span>
-              </h2>
+              <h2 class="h2-section mb-6">
+ ¿Listo para tener una web que realmente funcione?
+ </h2>
               <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed">
                 Diseño personalizado · SEO técnico incluido · Entrega 7–14 días · 30 días de soporte sin costo
               </p>
               <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="https://wa.me/573217466755?text=Hola%20AuraWebs%2C%20quiero%20cotizar%20un%20proyecto.%20(Vengo%20de%3A%20Blog%20AuraWebs%20%E2%80%94%20Dise%C3%B1o%20Web%20y%20SEO%20en%20Medell%C3%ADn)" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-5 rounded-full bg-gradient-to-r from-aura-purple to-aura-magenta text-white font-bold text-lg hover:shadow-[0_0_40px_rgba(124,58,237,0.45)] hover:-translate-y-1 transition-all duration-300">
+                <a href="https://wa.me/573217466755?text=Hola%20AuraWebs%2C%20quiero%20cotizar%20un%20proyecto.%20(Vengo%20de%3A%20Blog%20AuraWebs%20%E2%80%94%20Dise%C3%B1o%20Web%20y%20SEO%20en%20Medell%C3%ADn)" target="_blank" rel="noopener noreferrer" class="btn-wa w-full sm:w-auto inline-flex px-10 py-5 text-lg">
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
-                  Escribir por WhatsApp
+                  Cotiza gratis por WhatsApp
                 </a>
-                <a href="/es/contacto.html" class="w-full sm:w-auto inline-flex items-center justify-center px-10 py-5 rounded-full glass-panel border border-white/20 hover:border-aura-purple/40 text-white font-bold text-lg transition-all duration-300">
+                <a href="/es/contacto.html" class="w-full sm:w-auto inline-flex items-center justify-center px-10 py-5 rounded-full glass-panel border border-white/20 hover:border-aura-purple/40 text-white font-bold text-lg transition duration-300">
                   Formulario de contacto
                 </a>
               </div>
@@ -759,6 +758,7 @@ window.addEventListener('load', function () {
           <li><a href="/es/medellin/redisenio-web-medellin.html">Rediseño web</a></li>
           <li><a href="/es/medellin/mantenimiento-web-medellin.html">Mantenimiento web</a></li>
           <li><a href="/es/bogota.html">Diseño web en Bogotá</a></li>
+          <li><a href="/es/medellin/index.html">Servicios en Medellín</a></li>
           <li><a href="/es/servicios.html">Todos los servicios</a></li>
         </ul>
       </nav>

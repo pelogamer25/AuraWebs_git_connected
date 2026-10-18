@@ -140,7 +140,7 @@ window.addEventListener('load', function () {
       .badge-cyan   { background: rgba(6,182,212,0.12); color: #67e8f9; border: 1px solid rgba(6,182,212,0.25); }
       .badge-magenta{ background: rgba(192,38,211,0.12); color: #f0abfc; border: 1px solid rgba(192,38,211,0.25); }
       #toc { position: sticky; top: 100px; }
-      #toc a { display: block; padding: 6px 0 6px 12px; border-left: 2px solid transparent; color: #9ca3af; font-size: 0.85rem; transition: all 0.2s ease; text-decoration: none; line-height: 1.4; }
+      #toc a { display: block; padding: 6px 0 6px 12px; border-left: 2px solid transparent; color: #9ca3af; font-size: 0.85rem; transition: 0.2s ease; transition-property: color, background-color, border-color, opacity, box-shadow, transform, filter; text-decoration: none; line-height: 1.4; }
       #toc a:hover { color: #e5e7eb; border-left-color: rgba(124,58,237,0.5); }
       #toc a.active { color: #a78bfa; border-left-color: #7c3aed; font-weight: 600; }
       .prose-section { border-left: 3px solid rgba(124,58,237,0.2); padding-left: 1.5rem; margin-bottom: 2.5rem; }
@@ -148,9 +148,9 @@ window.addEventListener('load', function () {
       .info-card { background: rgba(124,58,237,0.06); border: 1px solid rgba(124,58,237,0.2); border-radius: 16px; padding: 1.5rem; }
       .tip-card  { background: rgba(6,182,212,0.06); border: 1px solid rgba(6,182,212,0.2); border-radius: 16px; padding: 1.5rem; }
       .warn-card { background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.2); border-radius: 16px; padding: 1.5rem; }
-      .faq-item { border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 1.5rem; transition: all 0.3s ease; background: rgba(255,255,255,0.02); }
+      .faq-item { border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 1.5rem; transition: 0.3s ease; transition-property: color, background-color, border-color, opacity, box-shadow, transform, filter; background: rgba(255,255,255,0.02); }
       .faq-item:hover { border-color: rgba(124,58,237,0.25); background: rgba(124,58,237,0.05); }
-      .tech-card { border-radius: 16px; padding: 1.25rem; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.02); transition: all 0.3s ease; }
+      .tech-card { border-radius: 16px; padding: 1.25rem; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.02); transition: 0.3s ease; transition-property: color, background-color, border-color, opacity, box-shadow, transform, filter; }
       .tech-card:hover { border-color: rgba(124,58,237,0.3); background: rgba(124,58,237,0.05); }
       .trend-card { background: rgba(124,58,237,0.04); border: 1px solid rgba(124,58,237,0.15); border-radius: 14px; padding: 1rem 1.25rem; }
     </style>
@@ -265,8 +265,8 @@ window.addEventListener('load', function () {
 
           <!-- Hero -->
           <section class="relative min-h-[60vh] flex items-center overflow-hidden py-16">
-            <div class="hero-orb parallax-slow w-96 h-96 bg-aura-purple/22 top-[-5%] left-[-8%]"></div>
-            <div class="hero-orb hero-orb-2 parallax-med w-80 h-80 bg-aura-cyan/18 bottom-[5%] right-[-5%]"></div>
+            <div class="hero-orb parallax-slow w-96 h-96 bg-aura-purple/[0.22] top-[-5%] left-[-8%]"></div>
+            <div class="hero-orb hero-orb-2 parallax-med w-80 h-80 bg-aura-cyan/[0.18] bottom-[5%] right-[-5%]"></div>
             <div class="hero-orb hero-orb-3 parallax-fast w-56 h-56 bg-aura-magenta/15 top-[30%] right-[20%]"></div>
             <div class="float-dot parallax-slow w-3 h-3 bg-aura-purple top-[20%] left-[15%]" style="animation-delay:0s"></div>
             <div class="float-dot parallax-med w-2 h-2 bg-aura-cyan top-[60%] left-[8%]" style="animation-delay:1.5s"></div>
@@ -287,9 +287,9 @@ window.addEventListener('load', function () {
                 </span>
                 <span class="text-xs text-gray-500">· 11 min lectura</span>
               </div>
-              <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight tracking-tight">
-                <span class="text-white block">Desarrollo Web en Medellín</span>
-                <span class="grad-text-purple block">para Empresas y Pymes</span>
+              <h1 class="h1-page mb-6">
+                <span class="text-white block">Desarrollo web en Medellín</span>
+                <span class="grad-text-purple block">para empresas y pymes</span>
               </h1>
               <p class="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed mb-8">
                 Qué tecnologías usar, cuánto cuesta el desarrollo a medida en Colombia, cómo elegir el proveedor correcto y las tendencias de 2026 que afectan a negocios locales.
@@ -327,8 +327,8 @@ window.addEventListener('load', function () {
                       </nav>
                       <div class="mt-6 pt-6 border-t border-white/10">
                         <p class="text-xs text-gray-500 mb-3">¿Tienes un proyecto en mente?</p>
-                        <a href="https://wa.me/573217466755?text=Hola%20AuraWebs%2C%20quiero%20cotizar%20un%20proyecto.%20(Vengo%20de%3A%20Desarrollo%20Web%20en%20Medell%C3%ADn%20para%20Empresas%20y%20Pymes%202026)" target="_blank" rel="noopener noreferrer" class="block text-center py-2.5 rounded-xl bg-gradient-to-r from-aura-purple to-aura-magenta text-white font-bold text-sm hover:shadow-[0_0_20px_rgba(124,58,237,0.4)] transition-all">
-                          Hablar con un experto →
+                        <a href="https://wa.me/573217466755?text=Hola%20AuraWebs%2C%20quiero%20cotizar%20un%20proyecto.%20(Vengo%20de%3A%20Desarrollo%20Web%20en%20Medell%C3%ADn%20para%20Empresas%20y%20Pymes%202026)" target="_blank" rel="noopener noreferrer" class="btn-wa block py-2.5 text-sm">
+                          Cotiza gratis por WhatsApp
                         </a>
                       </div>
                     </div>
@@ -667,11 +667,11 @@ window.addEventListener('load', function () {
                         AuraWebs desarrolla sitios web a medida con React, Tailwind CSS y hosting en CDN global. SEO técnico y Core Web Vitals perfectos incluidos. Entrega en 7–14 días hábiles para sitios corporativos.
                       </p>
                       <div class="flex flex-col sm:flex-row gap-3">
-                        <a href="https://wa.me/573217466755?text=Hola%20AuraWebs%2C%20quiero%20cotizar%20un%20proyecto.%20(Vengo%20de%3A%20Desarrollo%20Web%20en%20Medell%C3%ADn%20para%20Empresas%20y%20Pymes%202026)" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-aura-purple to-aura-magenta text-white font-bold text-sm hover:shadow-[0_0_20px_rgba(124,58,237,0.4)] hover:-translate-y-0.5 transition-all">
+                        <a href="https://wa.me/573217466755?text=Hola%20AuraWebs%2C%20quiero%20cotizar%20un%20proyecto.%20(Vengo%20de%3A%20Desarrollo%20Web%20en%20Medell%C3%ADn%20para%20Empresas%20y%20Pymes%202026)" target="_blank" rel="noopener noreferrer" class="btn-wa inline-flex px-6 py-3 text-sm">
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
-                          Hablar por WhatsApp
+                          Cotiza gratis por WhatsApp
                         </a>
-                        <a href="/es/medellin/desarrollo-web-medellin.html" class="inline-flex items-center justify-center px-6 py-3 rounded-full glass-panel border border-white/20 text-white font-bold text-sm hover:border-aura-purple/40 transition-all">
+                        <a href="/es/medellin/desarrollo-web-medellin.html" class="inline-flex items-center justify-center px-6 py-3 rounded-full glass-panel border border-white/20 text-white font-bold text-sm hover:border-aura-purple/40 transition">
                           Ver servicio desarrollo web →
                         </a>
                       </div>
@@ -739,19 +739,18 @@ window.addEventListener('load', function () {
             <div class="hero-orb parallax-slow w-96 h-96 bg-aura-purple/15 top-[-20%] left-[30%]"></div>
             <div class="container mx-auto px-6 relative z-10 text-center">
               <span class="inline-flex items-center rounded-full badge-purple text-sm font-semibold px-4 py-2 mb-6">AuraWebs · Medellín</span>
-              <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                ¿Listo para desarrollar tu web<br>
-                <span class="grad-text">en Medellín?</span>
-              </h2>
+              <h2 class="h2-section mb-6">
+ ¿Listo para desarrollar tu web en Medellín?
+ </h2>
               <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
                 React + Tailwind + hosting CDN global · SEO incluido · Entrega 7–14 días · 30 días soporte
               </p>
               <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="https://wa.me/573217466755?text=Hola%20AuraWebs%2C%20quiero%20cotizar%20un%20proyecto.%20(Vengo%20de%3A%20Desarrollo%20Web%20en%20Medell%C3%ADn%20para%20Empresas%20y%20Pymes%202026)" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-5 rounded-full bg-gradient-to-r from-aura-purple to-aura-magenta text-white font-bold text-lg hover:shadow-[0_0_40px_rgba(124,58,237,0.45)] hover:-translate-y-1 transition-all duration-300">
+                <a href="https://wa.me/573217466755?text=Hola%20AuraWebs%2C%20quiero%20cotizar%20un%20proyecto.%20(Vengo%20de%3A%20Desarrollo%20Web%20en%20Medell%C3%ADn%20para%20Empresas%20y%20Pymes%202026)" target="_blank" rel="noopener noreferrer" class="btn-wa w-full sm:w-auto inline-flex px-10 py-5 text-lg">
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
-                  Escribir por WhatsApp
+                  Cotiza gratis por WhatsApp
                 </a>
-                <a href="/es/contacto.html" class="w-full sm:w-auto inline-flex items-center justify-center px-10 py-5 rounded-full glass-panel border border-white/20 hover:border-aura-purple/40 text-white font-bold text-lg transition-all duration-300">
+                <a href="/es/contacto.html" class="w-full sm:w-auto inline-flex items-center justify-center px-10 py-5 rounded-full glass-panel border border-white/20 hover:border-aura-purple/40 text-white font-bold text-lg transition duration-300">
                   Formulario de contacto
                 </a>
               </div>
@@ -792,6 +791,7 @@ window.addEventListener('load', function () {
           <li><a href="/es/medellin/redisenio-web-medellin.html">Rediseño web</a></li>
           <li><a href="/es/medellin/mantenimiento-web-medellin.html">Mantenimiento web</a></li>
           <li><a href="/es/bogota.html">Diseño web en Bogotá</a></li>
+          <li><a href="/es/medellin/index.html">Servicios en Medellín</a></li>
           <li><a href="/es/servicios.html">Todos los servicios</a></li>
         </ul>
       </nav>

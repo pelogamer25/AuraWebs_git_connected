@@ -161,7 +161,17 @@ select.input-premium option {background-color: #0f0728; color: #fff;}
    In @layer components so Tailwind utilities on the same element
    (lg:hidden, mt-5, w-full…) still win.
    ============================================================ */
+@layer base {
+  h1, h2, h3 {text-wrap: balance;}
+}
+
 @layer components {
+  /* Type scale: two H1 sizes (homes / inner pages) and one section H2. The gradient accent
+     is reserved for the H1; section H2s stay white. */
+  .h1-display {font-size: clamp(2.5rem, 6.2vw, 4.75rem); line-height: 1.04; letter-spacing: -0.035em; font-weight: 700;}
+  .h1-page {font-size: clamp(2.25rem, 5vw, 3.75rem); line-height: 1.08; letter-spacing: -0.03em; font-weight: 700;}
+  .h2-section {font-size: clamp(1.875rem, 3.6vw, 3rem); line-height: 1.12; letter-spacing: -0.025em; font-weight: 700;}
+
   .skip-link {position: fixed; left: 1rem; top: -4rem; z-index: 100; padding: 0.75rem 1.25rem; border-radius: 9999px; background: #7c3aed; color: #fff; font-weight: 600; transition: top 0.2s ease;}
   .skip-link:focus {top: 1rem;}
 
@@ -216,6 +226,8 @@ select.input-premium option {background-color: #0f0728; color: #fff;}
 
   .btn-wa {display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.875rem 1.5rem; border-radius: 9999px; background: #16a34a; color: #fff; font-weight: 700; white-space: nowrap; box-shadow: 0 0 20px rgba(34, 197, 94, 0.25); transition: background-color 0.2s ease, box-shadow 0.2s ease;}
   .btn-wa:hover {background: #22c55e; box-shadow: 0 0 28px rgba(34, 197, 94, 0.4);}
+  .btn-secondary {display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.875rem 1.5rem; border-radius: 9999px; border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(255, 255, 255, 0.04); color: #fff; font-weight: 600; white-space: nowrap; transition: border-color 0.2s ease, background-color 0.2s ease;}
+  .btn-secondary:hover {border-color: rgba(255, 255, 255, 0.3); background: rgba(255, 255, 255, 0.08);}
 
   .footer-heading {margin-bottom: 1.25rem; font-size: 0.875rem; font-weight: 600; color: #fff;}
   .footer-links {display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.875rem;}

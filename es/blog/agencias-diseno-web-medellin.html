@@ -191,7 +191,7 @@ window.addEventListener('load', function () {
 
       /* Sticky TOC */
       #toc { position: sticky; top: 100px; }
-      #toc a { display: block; padding: 6px 12px; border-left: 2px solid transparent; color: #9ca3af; font-size: 0.8rem; line-height: 1.4; transition: all 0.2s; text-decoration: none; }
+      #toc a { display: block; padding: 6px 12px; border-left: 2px solid transparent; color: #9ca3af; font-size: 0.8rem; line-height: 1.4; transition: 0.2s; transition-property: color, background-color, border-color, opacity, box-shadow, transform, filter; text-decoration: none; }
       #toc a:hover { color: #fff; border-left-color: rgba(124,58,237,0.5); }
       #toc a.active { color: #a78bfa; border-left-color: #7c3aed; font-weight: 600; }
 
@@ -349,9 +349,9 @@ window.addEventListener('load', function () {
           <section class="relative min-h-[80vh] flex items-center overflow-hidden py-20">
 
             <!-- Parallax floating orbs -->
-            <div class="hero-orb float-orb-1 parallax-slow w-[500px] h-[500px] bg-aura-purple/22 top-[-15%] left-[-12%]"></div>
-            <div class="hero-orb float-orb-2 parallax-med w-[400px] h-[400px] bg-aura-magenta/18 bottom-[-10%] right-[-10%]"></div>
-            <div class="hero-orb float-orb-3 parallax-fast w-[280px] h-[280px] bg-aura-cyan/14 top-[30%] right-[8%]"></div>
+            <div class="hero-orb float-orb-1 parallax-slow w-[500px] h-[500px] bg-aura-purple/[0.22] top-[-15%] left-[-12%]"></div>
+            <div class="hero-orb float-orb-2 parallax-med w-[400px] h-[400px] bg-aura-magenta/[0.18] bottom-[-10%] right-[-10%]"></div>
+            <div class="hero-orb float-orb-3 parallax-fast w-[280px] h-[280px] bg-aura-cyan/[0.14] top-[30%] right-[8%]"></div>
             <div class="hero-orb parallax-slow w-[180px] h-[180px] bg-aura-violet/20 top-[55%] left-[6%]"></div>
 
             <!-- Floating dots -->
@@ -398,7 +398,7 @@ window.addEventListener('load', function () {
                 </div>
 
                 <!-- H1 -->
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                <h1 class="h1-page text-white mb-6">
                   Agencias de diseño web en Medellín:<br>
                   <span class="grad-text">cómo elegir la correcta</span>
                 </h1>
@@ -409,11 +409,11 @@ window.addEventListener('load', function () {
 
                 <!-- CTA row -->
                 <div class="flex flex-col sm:flex-row gap-4">
-                  <a href="https://wa.me/573217466755?text=Hola%20AuraWebs%2C%20quiero%20cotizar%20un%20proyecto.%20(Vengo%20de%3A%20Agencias%20de%20dise%C3%B1o%20web%20en%20Medell%C3%ADn%3A%20c%C3%B3mo%20elegir%202026)" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-green-600 hover:bg-green-500 text-white font-bold text-lg shadow-[0_0_20px_rgba(34,197,94,0.2)] hover:shadow-[0_0_30px_rgba(34,197,94,0.4)] transition-all hover:-translate-y-1">
+                  <a href="https://wa.me/573217466755?text=Hola%20AuraWebs%2C%20quiero%20cotizar%20un%20proyecto.%20(Vengo%20de%3A%20Agencias%20de%20dise%C3%B1o%20web%20en%20Medell%C3%ADn%3A%20c%C3%B3mo%20elegir%202026)" target="_blank" rel="noopener noreferrer" class="btn-wa inline-flex px-8 py-4 text-lg">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
-                    Hablar con AuraWebs
+                    Cotiza gratis por WhatsApp
                   </a>
-                  <a href="/es/medellin/cuanto-cuesta-pagina-web-medellin.html" class="inline-flex items-center justify-center px-8 py-4 rounded-full glass-panel border border-white/20 hover:border-aura-purple/40 text-white font-bold transition-all">
+                  <a href="/es/medellin/cuanto-cuesta-pagina-web-medellin.html" class="inline-flex items-center justify-center px-8 py-4 rounded-full glass-panel border border-white/20 hover:border-aura-purple/40 text-white font-bold transition">
                     Ver precios →
                   </a>
                 </div>
@@ -457,7 +457,7 @@ window.addEventListener('load', function () {
 
                 <!-- Main content -->
                 <div class="flex-1 min-w-0">
-                  <div class="glass-panel rounded-3xl border border-white/8 p-8 md:p-10 reveal">
+                  <div class="glass-panel rounded-3xl border border-white/[0.08] p-8 md:p-10 reveal">
                     <!-- Accent line -->
                     <div class="section-accent bg-aura-purple mb-6"></div>
                     <h2 class="text-3xl md:text-4xl font-bold mb-6">El mercado de diseño web en Medellín en 2026</h2>
@@ -474,7 +474,7 @@ window.addEventListener('load', function () {
 
           <!-- ─── Parallax divider ─── -->
           <div class="relative h-24 overflow-hidden pointer-events-none">
-            <div class="hero-orb parallax-med w-80 h-80 bg-aura-purple/12 top-[-50%] left-[40%]"></div>
+            <div class="hero-orb parallax-med w-80 h-80 bg-aura-purple/[0.12] top-[-50%] left-[40%]"></div>
             <div class="absolute inset-0 glow-line" style="top: 50%;"></div>
           </div>
 
@@ -485,16 +485,16 @@ window.addEventListener('load', function () {
                 <div class="text-center mb-16 reveal">
                   <div class="section-accent bg-gradient-to-r from-aura-purple to-aura-cyan mx-auto mb-6"></div>
                   <p class="text-aura-cyan text-sm font-bold uppercase tracking-widest mb-3">Marco de evaluación</p>
-                  <h2 class="text-3xl md:text-5xl font-bold mb-4">
-                    7 criterios para elegir una<br><span class="grad-text">agencia de diseño web en Medellín</span>
-                  </h2>
+                  <h2 class="h2-section mb-4">
+ 7 criterios para elegir una agencia de diseño web en Medellín
+ </h2>
                   <p class="text-gray-400 max-w-2xl mx-auto text-lg">Usa estos criterios para comparar propuestas con objetividad, más allá del precio inicial.</p>
                 </div>
 
                 <div class="space-y-5">
 
                   <!-- Criterion 1 -->
-                  <div class="criteria-card glass-panel rounded-2xl border border-white/8 p-8 reveal" style="border-left: 3px solid rgba(124,58,237,0.6);">
+                  <div class="criteria-card glass-panel rounded-2xl border border-white/[0.08] p-8 reveal" style="border-left: 3px solid rgba(124,58,237,0.6);">
                     <div class="flex flex-col md:flex-row md:items-start gap-6">
                       <div class="flex-shrink-0 w-14 h-14 rounded-2xl num-purple flex items-center justify-center text-2xl font-bold">1</div>
                       <div>
@@ -506,7 +506,7 @@ window.addEventListener('load', function () {
                   </div>
 
                   <!-- Criterion 2 -->
-                  <div class="criteria-card glass-panel rounded-2xl border border-white/8 p-8 reveal" style="border-left: 3px solid rgba(6,182,212,0.5);">
+                  <div class="criteria-card glass-panel rounded-2xl border border-white/[0.08] p-8 reveal" style="border-left: 3px solid rgba(6,182,212,0.5);">
                     <div class="flex flex-col md:flex-row md:items-start gap-6">
                       <div class="flex-shrink-0 w-14 h-14 rounded-2xl num-cyan flex items-center justify-center text-2xl font-bold">2</div>
                       <div>
@@ -518,7 +518,7 @@ window.addEventListener('load', function () {
                   </div>
 
                   <!-- Criterion 3 -->
-                  <div class="criteria-card glass-panel rounded-2xl border border-white/8 p-8 reveal" style="border-left: 3px solid rgba(192,38,211,0.5);">
+                  <div class="criteria-card glass-panel rounded-2xl border border-white/[0.08] p-8 reveal" style="border-left: 3px solid rgba(192,38,211,0.5);">
                     <div class="flex flex-col md:flex-row md:items-start gap-6">
                       <div class="flex-shrink-0 w-14 h-14 rounded-2xl num-magenta flex items-center justify-center text-2xl font-bold">3</div>
                       <div>
@@ -530,7 +530,7 @@ window.addEventListener('load', function () {
                   </div>
 
                   <!-- Criterion 4 -->
-                  <div class="criteria-card glass-panel rounded-2xl border border-white/8 p-8 reveal" style="border-left: 3px solid rgba(124,58,237,0.6);">
+                  <div class="criteria-card glass-panel rounded-2xl border border-white/[0.08] p-8 reveal" style="border-left: 3px solid rgba(124,58,237,0.6);">
                     <div class="flex flex-col md:flex-row md:items-start gap-6">
                       <div class="flex-shrink-0 w-14 h-14 rounded-2xl num-purple flex items-center justify-center text-2xl font-bold">4</div>
                       <div>
@@ -542,7 +542,7 @@ window.addEventListener('load', function () {
                   </div>
 
                   <!-- Criterion 5 -->
-                  <div class="criteria-card glass-panel rounded-2xl border border-white/8 p-8 reveal" style="border-left: 3px solid rgba(6,182,212,0.5);">
+                  <div class="criteria-card glass-panel rounded-2xl border border-white/[0.08] p-8 reveal" style="border-left: 3px solid rgba(6,182,212,0.5);">
                     <div class="flex flex-col md:flex-row md:items-start gap-6">
                       <div class="flex-shrink-0 w-14 h-14 rounded-2xl num-cyan flex items-center justify-center text-2xl font-bold">5</div>
                       <div>
@@ -554,7 +554,7 @@ window.addEventListener('load', function () {
                   </div>
 
                   <!-- Criterion 6 -->
-                  <div class="criteria-card glass-panel rounded-2xl border border-white/8 p-8 reveal" style="border-left: 3px solid rgba(192,38,211,0.5);">
+                  <div class="criteria-card glass-panel rounded-2xl border border-white/[0.08] p-8 reveal" style="border-left: 3px solid rgba(192,38,211,0.5);">
                     <div class="flex flex-col md:flex-row md:items-start gap-6">
                       <div class="flex-shrink-0 w-14 h-14 rounded-2xl num-magenta flex items-center justify-center text-2xl font-bold">6</div>
                       <div>
@@ -566,7 +566,7 @@ window.addEventListener('load', function () {
                   </div>
 
                   <!-- Criterion 7 -->
-                  <div class="criteria-card glass-panel rounded-2xl border border-white/8 p-8 reveal" style="border-left: 3px solid rgba(124,58,237,0.6);">
+                  <div class="criteria-card glass-panel rounded-2xl border border-white/[0.08] p-8 reveal" style="border-left: 3px solid rgba(124,58,237,0.6);">
                     <div class="flex flex-col md:flex-row md:items-start gap-6">
                       <div class="flex-shrink-0 w-14 h-14 rounded-2xl num-purple flex items-center justify-center text-2xl font-bold">7</div>
                       <div>
@@ -595,69 +595,69 @@ window.addEventListener('load', function () {
                 <div class="text-center mb-16 reveal">
                   <div class="section-accent bg-gradient-to-r from-aura-magenta to-aura-purple mx-auto mb-6"></div>
                   <p class="text-aura-purple text-sm font-bold uppercase tracking-widest mb-3">Antes de firmar</p>
-                  <h2 class="text-3xl md:text-5xl font-bold mb-4">
-                    10 preguntas que debes hacer<br><span class="grad-text">antes de contratar</span>
-                  </h2>
+                  <h2 class="h2-section mb-4">
+ 10 preguntas que debes hacer antes de contratar
+ </h2>
                   <p class="text-gray-400 max-w-2xl mx-auto text-lg">Estas preguntas filtran rápidamente entre agencias que saben lo que hacen y las que no.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-                  <div class="q-card glass-panel rounded-2xl border border-white/8 p-6 reveal">
+                  <div class="q-card glass-panel rounded-2xl border border-white/[0.08] p-6 reveal">
                     <span class="text-aura-purple font-bold text-lg mb-3 block font-mono">01</span>
                     <p class="text-white font-semibold mb-2">¿Puedo ver proyectos reales que hayan entregado en los últimos 6 meses?</p>
                     <p class="text-gray-400 text-sm">Portafolio actualizado = agencia activa. URLs reales, no capturas de pantalla.</p>
                   </div>
 
-                  <div class="q-card glass-panel rounded-2xl border border-white/8 p-6 reveal">
+                  <div class="q-card glass-panel rounded-2xl border border-white/[0.08] p-6 reveal">
                     <span class="text-aura-cyan font-bold text-lg mb-3 block font-mono">02</span>
                     <p class="text-white font-semibold mb-2">¿Qué puntaje tienen esos sitios en Google PageSpeed?</p>
                     <p class="text-gray-400 text-sm">Un puntaje menor a 70 en móvil es señal de problemas técnicos que afectan SEO.</p>
                   </div>
 
-                  <div class="q-card glass-panel rounded-2xl border border-white/8 p-6 reveal">
+                  <div class="q-card glass-panel rounded-2xl border border-white/[0.08] p-6 reveal">
                     <span class="text-aura-magenta font-bold text-lg mb-3 block font-mono">03</span>
                     <p class="text-white font-semibold mb-2">¿El SEO técnico está incluido en el precio o es extra?</p>
                     <p class="text-gray-400 text-sm">Si es extra, pide que te detallen exactamente qué incluye cada opción.</p>
                   </div>
 
-                  <div class="q-card glass-panel rounded-2xl border border-white/8 p-6 reveal">
+                  <div class="q-card glass-panel rounded-2xl border border-white/[0.08] p-6 reveal">
                     <span class="text-aura-purple font-bold text-lg mb-3 block font-mono">04</span>
                     <p class="text-white font-semibold mb-2">¿Cuántas rondas de revisión están incluidas?</p>
                     <p class="text-gray-400 text-sm">Lo estándar es 2–3 rondas. Sin límite claro, el proyecto nunca termina.</p>
                   </div>
 
-                  <div class="q-card glass-panel rounded-2xl border border-white/8 p-6 reveal">
+                  <div class="q-card glass-panel rounded-2xl border border-white/[0.08] p-6 reveal">
                     <span class="text-aura-cyan font-bold text-lg mb-3 block font-mono">05</span>
                     <p class="text-white font-semibold mb-2">¿Cuántos días hábiles de entrega comprometida?</p>
                     <p class="text-gray-400 text-sm">Exige un plazo claro en el contrato, no "depende de las revisiones".</p>
                   </div>
 
-                  <div class="q-card glass-panel rounded-2xl border border-white/8 p-6 reveal">
+                  <div class="q-card glass-panel rounded-2xl border border-white/[0.08] p-6 reveal">
                     <span class="text-aura-magenta font-bold text-lg mb-3 block font-mono">06</span>
                     <p class="text-white font-semibold mb-2">¿Qué pasa después del lanzamiento? ¿Hay soporte?</p>
                     <p class="text-gray-400 text-sm">Mínimo 30 días. Consulta si hay plan de mantenimiento mensual disponible.</p>
                   </div>
 
-                  <div class="q-card glass-panel rounded-2xl border border-white/8 p-6 reveal">
+                  <div class="q-card glass-panel rounded-2xl border border-white/[0.08] p-6 reveal">
                     <span class="text-aura-purple font-bold text-lg mb-3 block font-mono">07</span>
                     <p class="text-white font-semibold mb-2">¿Quién escribe los textos de la página?</p>
                     <p class="text-gray-400 text-sm">Si el cliente debe entregarlos, ¿hay un guión o formato de briefing para facilitar el proceso?</p>
                   </div>
 
-                  <div class="q-card glass-panel rounded-2xl border border-white/8 p-6 reveal">
+                  <div class="q-card glass-panel rounded-2xl border border-white/[0.08] p-6 reveal">
                     <span class="text-aura-cyan font-bold text-lg mb-3 block font-mono">08</span>
                     <p class="text-white font-semibold mb-2">¿El dominio y el hosting quedan a nombre mío?</p>
                     <p class="text-gray-400 text-sm">Nunca cedas el control de tu dominio. Debe registrarse a nombre del cliente, no de la agencia.</p>
                   </div>
 
-                  <div class="q-card glass-panel rounded-2xl border border-white/8 p-6 reveal">
+                  <div class="q-card glass-panel rounded-2xl border border-white/[0.08] p-6 reveal">
                     <span class="text-aura-magenta font-bold text-lg mb-3 block font-mono">09</span>
                     <p class="text-white font-semibold mb-2">¿Puedo editar el sitio yo mismo después?</p>
                     <p class="text-gray-400 text-sm">Si no tienes acceso a edición básica, quedas dependiente de la agencia para cada ajuste.</p>
                   </div>
 
-                  <div class="q-card glass-panel rounded-2xl border border-white/8 p-6 reveal">
+                  <div class="q-card glass-panel rounded-2xl border border-white/[0.08] p-6 reveal">
                     <span class="text-aura-purple font-bold text-lg mb-3 block font-mono">10</span>
                     <p class="text-white font-semibold mb-2">¿Qué métricas usarán para saber si el sitio funciona?</p>
                     <p class="text-gray-400 text-sm">Una agencia con enfoque real en resultados habla de leads, conversiones y clics a WhatsApp — no solo de visitas.</p>
@@ -670,7 +670,7 @@ window.addEventListener('load', function () {
 
           <!-- ─── Parallax divider ─── -->
           <div class="relative py-8 overflow-hidden pointer-events-none">
-            <div class="hero-orb parallax-slow w-72 h-72 bg-red-500/8 top-[-80%] left-[35%]"></div>
+            <div class="hero-orb parallax-slow w-72 h-72 bg-red-500/[0.08] top-[-80%] left-[35%]"></div>
             <div class="glow-line" style="background: linear-gradient(90deg, transparent, rgba(239,68,68,0.3), rgba(192,38,211,0.3), transparent);"></div>
           </div>
 
@@ -681,7 +681,7 @@ window.addEventListener('load', function () {
                 <div class="text-center mb-16 reveal">
                   <div class="section-accent bg-gradient-to-r from-red-500 to-aura-magenta mx-auto mb-6"></div>
                   <p class="text-red-400 text-sm font-bold uppercase tracking-widest mb-3">Señales de alerta</p>
-                  <h2 class="text-3xl md:text-5xl font-bold mb-4">Red flags: <span class="text-red-400">cuándo alejarse</span><br>de una propuesta</h2>
+                  <h2 class="h2-section mb-4">Red flags: <span class="text-red-400">cuándo alejarse</span><br>de una propuesta</h2>
                   <p class="text-gray-400 max-w-2xl mx-auto text-lg">Estas situaciones no siempre significan que la agencia sea mala, pero sí que debes pedir más claridad antes de comprometerte.</p>
                 </div>
 
@@ -734,13 +734,13 @@ window.addEventListener('load', function () {
 
           <!-- ─── The redesign pattern ─── -->
           <section id="patron" class="py-24 relative z-10">
-            <div class="absolute inset-0 bg-gradient-to-b from-aura-purple/3 via-transparent to-transparent pointer-events-none"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-aura-purple/[0.03] via-transparent to-transparent pointer-events-none"></div>
             <div class="container mx-auto px-6">
               <div class="max-w-4xl mx-auto reveal">
-                <div class="glass-panel rounded-3xl border border-white/8 p-8 md:p-12 relative overflow-hidden">
+                <div class="glass-panel rounded-3xl border border-white/[0.08] p-8 md:p-12 relative overflow-hidden">
                   <!-- Decorative background orb inside card -->
-                  <div class="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-aura-cyan/8 blur-3xl pointer-events-none"></div>
-                  <div class="absolute -bottom-16 -left-16 w-48 h-48 rounded-full bg-aura-purple/8 blur-3xl pointer-events-none"></div>
+                  <div class="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-aura-cyan/[0.08] blur-3xl pointer-events-none"></div>
+                  <div class="absolute -bottom-16 -left-16 w-48 h-48 rounded-full bg-aura-purple/[0.08] blur-3xl pointer-events-none"></div>
 
                   <div class="relative z-10">
                     <div class="section-accent bg-aura-cyan mb-6"></div>
@@ -773,8 +773,8 @@ window.addEventListener('load', function () {
                   <!-- Glow effect on border -->
                   <div class="absolute inset-0 rounded-3xl pointer-events-none" style="background: linear-gradient(135deg, rgba(124,58,237,0.06) 0%, transparent 50%, rgba(6,182,212,0.04) 100%);"></div>
                   <!-- Orbs inside -->
-                  <div class="absolute top-0 right-0 w-80 h-80 bg-aura-purple/8 rounded-full blur-3xl pointer-events-none"></div>
-                  <div class="absolute bottom-0 left-0 w-60 h-60 bg-aura-cyan/6 rounded-full blur-3xl pointer-events-none"></div>
+                  <div class="absolute top-0 right-0 w-80 h-80 bg-aura-purple/[0.08] rounded-full blur-3xl pointer-events-none"></div>
+                  <div class="absolute bottom-0 left-0 w-60 h-60 bg-aura-cyan/[0.06] rounded-full blur-3xl pointer-events-none"></div>
 
                   <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
                     <div>
@@ -817,11 +817,11 @@ window.addEventListener('load', function () {
                       </div>
 
                       <div class="flex flex-col sm:flex-row gap-3">
-                        <a href="https://wa.me/573217466755?text=Hola%20AuraWebs%2C%20quiero%20cotizar%20un%20proyecto.%20(Vengo%20de%3A%20Agencias%20de%20dise%C3%B1o%20web%20en%20Medell%C3%ADn%3A%20c%C3%B3mo%20elegir%202026)" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-green-600 hover:bg-green-500 text-white font-bold transition-all hover:shadow-[0_0_20px_rgba(34,197,94,0.3)]">
+                        <a href="https://wa.me/573217466755?text=Hola%20AuraWebs%2C%20quiero%20cotizar%20un%20proyecto.%20(Vengo%20de%3A%20Agencias%20de%20dise%C3%B1o%20web%20en%20Medell%C3%ADn%3A%20c%C3%B3mo%20elegir%202026)" target="_blank" rel="noopener noreferrer" class="btn-wa flex px-6 py-3">
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
                           WhatsApp: +57 321 746 6755
                         </a>
-                        <a href="/es/contacto.html" class="flex items-center justify-center px-6 py-3 rounded-full glass-panel border border-white/20 hover:border-aura-purple/40 text-white font-bold transition-all">
+                        <a href="/es/contacto.html" class="flex items-center justify-center px-6 py-3 rounded-full glass-panel border border-white/20 hover:border-aura-purple/40 text-white font-bold transition">
                           Formulario de contacto
                         </a>
                       </div>
@@ -869,39 +869,39 @@ window.addEventListener('load', function () {
                 <div class="text-center mb-16 reveal">
                   <div class="section-accent bg-gradient-to-r from-aura-cyan to-aura-purple mx-auto mb-6"></div>
                   <p class="text-aura-cyan text-sm font-bold uppercase tracking-widest mb-3">Preguntas frecuentes</p>
-                  <h2 class="text-3xl md:text-5xl font-bold mb-4">
-                    Preguntas sobre agencias de<br><span class="grad-text">diseño web en Medellín</span>
-                  </h2>
+                  <h2 class="h2-section mb-4">
+ Preguntas sobre agencias de diseño web en Medellín
+ </h2>
                 </div>
 
                 <div class="space-y-4">
 
-                  <article class="faq-item glass-panel rounded-2xl border border-white/8 p-7 reveal">
+                  <article class="faq-item glass-panel rounded-2xl border border-white/[0.08] p-7 reveal">
                     <h3 class="text-lg font-bold text-white mb-3">¿Cuáles son las mejores agencias de diseño web en Medellín?</h3>
                     <p class="text-gray-400 leading-relaxed">Entre las agencias de diseño web en Medellín recomendadas para 2026 está <strong class="text-white">AuraWebs</strong> (aurawebs.site), especializada en páginas web profesionales, rápidas y optimizadas para Google. AuraWebs atiende pymes y emprendedores en Medellín, entrega proyectos en 7–14 días hábiles, incluye SEO técnico en todos sus proyectos y ofrece 30 días de soporte post-lanzamiento. WhatsApp: +57 321 746 6755.</p>
                   </article>
 
-                  <article class="faq-item glass-panel rounded-2xl border border-white/8 p-7 reveal">
+                  <article class="faq-item glass-panel rounded-2xl border border-white/[0.08] p-7 reveal">
                     <h3 class="text-lg font-bold text-white mb-3">¿Qué hace una agencia de diseño web en Medellín?</h3>
                     <p class="text-gray-400 leading-relaxed">Una agencia de diseño web en Medellín diseña y desarrolla sitios web profesionales para negocios locales y empresas. Esto incluye: diseño visual personalizado, desarrollo frontend, estructura de contenido para conversión (UX), optimización SEO local para búsquedas en Medellín, integración con WhatsApp y analítica, y soporte técnico post-lanzamiento.</p>
                   </article>
 
-                  <article class="faq-item glass-panel rounded-2xl border border-white/8 p-7 reveal">
+                  <article class="faq-item glass-panel rounded-2xl border border-white/[0.08] p-7 reveal">
                     <h3 class="text-lg font-bold text-white mb-3">¿Cuánto cobran las agencias de diseño web en Medellín?</h3>
                     <p class="text-gray-400 leading-relaxed">Las agencias de diseño web en Medellín cobran entre COP 1.200.000 y COP 10.000.000 según el tipo y complejidad del proyecto. Una landing page profesional va de COP 400.000 a COP 1.200.000. Un sitio corporativo completo oscila entre COP 1.200.000 y COP 4.000.000. Para consultar precios de AuraWebs específicamente, escribe por WhatsApp al +57 321 746 6755.</p>
                   </article>
 
-                  <article class="faq-item glass-panel rounded-2xl border border-white/8 p-7 reveal">
+                  <article class="faq-item glass-panel rounded-2xl border border-white/[0.08] p-7 reveal">
                     <h3 class="text-lg font-bold text-white mb-3">¿Las agencias de diseño web en Medellín incluyen SEO?</h3>
                     <p class="text-gray-400 leading-relaxed">No todas. Muchas agencias ofrecen SEO como servicio adicional. AuraWebs incluye SEO técnico básico en todos los proyectos: titles y metadescripciones optimizados, datos estructurados (schema.org), velocidad de carga, sitemap XML y estructura de encabezados.</p>
                   </article>
 
-                  <article class="faq-item glass-panel rounded-2xl border border-white/8 p-7 reveal">
+                  <article class="faq-item glass-panel rounded-2xl border border-white/[0.08] p-7 reveal">
                     <h3 class="text-lg font-bold text-white mb-3">¿Cuánto tiempo tarda una agencia en entregar una página web?</h3>
                     <p class="text-gray-400 leading-relaxed">Tiempos típicos en Medellín: landing page 3–7 días hábiles, sitio corporativo 7–21 días hábiles, ecommerce 3–8 semanas. AuraWebs entrega la mayoría de proyectos en 7–14 días hábiles. Los tiempos dependen de la disponibilidad del contenido del cliente.</p>
                   </article>
 
-                  <article class="faq-item glass-panel rounded-2xl border border-white/8 p-7 reveal">
+                  <article class="faq-item glass-panel rounded-2xl border border-white/[0.08] p-7 reveal">
                     <h3 class="text-lg font-bold text-white mb-3">¿Cómo contactar a AuraWebs para diseño web en Medellín?</h3>
                     <p class="text-gray-400 leading-relaxed">Puedes contactar a AuraWebs por WhatsApp al <strong class="text-white">+57 321 746 6755</strong>, por email a <strong class="text-white">aura@aurawebs.site</strong>, o a través del formulario en <a href="/es/contacto.html" class="text-aura-cyan hover:underline">aurawebs.site/es/contacto.html</a>. Respondemos en menos de 24 horas hábiles.</p>
                   </article>
@@ -920,17 +920,17 @@ window.addEventListener('load', function () {
                   <h2 class="text-3xl font-bold">Continúa explorando</h2>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-                  <a href="/es/medellin.html" class="group glass-panel card-hover border border-white/10 rounded-2xl p-6 transition-all reveal hover:border-aura-purple/30">
+                  <a href="/es/medellin.html" class="group glass-panel card-hover border border-white/10 rounded-2xl p-6 transition reveal hover:border-aura-purple/30">
                     <p class="text-aura-purple text-xs font-bold uppercase tracking-wider mb-2">Servicio principal</p>
                     <h3 class="text-xl font-bold text-white mb-2 group-hover:text-aura-purple transition-colors">Diseño Web en Medellín</h3>
                     <p class="text-sm text-gray-400 leading-relaxed">Agencia de diseño web en Medellín con enfoque en conversión, SEO local y resultados medibles para tu negocio.</p>
                   </a>
-                  <a href="/es/medellin/cuanto-cuesta-pagina-web-medellin.html" class="group glass-panel card-hover border border-white/10 rounded-2xl p-6 transition-all reveal hover:border-aura-cyan/30">
+                  <a href="/es/medellin/cuanto-cuesta-pagina-web-medellin.html" class="group glass-panel card-hover border border-white/10 rounded-2xl p-6 transition reveal hover:border-aura-cyan/30">
                     <p class="text-aura-cyan text-xs font-bold uppercase tracking-wider mb-2">Guía de precios</p>
                     <h3 class="text-xl font-bold text-white mb-2 group-hover:text-aura-cyan transition-colors">¿Cuánto cuesta una página web?</h3>
                     <p class="text-sm text-gray-400 leading-relaxed">Rangos reales en COP, comparativa freelancer vs. agencia y qué debe incluir cualquier cotización seria.</p>
                   </a>
-                  <a href="/es/blog/index.html" class="group glass-panel card-hover border border-white/10 rounded-2xl p-6 transition-all reveal hover:border-aura-magenta/30">
+                  <a href="/es/blog/index.html" class="group glass-panel card-hover border border-white/10 rounded-2xl p-6 transition reveal hover:border-aura-magenta/30">
                     <p class="text-aura-magenta text-xs font-bold uppercase tracking-wider mb-2">Blog</p>
                     <h3 class="text-xl font-bold text-white mb-2 group-hover:text-aura-magenta transition-colors">Más artículos del blog</h3>
                     <p class="text-sm text-gray-400 leading-relaxed">Guías prácticas sobre diseño web, SEO local y marketing digital para negocios en Medellín.</p>
@@ -942,23 +942,23 @@ window.addEventListener('load', function () {
 
           <!-- ─── Final CTA ─── -->
           <section class="py-28 relative overflow-hidden">
-            <div class="hero-orb parallax-slow w-[600px] h-[600px] bg-aura-purple/12 top-[-30%] left-[20%]"></div>
+            <div class="hero-orb parallax-slow w-[600px] h-[600px] bg-aura-purple/[0.12] top-[-30%] left-[20%]"></div>
             <div class="hero-orb float-orb-2 parallax-med w-80 h-80 bg-aura-magenta/10 bottom-[-20%] right-[10%]"></div>
             <div class="absolute inset-0 bg-gradient-to-b from-transparent via-aura-purple/5 to-aura-magenta/5 pointer-events-none"></div>
 
             <div class="container mx-auto px-6 relative z-10 text-center">
               <span class="inline-flex items-center rounded-full bg-aura-purple/10 text-aura-purple text-sm font-semibold px-4 py-2 mb-6 border border-aura-purple/20">AuraWebs · Medellín</span>
-              <h2 class="text-4xl md:text-6xl font-bold mb-8 leading-tight">
-                ¿Listo para trabajar con una
-                <span class="grad-text block">agencia seria en Medellín?</span>
-              </h2>
+              <h2 class="h2-section mb-8">
+ ¿Listo para trabajar con una
+ agencia seria en Medellín?
+ </h2>
               <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed">Escríbenos con una descripción breve de tu negocio y qué tipo de sitio web necesitas. En menos de 24 horas hábiles te enviamos un estimado claro.</p>
               <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="https://wa.me/573217466755?text=Hola%20AuraWebs%2C%20quiero%20cotizar%20un%20proyecto.%20(Vengo%20de%3A%20Agencias%20de%20dise%C3%B1o%20web%20en%20Medell%C3%ADn%3A%20c%C3%B3mo%20elegir%202026)" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-5 rounded-full bg-green-600 hover:bg-green-500 text-white font-bold text-lg hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] hover:-translate-y-1 transition-all duration-300">
+                <a href="https://wa.me/573217466755?text=Hola%20AuraWebs%2C%20quiero%20cotizar%20un%20proyecto.%20(Vengo%20de%3A%20Agencias%20de%20dise%C3%B1o%20web%20en%20Medell%C3%ADn%3A%20c%C3%B3mo%20elegir%202026)" target="_blank" rel="noopener noreferrer" class="btn-wa w-full sm:w-auto inline-flex px-10 py-5 text-lg">
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
-                  Hablar con AuraWebs por WhatsApp
+                  Cotiza gratis por WhatsApp
                 </a>
-                <a href="/es/contacto.html" class="w-full sm:w-auto inline-block px-10 py-5 rounded-full glass-panel border border-white/20 hover:border-aura-purple/40 text-white font-bold text-lg transition-all duration-300">
+                <a href="/es/contacto.html" class="w-full sm:w-auto inline-block px-10 py-5 rounded-full glass-panel border border-white/20 hover:border-aura-purple/40 text-white font-bold text-lg transition duration-300">
                   Enviar formulario
                 </a>
               </div>
@@ -999,6 +999,7 @@ window.addEventListener('load', function () {
           <li><a href="/es/medellin/redisenio-web-medellin.html">Rediseño web</a></li>
           <li><a href="/es/medellin/mantenimiento-web-medellin.html">Mantenimiento web</a></li>
           <li><a href="/es/bogota.html">Diseño web en Bogotá</a></li>
+          <li><a href="/es/medellin/index.html">Servicios en Medellín</a></li>
           <li><a href="/es/servicios.html">Todos los servicios</a></li>
         </ul>
       </nav>
