@@ -29,6 +29,95 @@ const SERVICES_ES = [
 ];
 const SERVICES_CLUSTER = new Set([...SERVICES_ES.map(s => s[0]), '/es/servicios.html', '/es/medellin/index.html']);
 
+// "Sigue explorando" block before </main>: three related pages so every page leads somewhere.
+const CARDS = {
+  med: ['/es/medellin.html', 'Diseño web en Medellín', 'Sitios profesionales que consiguen clientes desde Google.'],
+  dev: ['/es/medellin/desarrollo-web-medellin.html', 'Desarrollo web', 'Sitios y aplicaciones a medida, rápidos y escalables.'],
+  land: ['/es/medellin/landing-pages-medellin.html', 'Landing pages', 'Páginas de campaña que convierten visitas en contactos.'],
+  seo: ['/es/medellin/seo-local-medellin.html', 'SEO local', 'Aparece en Google y Google Maps en tu ciudad.'],
+  redis: ['/es/medellin/redisenio-web-medellin.html', 'Rediseño web', 'Moderniza tu sitio sin perder posicionamiento.'],
+  mant: ['/es/medellin/mantenimiento-web-medellin.html', 'Mantenimiento web', 'Soporte, seguridad y actualizaciones cada mes.'],
+  precios: ['/es/medellin/cuanto-cuesta-pagina-web-medellin.html', '¿Cuánto cuesta una página web?', 'Rangos de precio 2026 y qué debe incluir una cotización.'],
+  port: ['/es/portafolio.html', 'Portafolio', 'Proyectos reales de diseño y desarrollo web.'],
+  serv: ['/es/servicios.html', 'Todos los servicios', 'Diseño, desarrollo, SEO, apps y analítica en un solo lugar.'],
+  faq: ['/es/faq.html', 'Preguntas frecuentes', 'Tiempos, proceso, pagos y soporte, respondidos.'],
+  blog: ['/es/blog/index.html', 'Blog', 'Guías prácticas sobre diseño web y SEO local.'],
+  en_web: ['/en/web-design.html', 'Web design', 'Websites built to rank on Google and convert visitors.'],
+  en_serv: ['/en/services.html', 'Services & pricing', 'What we build and what it costs.'],
+  en_work: ['/en/showcase.html', 'Our work', 'Selected design and development projects.'],
+  en_faq: ['/en/faq.html', 'FAQ', 'Timelines, process, payments and support.'],
+  en_contact: ['/en/contact.html', 'Contact', 'Tell us about your project. We reply within 24 hours.'],
+};
+const NEXT = {
+  '/es/medellin.html': ['port', 'precios', 'serv'],
+  '/es/medellin/index.html': ['med', 'precios', 'port'],
+  '/es/medellin/desarrollo-web-medellin.html': ['land', 'redis', 'precios'],
+  '/es/medellin/landing-pages-medellin.html': ['seo', 'dev', 'precios'],
+  '/es/medellin/seo-local-medellin.html': ['med', 'land', 'precios'],
+  '/es/medellin/redisenio-web-medellin.html': ['seo', 'mant', 'precios'],
+  '/es/medellin/mantenimiento-web-medellin.html': ['redis', 'seo', 'precios'],
+  '/es/medellin/cuanto-cuesta-pagina-web-medellin.html': ['med', 'land', 'port'],
+  '/es/bogota.html': ['port', 'precios', 'serv'],
+  '/es/servicios.html': ['port', 'faq', 'blog'],
+  '/es/portafolio.html': ['serv', 'precios', 'med'],
+  '/es/faq.html': ['precios', 'serv', 'port'],
+  '/es/blog/index.html': ['med', 'serv', 'port'],
+  '/es/blog/agencias-diseno-web-medellin.html': ['med', 'precios', 'port'],
+  '/es/blog/desarrollo-web-medellin.html': ['dev', 'precios', 'port'],
+  '/es/blog/diseno-web-pymes-medellin.html': ['med', 'land', 'precios'],
+  '/es/blog/paginas-web-medellin.html': ['med', 'precios', 'port'],
+  '/es/blog/redisenio-web-medellin.html': ['redis', 'precios', 'port'],
+  '/es/blog/seo-local-medellin.html': ['seo', 'med', 'precios'],
+  '/es/blog/tienda-online-medellin.html': ['dev', 'precios', 'port'],
+  '/en/services.html': ['en_web', 'en_work', 'en_faq'],
+  '/en/web-design.html': ['en_serv', 'en_work', 'en_faq'],
+  '/en/showcase.html': ['en_serv', 'en_web', 'en_contact'],
+  '/en/faq.html': ['en_serv', 'en_work', 'en_contact'],
+};
+
+function renderNext(path, lang) {
+  const keys = NEXT[path];
+  if (!keys) return null;
+  const items = keys.map(k => CARDS[k]).map(([href, title, desc]) =>
+    `      <li><a href="${href}" class="hub-card"><span class="hub-card-title">${title}</span><span class="hub-card-desc">${desc}</span><span class="hub-card-link" aria-hidden="true">${lang === 'es' ? 'Ver más' : 'Learn more'} →</span></a></li>`);
+  const heading = lang === 'es' ? 'Sigue explorando' : 'Keep exploring';
+  return `<section class="next-step container mx-auto px-6 py-20" aria-labelledby="next-step-title">
+  <h2 id="next-step-title" class="next-step-title">${heading}</h2>
+  <ul class="mt-6 grid gap-4 md:grid-cols-3">
+${items.join('\n')}
+  </ul>
+</section>`;
+}
+
+/** Visible breadcrumb rendered from the page's own BreadcrumbList schema, so the two never disagree. */
+function renderBreadcrumb(html, lang) {
+  for (const m of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+    let data;
+    try { data = JSON.parse(m[1]); } catch { continue; }
+    const stack = [data];
+    while (stack.length) {
+      const x = stack.pop();
+      if (Array.isArray(x)) { stack.push(...x); continue; }
+      if (!x || typeof x !== 'object') continue;
+      if (x['@type'] === 'BreadcrumbList') {
+        const items = [];
+        for (const it of x.itemListElement || []) {
+          const href = String(it.item?.['@id'] || it.item || '').replace('https://aurawebs.site', '');
+          if (items.length && items.at(-1).href === href) items.pop(); // schema repeats a URL: keep the deeper name
+          items.push({ name: it.name, href });
+        }
+        if (items.length < 2) return null;
+        const lis = items.map((it, i) => i === items.length - 1
+          ? `<li aria-current="page">${it.name}</li>`
+          : `<li><a href="${it.href}">${it.name}</a></li>`).join('');
+        return `<nav aria-label="${lang === 'es' ? 'Ruta de navegación' : 'Breadcrumb'}" class="breadcrumbs"><ol>${lis}</ol></nav>`;
+      }
+      stack.push(...Object.values(x));
+    }
+  }
+  return null;
+}
+
 const read = p => readFileSync(join(ROOT, p), 'utf8').replace(/^﻿/, '');
 const partials = {
   header: { es: read('partials/header.es.html'), en: read('partials/header.en.html') },
@@ -129,6 +218,25 @@ for (const rel of pages()) {
     html = replaceBlock(html, 'footer', render(partials.footer[lang], ctx),
       h => { const i = h.search(/<footer\b/); return i === -1 ? null : elementRange(h, i, 'footer'); },
       h => h.lastIndexOf('</body>'));
+  }
+
+  // "Sigue explorando" block, right before </main>.
+  const next = renderNext(path, lang);
+  if (next && html.includes('</main>')) {
+    html = replaceBlock(html, 'next', next, () => null, h => h.lastIndexOf('</main>'));
+  }
+
+  // Breadcrumb only where the page doesn't already show one (blog, medellin.html and the price guide do).
+  const withoutOurs = html.replace(/<!-- site-breadcrumb:start[\s\S]*?<!-- site-breadcrumb:end -->/, '');
+  if (!/aria-label="[Bb]readcrumb"/.test(withoutOurs)) {
+    const crumb = renderBreadcrumb(html, lang);
+    if (crumb && /<h1\b/.test(html)) {
+      html = replaceBlock(html, 'breadcrumb', crumb, () => null, h => {
+        const h1 = h.search(/<h1\b/);
+        const badge = h.lastIndexOf('<span class="inline-flex', h1);
+        return badge !== -1 && h1 - badge < 600 ? badge : h1;
+      });
+    }
   }
 
   // Skip-link target.
