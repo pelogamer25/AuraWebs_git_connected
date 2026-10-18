@@ -154,3 +154,74 @@ body {
 .input-premium::placeholder {color: rgba(156,163,175,0.6);}
 /* Native dropdown list is painted by the OS; without this it's white-on-white on Windows. */
 select.input-premium option {background-color: #0f0728; color: #fff;}
+
+/* ============================================================
+   Shared header + footer (partials/*.html, synced by
+   scripts/sync-partials.mjs; behaviour in nav.js).
+   In @layer components so Tailwind utilities on the same element
+   (lg:hidden, mt-5, w-full…) still win.
+   ============================================================ */
+@layer components {
+  .skip-link {position: fixed; left: 1rem; top: -4rem; z-index: 100; padding: 0.75rem 1.25rem; border-radius: 9999px; background: #7c3aed; color: #fff; font-weight: 600; transition: top 0.2s ease;}
+  .skip-link:focus {top: 1rem;}
+
+  .site-nav {padding-block: 1.5rem; transition: padding 0.3s ease;}
+  .site-nav.is-scrolled {padding-block: 1rem;}
+  .site-nav.is-scrolled .nav-pill {background: rgba(15, 7, 40, 0.72); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(124, 58, 237, 0.12);}
+
+  .nav-link {display: inline-flex; align-items: center; padding: 0.5rem 0.875rem; border-radius: 9999px; color: #9ca3af; transition: color 0.2s ease, background-color 0.2s ease;}
+  .nav-link:hover, .nav-dd.is-open > .nav-link {color: #fff; background: rgba(255, 255, 255, 0.06);}
+  .nav-link[aria-current="page"], .nav-link[data-current] {color: #fff; background: rgba(124, 58, 237, 0.2);}
+
+  .nav-dd {position: relative;}
+  .nav-dd-chevron {transition: transform 0.2s ease;}
+  .nav-dd:hover .nav-dd-chevron, .nav-dd.is-open .nav-dd-chevron {transform: rotate(180deg);}
+  .nav-dd-panel {position: absolute; left: 50%; top: calc(100% + 1rem); width: 36rem; padding: 0.75rem; border-radius: 1.25rem; background: rgba(10, 4, 30, 0.985); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5); opacity: 0; visibility: hidden; transform: translate(-50%, 6px); transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;}
+  .nav-dd-panel::before {content: ""; position: absolute; left: 0; right: 0; top: -1rem; height: 1rem;} /* hover bridge across the gap */
+  @media (hover: hover) {
+    .nav-dd:hover .nav-dd-panel {opacity: 1; visibility: visible; transform: translate(-50%, 0);}
+  }
+  .nav-dd.is-open .nav-dd-panel {opacity: 1; visibility: visible; transform: translate(-50%, 0);}
+  .nav-dd-item {display: block; padding: 0.75rem 0.875rem; border-radius: 0.875rem; transition: background-color 0.15s ease;}
+  .nav-dd-item:hover, .nav-dd-item[aria-current="page"] {background: rgba(255, 255, 255, 0.06);}
+  .nav-dd-title {display: block; color: #fff; font-weight: 600;}
+  .nav-dd-desc {display: block; margin-top: 0.125rem; color: #9ca3af; font-size: 0.8125rem; font-weight: 400; line-height: 1.35;}
+  .nav-dd-all {display: block; margin-top: 0.5rem; padding: 0.75rem 0.875rem 0.25rem; border-top: 1px solid rgba(255, 255, 255, 0.08); color: #c4b5fd; font-weight: 600;}
+  .nav-dd-all:hover {color: #fff;}
+
+  .lang-switch {display: flex; align-items: center; gap: 0.125rem; padding: 0.25rem; border-radius: 9999px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);}
+  .lang-switch a {padding: 0.375rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #9ca3af; transition: color 0.2s ease, background-color 0.2s ease;}
+  .lang-switch a:hover {color: #fff;}
+  .lang-switch a[aria-current] {background: rgba(124, 58, 237, 0.5); color: #fff;}
+
+  .nav-cta {align-items: center; gap: 0.5rem; padding: 0.625rem 1.125rem; border-radius: 9999px; background: #16a34a; color: #fff; font-size: 0.875rem; font-weight: 600; white-space: nowrap; transition: background-color 0.2s ease;}
+  .nav-cta:hover {background: #22c55e;}
+  @media (max-width: 639px) {.nav-cta {padding: 0.5rem 0.875rem;}}
+
+  .nav-toggle {display: inline-flex; align-items: center; justify-content: center; width: 2.75rem; height: 2.75rem; border-radius: 9999px; color: #fff;}
+  .nav-toggle .icon-close {display: none;}
+  .nav-toggle[aria-expanded="true"] .icon-open {display: none;}
+  .nav-toggle[aria-expanded="true"] .icon-close {display: block;}
+
+  .nav-mobile-panel {display: flex; flex-direction: column; max-height: calc(100dvh - 7rem); overflow-y: auto; overscroll-behavior: contain; background: rgba(10, 4, 30, 0.95); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1);}
+  .nav-m-link, .nav-m-group > summary {display: flex; justify-content: space-between; padding: 0.875rem 0.25rem; font-size: 1.0625rem; font-weight: 500; color: #d1d5db; border-bottom: 1px solid rgba(255, 255, 255, 0.06);}
+  .nav-m-link[aria-current="page"], .nav-m-link[data-current] {color: #c4b5fd;}
+  .nav-m-group > summary {cursor: pointer; list-style: none;}
+  .nav-m-group > summary::-webkit-details-marker {display: none;}
+  .nav-m-group > summary::after {content: "+"; color: #9ca3af;}
+  .nav-m-group[open] > summary::after {content: "–";}
+  .nav-m-group ul {padding: 0.25rem 0 0.5rem 0.75rem;}
+  .nav-m-group li a {display: block; padding: 0.5rem 0.25rem; color: #9ca3af; font-size: 0.9375rem;}
+  .nav-m-group li a[aria-current="page"] {color: #c4b5fd;}
+
+  .btn-wa {display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.875rem 1.5rem; border-radius: 9999px; background: #16a34a; color: #fff; font-weight: 700; white-space: nowrap; box-shadow: 0 0 20px rgba(34, 197, 94, 0.25); transition: background-color 0.2s ease, box-shadow 0.2s ease;}
+  .btn-wa:hover {background: #22c55e; box-shadow: 0 0 28px rgba(34, 197, 94, 0.4);}
+
+  .footer-heading {margin-bottom: 1.25rem; font-size: 0.875rem; font-weight: 600; color: #fff;}
+  .footer-links {display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.875rem;}
+  .footer-links a {color: #9ca3af; transition: color 0.2s ease;}
+  .footer-links a:hover, .footer-links a[aria-current="page"] {color: #fff;}
+}
+
+/* Visible keyboard focus everywhere (mouse clicks don't trigger :focus-visible). */
+a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-visible {outline: 2px solid #a78bfa; outline-offset: 3px;}

@@ -41,52 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   window.addEventListener('scroll', updateProgress, { passive: true });
 
-  // 1. Navbar Scroll Effect
-  const navbar = document.querySelector('nav');
-  const navInner = navbar?.querySelector('.glass-panel');
-
-  if (navbar && navInner) {
-    const handleScroll = () => {
-      if (window.scrollY > 20) {
-        navbar.classList.remove('py-6');
-        navbar.classList.add('py-4', 'scrolled');
-        navInner.classList.remove('bg-opacity-30');
-        navInner.classList.add('bg-opacity-60', 'shadow-lg', 'shadow-aura-purple/10');
-      } else {
-        navbar.classList.add('py-6');
-        navbar.classList.remove('py-4', 'scrolled');
-        navInner.classList.add('bg-opacity-30');
-        navInner.classList.remove('bg-opacity-60', 'shadow-lg', 'shadow-aura-purple/10');
-      }
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll(); // Init
-  }
-
-  // 2. Mobile Menu Toggle
-  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-  const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-  
-  if (mobileMenuBtn && mobileMenuOverlay) {
-    let isOpen = false;
-    
-    // The SVG for Menu and X
-    const menuIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>`;
-    const xIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>`;
-    
-    mobileMenuBtn.addEventListener('click', () => {
-      isOpen = !isOpen;
-      if (isOpen) {
-        mobileMenuOverlay.classList.remove('hidden');
-        mobileMenuOverlay.classList.add('block');
-        mobileMenuBtn.innerHTML = xIcon;
-      } else {
-        mobileMenuOverlay.classList.add('hidden');
-        mobileMenuOverlay.classList.remove('block');
-        mobileMenuBtn.innerHTML = menuIcon;
-      }
-    });
-  }
+  // 1–2. Header scroll effect and mobile menu live in nav.js (shipped with the header partial).
 
   // 3. DecryptedText Effect
   const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+";

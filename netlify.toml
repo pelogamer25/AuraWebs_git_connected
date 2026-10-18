@@ -160,6 +160,25 @@
   status = 301
   force = true
 
+# --- One English home: "/" (en/index.html was a second, different EN home canonicalised to "/") ---
+[[redirects]]
+  from = "/en/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/"
+  to = "/"
+  status = 301
+  force = true
+
 # --- Internal working folders (SEO research, plans): never public ---
 [[redirects]]
   from = "/seo/*"

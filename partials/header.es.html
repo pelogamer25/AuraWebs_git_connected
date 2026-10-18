@@ -1,0 +1,69 @@
+<a href="#contenido" class="skip-link">Saltar al contenido</a>
+<nav class="site-nav fixed top-0 inset-x-0 z-50" aria-label="Principal">
+  <div class="container mx-auto px-4 sm:px-6">
+    <div class="glass-panel nav-pill rounded-full pl-4 pr-2 sm:pl-6 sm:pr-3 py-2.5 flex items-center justify-between gap-2 sm:gap-3">
+      <a href="/es/index.html" class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <img src="/assets/images/optimized/novemodel-128.webp" srcset="/assets/images/optimized/novemodel-64.webp 64w, /assets/images/optimized/novemodel-128.webp 128w, /assets/images/optimized/novemodel-256.webp 256w" sizes="40px" alt="AuraWebs - Agencia de Diseño Web en Medellín" width="40" height="40" fetchpriority="high" decoding="async" class="w-10 h-10" />
+        <span class="text-xl font-bold tracking-tight text-white" translate="no">Aura<span class="font-light opacity-80">Webs</span></span>
+      </a>
+      <ul class="hidden lg:flex items-center gap-1 text-sm font-medium">
+        <li class="nav-dd" data-dropdown>
+          <button type="button" class="nav-link inline-flex items-center gap-1" aria-expanded="false" aria-controls="nav-servicios"{{cur:servicios}}>
+            Servicios
+            <svg class="nav-dd-chevron" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div id="nav-servicios" class="nav-dd-panel">
+            <ul class="grid grid-cols-2 gap-1">
+              {{services}}
+            </ul>
+            <a href="/es/servicios.html" class="nav-dd-all"{{page:/es/servicios.html}}>Ver todos los servicios →</a>
+          </div>
+        </li>
+        <li><a href="/es/portafolio.html" class="nav-link"{{page:/es/portafolio.html}}>Portafolio</a></li>
+        <li><a href="/es/medellin/cuanto-cuesta-pagina-web-medellin.html" class="nav-link"{{page:/es/medellin/cuanto-cuesta-pagina-web-medellin.html}}>Precios</a></li>
+        <li><a href="/es/blog/index.html" class="nav-link"{{cur:blog}}>Blog</a></li>
+      </ul>
+      <div class="flex items-center gap-2">
+        <div id="lang-switcher" class="lang-switch hidden sm:flex">
+          <a href="{{en_url}}" hreflang="en" lang="en">EN</a>
+          <a href="{{es_url}}" hreflang="es" aria-current="true">ES</a>
+        </div>
+        <a href="{{wa}}" target="_blank" rel="noopener noreferrer" class="nav-cta inline-flex">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+          Cotizar
+        </a>
+        <button id="nav-toggle" type="button" class="nav-toggle lg:hidden" aria-label="Abrir menú" data-label-close="Cerrar menú" aria-expanded="false" aria-controls="nav-mobile">
+          <svg class="icon-open" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="nav-mobile" class="lg:hidden" hidden>
+    <div class="container mx-auto px-4 sm:px-6 mt-2">
+      <div class="nav-mobile-panel rounded-2xl p-5">
+        <details class="nav-m-group"{{open:servicios}}>
+          <summary>Servicios</summary>
+          <ul>
+            {{services_mobile}}
+            <li><a href="/es/servicios.html"{{page:/es/servicios.html}}>Todos los servicios</a></li>
+          </ul>
+        </details>
+        <a href="/es/portafolio.html" class="nav-m-link"{{page:/es/portafolio.html}}>Portafolio</a>
+        <a href="/es/medellin/cuanto-cuesta-pagina-web-medellin.html" class="nav-m-link"{{page:/es/medellin/cuanto-cuesta-pagina-web-medellin.html}}>Precios</a>
+        <a href="/es/blog/index.html" class="nav-m-link"{{cur:blog}}>Blog</a>
+        <a href="/es/faq.html" class="nav-m-link"{{page:/es/faq.html}}>Preguntas frecuentes</a>
+        <a href="/es/contacto.html" class="nav-m-link"{{page:/es/contacto.html}}>Contacto</a>
+        <div id="mobile-lang-switcher" class="lang-switch mt-4 self-start">
+          <a href="{{en_url}}" hreflang="en" lang="en">English</a>
+          <a href="{{es_url}}" hreflang="es" aria-current="true">Español</a>
+        </div>
+        <a href="{{wa}}" target="_blank" rel="noopener noreferrer" class="btn-wa mt-5 w-full">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+          Cotiza gratis por WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+<script src="/nav.js" defer></script>
