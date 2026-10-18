@@ -68,6 +68,7 @@ window.addEventListener('load', function () {
     <link rel="alternate" hreflang="en" href="https://aurawebs.site/en/contact.html" />
     <link rel="alternate" hreflang="es" href="https://aurawebs.site/es/contacto.html" />
     <link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/contact.html" />
+<link rel="preload" href="/assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
@@ -355,7 +356,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                           +57 321 7466755
                         </p>
                         <p class="text-gray-500 text-sm mt-1">
-                          Lun-Vie, 9am - 6pm EST
+                          Lun–vie, 9:00 a. m.–6:00 p. m. (hora Colombia)
                         </p>
                       </div></a
                     >
@@ -364,48 +365,51 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div
                   class="glass-panel gradient-border p-8 md:p-10 rounded-3xl border border-white/5 shadow-2xl reveal-right"
                 >
-                  <form class="space-y-6">
+                  <form class="space-y-6" action="https://wa.me/573217466755" method="get" target="_blank" data-whatsapp-form>
                     <div>
                       <label
                         for="name"
                         class="block text-sm font-medium text-gray-400 mb-2"
-                        >Nombre Completo</label
+                        >Nombre completo</label
                       ><input
                         type="text"
                         id="name"
+                        name="nombre"
+                        autocomplete="name"
                         class="input-premium w-full rounded-xl px-4 py-3"
-                        placeholder="John Doe"
-                        required=""
-                        value=""
+                        placeholder="Ej.: María Gómez"
+                        required
                       />
                     </div>
                     <div>
                       <label
                         for="email"
                         class="block text-sm font-medium text-gray-400 mb-2"
-                        >Correo Electrónico</label
+                        >Correo electrónico <span class="text-gray-500">(opcional)</span></label
                       ><input
                         type="email"
                         id="email"
+                        name="correo"
+                        autocomplete="email"
+                        spellcheck="false"
                         class="input-premium w-full rounded-xl px-4 py-3"
-                        placeholder="john@company.com"
-                        required=""
-                        value=""
+                        placeholder="tu@empresa.com"
                       />
                     </div>
                     <div>
                       <label
                         for="interest"
                         class="block text-sm font-medium text-gray-400 mb-2"
-                        >Tipo de Proyecto</label
+                        >Tipo de proyecto</label
                       ><select
                         id="interest"
-                        class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-aura-purple focus:ring-1 focus:ring-aura-purple transition-all appearance-none"
+                        name="tipo"
+                        class="input-premium w-full rounded-xl px-4 py-3 appearance-none"
                       >
-                        <option>Diseño y Desarrollo Web</option>
-                        <option>SEO y Marketing</option>
-                        <option>Comercio Electrónico</option>
-                        <option>Desarrollo de Aplicaciones</option>
+                        <option>Diseño y desarrollo web</option>
+                        <option>SEO y marketing</option>
+                        <option>Tienda online</option>
+                        <option>Desarrollo de aplicaciones</option>
                         <option>Otro</option>
                       </select>
                     </div>
@@ -413,38 +417,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       <label
                         for="message"
                         class="block text-sm font-medium text-gray-400 mb-2"
-                        >Detalles del Proyecto</label
+                        >Detalles del proyecto</label
                       ><textarea
                         id="message"
+                        name="text"
                         rows="4"
-                        class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-aura-purple focus:ring-1 focus:ring-aura-purple transition-all resize-none"
-                        placeholder="Cuéntanos sobre tus objetivos..."
-                        required=""
+                        class="input-premium w-full rounded-xl px-4 py-3 resize-none"
+                        placeholder="Qué necesitas, para cuándo y un presupuesto aproximado…"
+                        required
                       ></textarea>
                     </div>
                     <button
                       type="submit"
-                      class="w-full py-4 rounded-xl bg-gradient-to-r from-aura-purple to-aura-magenta text-white font-bold text-lg shadow-lg hover:shadow-aura-purple/50 transform hover:-translate-y-1 transition-all flex items-center justify-center gap-2"
+                      class="w-full py-4 rounded-xl bg-green-600 hover:bg-green-500 text-white font-bold text-lg shadow-[0_0_20px_rgba(34,197,94,0.3)] transition-colors flex items-center justify-center gap-2"
                     >
-                      Enviar Mensaje<svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="lucide lucide-send"
-                        aria-hidden="true"
-                      >
-                        <path
-                          d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"
-                        ></path>
-                        <path d="m21.854 2.147-10.94 10.939"></path>
-                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                      Enviar por WhatsApp
                     </button>
+                    <p class="text-sm text-gray-400 text-center" data-form-status aria-live="polite">Se abrirá WhatsApp con tu mensaje listo para enviar.</p>
                   </form>
                 </div>
               </div>

@@ -484,4 +484,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
   initStaticReveal();
+
+  // --- 10. Contact forms send everything to WhatsApp ---
+  // Without JS the form still GETs wa.me with the textarea as ?text=.
+  document.querySelectorAll('form[data-whatsapp-form]').forEach(form => {
+    const es = document.documentElement.lang.startsWith('es');
+    const status = form.querySelector('[data-form-status]');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      if (!form.reportValidity()) return;
+      const val = id => (form.querySelector('#' + id)?.value || '').trim();
+      const fields = es
+        ? [['Nombre', 'name'], ['Correo', 'email'], ['Tipo de proyecto', 'interest'], ['Detalles', 'message']]
+        : [['Name', 'name'], ['Email', 'email'], ['Project type', 'interest'], ['Details', 'message']];
+      const intro = es ? 'Hola AuraWebs, quiero cotizar un proyecto.' : 'Hi AuraWebs, I would like a quote.';
+      const body = fields.filter(([, id]) => val(id)).map(([label, id]) => `${label}: ${val(id)}`).join('\n');
+      const url = form.action + '?text=' + encodeURIComponent(intro + '\n\n' + body);
+      const win = window.open(url, '_blank');
+      if (win) win.opener = null; else window.location.href = url;
+      if (status) status.textContent = es
+        ? 'Listo: abrimos WhatsApp con tu mensaje. Solo pulsa enviar.'
+        : 'Done: WhatsApp is open with your message. Just hit send.';
+    });
+  });
 });
