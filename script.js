@@ -440,6 +440,28 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   initStaticReveal();
 
+  // --- 9b. Tabs ([data-tabs]): without JS every panel shows; with JS one at a time, arrow keys move. ---
+  document.querySelectorAll('[data-tabs]').forEach(root => {
+    const tabs = [...root.querySelectorAll('[role="tab"]')];
+    const select = (tab, focus) => {
+      tabs.forEach(t => {
+        const on = t === tab;
+        t.setAttribute('aria-selected', String(on));
+        t.tabIndex = on ? 0 : -1;
+        document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+      });
+      if (focus) tab.focus();
+    };
+    tabs.forEach((t, i) => {
+      t.addEventListener('click', () => select(t));
+      t.addEventListener('keydown', e => {
+        const step = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+        if (step) { e.preventDefault(); select(tabs[(i + step + tabs.length) % tabs.length], true); }
+      });
+    });
+    select(tabs.find(t => t.getAttribute('aria-selected') === 'true') || tabs[0]);
+  });
+
   // --- 10. Contact forms send everything to WhatsApp ---
   // Without JS the form still GETs wa.me with the textarea as ?text=.
   document.querySelectorAll('form[data-whatsapp-form]').forEach(form => {

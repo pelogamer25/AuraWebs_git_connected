@@ -243,6 +243,35 @@ select.input-premium option {background-color: #0f0728; color: #fff;}
   .price-card-list {margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.625rem; font-size: 0.9375rem; color: #d1d5db;}
   .price-card-list li::before {content: "✓"; margin-right: 0.625rem; color: #a78bfa; font-weight: 700;}
 
+  /* FAQ accordions: <details> with the question as an H3 inside <summary>; answers stay in the HTML. */
+  .faq-d {border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.08); background: rgba(15, 7, 40, 0.45); transition: border-color 0.2s ease;}
+  .faq-d[open] {border-color: rgba(167, 139, 250, 0.35);}
+  .faq-d > summary {display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.125rem 1.5rem; cursor: pointer; list-style: none;}
+  .faq-d > summary::-webkit-details-marker {display: none;}
+  .faq-d-q {font-size: 1.0625rem; font-weight: 600; line-height: 1.4; color: #fff; text-wrap: pretty;}
+  .faq-d-icon {flex-shrink: 0; width: 1.75rem; height: 1.75rem; border-radius: 9999px; border: 1px solid rgba(255, 255, 255, 0.15); display: inline-flex; align-items: center; justify-content: center; color: #c4b5fd; transition: transform 0.2s ease;}
+  .faq-d-icon::before {content: "+"; font-size: 1.125rem; line-height: 1;}
+  .faq-d[open] .faq-d-icon {transform: rotate(45deg);}
+  .faq-d-a {padding: 0 1.5rem 1.25rem; color: #9ca3af; line-height: 1.7;}
+  .faq-d-a a {color: #c4b5fd; text-decoration: underline; text-underline-offset: 2px;}
+
+  /* Tabs (script.js §9b) */
+  .tabs-list {display: flex; gap: 0.5rem; overflow-x: auto; padding-bottom: 0.25rem; margin-bottom: 2.5rem; scrollbar-width: none; justify-content: flex-start;}
+  .tabs-list::-webkit-scrollbar {display: none;}
+  @media (min-width: 1024px) {.tabs-list {justify-content: center;}}
+  .tabs-list [role="tab"] {flex-shrink: 0; padding: 0.625rem 1.125rem; border-radius: 9999px; border: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.04); color: #9ca3af; font-size: 0.9375rem; font-weight: 600; white-space: nowrap; transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;}
+  .tabs-list [role="tab"]:hover {color: #fff; border-color: rgba(255, 255, 255, 0.2);}
+  .tabs-list [role="tab"][aria-selected="true"] {color: #fff; background: rgba(124, 58, 237, 0.35); border-color: rgba(167, 139, 250, 0.5);}
+  .tabs-panel:focus-visible {outline: 2px solid #a78bfa; outline-offset: 6px; border-radius: 1rem;}
+
+  /* Reviews: swipeable row on mobile, 3-column grid from md up */
+  .reviews-row {display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 0.75rem; scrollbar-width: thin;}
+  .reviews-row > * {flex: 0 0 85%; scroll-snap-align: start;}
+  @media (min-width: 768px) {
+    .reviews-row {display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; overflow: visible;}
+    .reviews-row > * {flex: none;}
+  }
+
   /* "Sigue explorando" block and generated breadcrumbs (scripts/sync-partials.mjs) */
   .next-step {border-top: 1px solid rgba(255, 255, 255, 0.06);}
   .next-step-title {font-size: 1.25rem; font-weight: 700; color: #fff;}
