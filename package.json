@@ -10,7 +10,7 @@
     "sitemap:dates": "node scripts/seo/sitemap-lastmod.mjs",
     "sitemap:check": "node scripts/seo/sitemap-lastmod.mjs --check",
     "partials:sync": "node scripts/sync-partials.mjs",
-    "qa:serve": "python -m http.server 8765 --bind 127.0.0.1",
+    "qa:serve": "python scripts/qa/serve.py 8765",
     "qa": "playwright-cli open about:blank && playwright-cli run-code --filename=scripts/qa/visual-check.js && playwright-cli close"
   },
   "devDependencies": {

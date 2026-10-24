@@ -6,301 +6,301 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/" />
   </url>
   <url>
-    <loc>https://aurawebs.site/es/index.html</loc>
+    <loc>https://aurawebs.site/es/</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/" />
   </url>
   <url>
-    <loc>https://aurawebs.site/en/web-design.html</loc>
+    <loc>https://aurawebs.site/en/web-design</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/web-design.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/medellin.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/web-design" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/diseno-web-medellin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design" />
   </url>
   <url>
-    <loc>https://aurawebs.site/es/medellin.html</loc>
+    <loc>https://aurawebs.site/es/diseno-web-medellin</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/web-design.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/medellin.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/web-design" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/diseno-web-medellin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design" />
   </url>
   <url>
-    <loc>https://aurawebs.site/es/bogota.html</loc>
+    <loc>https://aurawebs.site/es/diseno-web-bogota</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://aurawebs.site/en/services.html</loc>
+    <loc>https://aurawebs.site/en/services</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/services.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/servicios.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/services.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/services" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/servicios" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/services" />
   </url>
   <url>
-    <loc>https://aurawebs.site/es/servicios.html</loc>
+    <loc>https://aurawebs.site/es/servicios</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/services.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/servicios.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/services.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/services" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/servicios" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/services" />
   </url>
   <url>
-    <loc>https://aurawebs.site/en/showcase.html</loc>
+    <loc>https://aurawebs.site/en/showcase</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/showcase.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/portafolio.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/showcase.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/showcase" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/portafolio" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/showcase" />
   </url>
   <url>
-    <loc>https://aurawebs.site/es/portafolio.html</loc>
+    <loc>https://aurawebs.site/es/portafolio</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/showcase.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/portafolio.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/showcase.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/showcase" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/portafolio" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/showcase" />
   </url>
   <url>
-    <loc>https://aurawebs.site/en/faq.html</loc>
+    <loc>https://aurawebs.site/en/faq</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/faq.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/faq.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/faq.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/faq" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/faq" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/faq" />
   </url>
   <url>
-    <loc>https://aurawebs.site/es/faq.html</loc>
+    <loc>https://aurawebs.site/es/faq</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/faq.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/faq.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/faq.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/faq" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/faq" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/faq" />
   </url>
   <url>
-    <loc>https://aurawebs.site/en/contact.html</loc>
+    <loc>https://aurawebs.site/en/contact</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/contact.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/contacto.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/contact.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/contact" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/contacto" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/contact" />
   </url>
   <url>
-    <loc>https://aurawebs.site/es/contacto.html</loc>
+    <loc>https://aurawebs.site/es/contacto</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/contact.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/contacto.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/contact.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/contact" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/contacto" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/contact" />
   </url>
   <url>
-    <loc>https://aurawebs.site/en/privacy.html</loc>
+    <loc>https://aurawebs.site/en/privacy</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/privacy.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/privacidad.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/privacidad" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/privacy" />
   </url>
   <url>
-    <loc>https://aurawebs.site/es/privacidad.html</loc>
+    <loc>https://aurawebs.site/es/privacidad</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/privacy.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/privacidad.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/privacidad" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/privacy" />
   </url>
   <url>
-    <loc>https://aurawebs.site/en/terms.html</loc>
+    <loc>https://aurawebs.site/en/terms</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/terms.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/terminos.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/terms.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/terms" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/terminos" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/terms" />
   </url>
   <url>
-    <loc>https://aurawebs.site/es/terminos.html</loc>
+    <loc>https://aurawebs.site/es/terminos</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/terms.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/terminos.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/terms.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/terms" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/terminos" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/terms" />
   </url>
   <url>
-    <loc>https://aurawebs.site/en/sitemap.html</loc>
+    <loc>https://aurawebs.site/en/sitemap</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/sitemap.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/mapa-del-sitio.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/sitemap.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/sitemap" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/mapa-del-sitio" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/sitemap" />
   </url>
   <url>
-    <loc>https://aurawebs.site/es/mapa-del-sitio.html</loc>
+    <loc>https://aurawebs.site/es/mapa-del-sitio</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/sitemap.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/mapa-del-sitio.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/sitemap.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://aurawebs.site/en/sitemap" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/mapa-del-sitio" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/sitemap" />
   </url>
   <url>
-    <loc>https://aurawebs.site/es/medellin/index.html</loc>
+    <loc>https://aurawebs.site/es/medellin/</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/medellin/index.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/medellin/index.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design.html" />
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/medellin/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/medellin/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design" />
   </url>
   <url>
-    <loc>https://aurawebs.site/es/medellin/desarrollo-web-medellin.html</loc>
+    <loc>https://aurawebs.site/es/medellin/desarrollo-web-medellin</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/medellin/desarrollo-web-medellin.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/medellin/desarrollo-web-medellin.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design.html" />
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/medellin/desarrollo-web-medellin" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/medellin/desarrollo-web-medellin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design" />
   </url>
   <url>
-    <loc>https://aurawebs.site/es/medellin/landing-pages-medellin.html</loc>
+    <loc>https://aurawebs.site/es/medellin/landing-pages-medellin</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/medellin/landing-pages-medellin.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/medellin/landing-pages-medellin.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design.html" />
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/medellin/landing-pages-medellin" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/medellin/landing-pages-medellin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design" />
   </url>
   <url>
-    <loc>https://aurawebs.site/es/medellin/seo-local-medellin.html</loc>
+    <loc>https://aurawebs.site/es/medellin/seo-local-medellin</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/medellin/seo-local-medellin.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/medellin/seo-local-medellin.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design.html" />
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/medellin/seo-local-medellin" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/medellin/seo-local-medellin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design" />
   </url>
   <url>
-    <loc>https://aurawebs.site/es/medellin/mantenimiento-web-medellin.html</loc>
+    <loc>https://aurawebs.site/es/medellin/mantenimiento-web-medellin</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/medellin/mantenimiento-web-medellin.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/medellin/mantenimiento-web-medellin.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design.html" />
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/medellin/mantenimiento-web-medellin" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/medellin/mantenimiento-web-medellin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design" />
   </url>
   <url>
-    <loc>https://aurawebs.site/es/medellin/redisenio-web-medellin.html</loc>
+    <loc>https://aurawebs.site/es/medellin/redisenio-web-medellin</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/medellin/redisenio-web-medellin.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/medellin/redisenio-web-medellin.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design.html" />
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/medellin/redisenio-web-medellin" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/medellin/redisenio-web-medellin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design" />
   </url>
   <url>
-    <loc>https://aurawebs.site/es/medellin/cuanto-cuesta-pagina-web-medellin.html</loc>
+    <loc>https://aurawebs.site/es/medellin/cuanto-cuesta-pagina-web-medellin</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/medellin/cuanto-cuesta-pagina-web-medellin.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/medellin/cuanto-cuesta-pagina-web-medellin.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design.html" />
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/medellin/cuanto-cuesta-pagina-web-medellin" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/medellin/cuanto-cuesta-pagina-web-medellin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design" />
   </url>
   <url>
-    <loc>https://aurawebs.site/es/blog/index.html</loc>
+    <loc>https://aurawebs.site/es/blog/</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/blog/index.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/blog/index.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design.html" />
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/blog/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design" />
   </url>
   <url>
-    <loc>https://aurawebs.site/es/blog/agencias-diseno-web-medellin.html</loc>
+    <loc>https://aurawebs.site/es/blog/agencias-diseno-web-medellin</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/blog/agencias-diseno-web-medellin.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/blog/agencias-diseno-web-medellin.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design.html" />
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/blog/agencias-diseno-web-medellin" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/blog/agencias-diseno-web-medellin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design" />
   </url>
   <url>
-    <loc>https://aurawebs.site/es/blog/seo-local-medellin.html</loc>
+    <loc>https://aurawebs.site/es/blog/seo-local-medellin</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/blog/seo-local-medellin.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/blog/seo-local-medellin.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design.html" />
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/blog/seo-local-medellin" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/blog/seo-local-medellin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design" />
   </url>
   <url>
-    <loc>https://aurawebs.site/es/blog/paginas-web-medellin.html</loc>
+    <loc>https://aurawebs.site/es/blog/paginas-web-medellin</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/blog/paginas-web-medellin.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/blog/paginas-web-medellin.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design.html" />
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/blog/paginas-web-medellin" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/blog/paginas-web-medellin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design" />
   </url>
   <url>
-    <loc>https://aurawebs.site/es/blog/desarrollo-web-medellin.html</loc>
+    <loc>https://aurawebs.site/es/blog/desarrollo-web-medellin</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/blog/desarrollo-web-medellin.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/blog/desarrollo-web-medellin.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design.html" />
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/blog/desarrollo-web-medellin" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/blog/desarrollo-web-medellin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design" />
   </url>
   <url>
-    <loc>https://aurawebs.site/es/blog/tienda-online-medellin.html</loc>
+    <loc>https://aurawebs.site/es/blog/tienda-online-medellin</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/blog/tienda-online-medellin.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/blog/tienda-online-medellin.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design.html" />
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/blog/tienda-online-medellin" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/blog/tienda-online-medellin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design" />
   </url>
   <url>
-    <loc>https://aurawebs.site/es/blog/redisenio-web-medellin.html</loc>
+    <loc>https://aurawebs.site/es/blog/redisenio-web-medellin</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/blog/redisenio-web-medellin.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/blog/redisenio-web-medellin.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design.html" />
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/blog/redisenio-web-medellin" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/blog/redisenio-web-medellin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design" />
   </url>
   <url>
-    <loc>https://aurawebs.site/es/blog/diseno-web-pymes-medellin.html</loc>
+    <loc>https://aurawebs.site/es/blog/diseno-web-pymes-medellin</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/blog/diseno-web-pymes-medellin.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/blog/diseno-web-pymes-medellin.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design.html" />
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/blog/diseno-web-pymes-medellin" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/blog/diseno-web-pymes-medellin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design" />
   </url>
 </urlset>

@@ -1,33 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   const currentPath = window.location.pathname;
-  const languageRouteMap = {
-    '/': { en: '/', es: '/es/index.html' },
-    '/index.html': { en: '/', es: '/es/index.html' },
-    '/contact.html': { en: '/en/contact.html', es: '/es/contacto.html' },
-    '/faq.html': { en: '/en/faq.html', es: '/es/faq.html' },
-    '/services.html': { en: '/en/services.html', es: '/es/servicios.html' },
-    '/showcase.html': { en: '/en/showcase.html', es: '/es/portafolio.html' },
-    '/sitemap.html': { en: '/en/sitemap.html', es: '/es/mapa-del-sitio.html' },
-    '/en/index.html': { en: '/', es: '/es/index.html' },
-    '/en/contact.html': { en: '/en/contact.html', es: '/es/contacto.html' },
-    '/en/faq.html': { en: '/en/faq.html', es: '/es/faq.html' },
-    '/en/privacy.html': { en: '/en/privacy.html', es: '/es/privacidad.html' },
-    '/en/services.html': { en: '/en/services.html', es: '/es/servicios.html' },
-    '/en/showcase.html': { en: '/en/showcase.html', es: '/es/portafolio.html' },
-    '/en/sitemap.html': { en: '/en/sitemap.html', es: '/es/mapa-del-sitio.html' },
-    '/en/terms.html': { en: '/en/terms.html', es: '/es/terminos.html' },
-    '/en/web-design.html': { en: '/en/web-design.html', es: '/es/medellin.html' },
-    '/es/index.html': { en: '/', es: '/es/index.html' },
-    '/es/contacto.html': { en: '/en/contact.html', es: '/es/contacto.html' },
-    '/es/faq.html': { en: '/en/faq.html', es: '/es/faq.html' },
-    '/es/mapa-del-sitio.html': { en: '/en/sitemap.html', es: '/es/mapa-del-sitio.html' },
-    '/es/medellin.html': { en: '/en/web-design.html', es: '/es/medellin.html' },
-    '/es/portafolio.html': { en: '/en/showcase.html', es: '/es/portafolio.html' },
-    '/es/privacidad.html': { en: '/en/privacy.html', es: '/es/privacidad.html' },
-    '/es/servicios.html': { en: '/en/services.html', es: '/es/servicios.html' },
-    '/es/terminos.html': { en: '/en/terms.html', es: '/es/terminos.html' }
-  };
-  const localizedRoutes = languageRouteMap[currentPath] || languageRouteMap['/'];
+  // Language-switch targets come from the page's own hreflang alternates.
+  const alternate = lang => (document.querySelector(`link[rel="alternate"][hreflang^="${lang}"]`)?.getAttribute('href') || '').replace('https://aurawebs.site', '');
+  const isEsPath = currentPath.startsWith('/es');
+  const localizedRoutes = { en: alternate('en') || (isEsPath ? '/' : currentPath), es: alternate('es') || (isEsPath ? currentPath : '/es/') };
 
   // 0. Scroll Progress Bar
   const progressBar = document.createElement('div');

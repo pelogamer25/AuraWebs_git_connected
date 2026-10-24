@@ -1,166 +1,348 @@
-# aurawebs.site is served by NETLIFY. vercel.json / .vercelignore were never applied in
-# production, so this file is the single source of truth for redirects and headers.
-# Build settings (if any) stay in the Netlify UI; the site is static and styles.css is committed.
+# aurawebs.site is served by NETLIFY (not Vercel). This file is the single source of truth for
+# redirects and headers; build settings, if any, stay in the Netlify UI (styles.css is committed).
+#
+# URLs are clean: /x is served from x.html and /dir/ from dir/index.html (Netlify does this natively).
+# Every old ".html" address 301s to its clean URL. Rules are matched on the incoming path only, so
+# "/x.html -> /x" cannot loop with Netlify serving /x from x.html (verified 2026-10-24).
 
-# --- Legacy and short URLs -> canonical pages (force: Netlify otherwise serves an existing
-#     file or its pretty-URL twin instead of redirecting) ---
+# --- Old .html addresses -> clean URLs ---
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/blog/agencias-diseno-web-medellin.html"
+  to = "/es/blog/agencias-diseno-web-medellin"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/blog/desarrollo-web-medellin.html"
+  to = "/es/blog/desarrollo-web-medellin"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/blog/diseno-web-pymes-medellin.html"
+  to = "/es/blog/diseno-web-pymes-medellin"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/blog/index.html"
+  to = "/es/blog/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/blog/paginas-web-medellin.html"
+  to = "/es/blog/paginas-web-medellin"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/blog/redisenio-web-medellin.html"
+  to = "/es/blog/redisenio-web-medellin"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/blog/seo-local-medellin.html"
+  to = "/es/blog/seo-local-medellin"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/blog/tienda-online-medellin.html"
+  to = "/es/blog/tienda-online-medellin"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/contacto.html"
+  to = "/es/contacto"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/bogota.html"
+  to = "/es/diseno-web-bogota"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/diseno-web-bogota.html"
+  to = "/es/diseno-web-bogota"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/medellin.html"
+  to = "/es/diseno-web-medellin"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/diseno-web-medellin.html"
+  to = "/es/diseno-web-medellin"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/faq.html"
+  to = "/es/faq"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/index.html"
+  to = "/es/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/mapa-del-sitio.html"
+  to = "/es/mapa-del-sitio"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/medellin/cuanto-cuesta-pagina-web-medellin.html"
+  to = "/es/medellin/cuanto-cuesta-pagina-web-medellin"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/medellin/desarrollo-web-medellin.html"
+  to = "/es/medellin/desarrollo-web-medellin"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/medellin/index.html"
+  to = "/es/medellin/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/medellin/landing-pages-medellin.html"
+  to = "/es/medellin/landing-pages-medellin"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/medellin/mantenimiento-web-medellin.html"
+  to = "/es/medellin/mantenimiento-web-medellin"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/medellin/redisenio-web-medellin.html"
+  to = "/es/medellin/redisenio-web-medellin"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/medellin/seo-local-medellin.html"
+  to = "/es/medellin/seo-local-medellin"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/portafolio.html"
+  to = "/es/portafolio"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/privacidad.html"
+  to = "/es/privacidad"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/servicios.html"
+  to = "/es/servicios"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/terminos.html"
+  to = "/es/terminos"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/contact.html"
+  to = "/en/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/faq.html"
+  to = "/en/faq"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/privacy.html"
+  to = "/en/privacy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/services.html"
+  to = "/en/services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/showcase.html"
+  to = "/en/showcase"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/sitemap.html"
+  to = "/en/sitemap"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/terms.html"
+  to = "/en/terms"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/web-design.html"
+  to = "/en/web-design"
+  status = 301
+  force = true
+
+# --- Legacy and short URLs (point straight at the final URL: no redirect chains) ---
 [[redirects]]
   from = "/contact.html"
-  to = "/en/contact.html"
+  to = "/en/contact"
   status = 301
   force = true
 
 [[redirects]]
   from = "/faq.html"
-  to = "/en/faq.html"
+  to = "/en/faq"
   status = 301
   force = true
 
 [[redirects]]
   from = "/services.html"
-  to = "/en/services.html"
+  to = "/en/services"
   status = 301
   force = true
 
 [[redirects]]
   from = "/showcase.html"
-  to = "/en/showcase.html"
+  to = "/en/showcase"
   status = 301
   force = true
 
 [[redirects]]
   from = "/sitemap.html"
-  to = "/en/sitemap.html"
+  to = "/en/sitemap"
   status = 301
   force = true
 
 [[redirects]]
   from = "/diseno-web-medellin"
-  to = "/es/medellin.html"
+  to = "/es/diseno-web-medellin"
   status = 301
   force = true
 
 [[redirects]]
   from = "/diseño-web-medellin"
-  to = "/es/medellin.html"
+  to = "/es/diseno-web-medellin"
   status = 301
   force = true
 
 [[redirects]]
   from = "/dise%C3%B1o-web-medellin"
-  to = "/es/medellin.html"
+  to = "/es/diseno-web-medellin"
   status = 301
   force = true
 
 [[redirects]]
   from = "/diseno-web-en-medellin"
-  to = "/es/medellin.html"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/es/medellin"
-  to = "/es/medellin.html"
+  to = "/es/diseno-web-medellin"
   status = 301
   force = true
 
 [[redirects]]
   from = "/diseno-web-bogota"
-  to = "/es/bogota.html"
+  to = "/es/diseno-web-bogota"
   status = 301
   force = true
 
 [[redirects]]
   from = "/diseño-web-bogota"
-  to = "/es/bogota.html"
+  to = "/es/diseno-web-bogota"
   status = 301
   force = true
 
 [[redirects]]
   from = "/dise%C3%B1o-web-bogota"
-  to = "/es/bogota.html"
+  to = "/es/diseno-web-bogota"
   status = 301
   force = true
 
 [[redirects]]
   from = "/diseno-web-en-bogota"
-  to = "/es/bogota.html"
+  to = "/es/diseno-web-bogota"
   status = 301
   force = true
 
 [[redirects]]
   from = "/es/bogota"
-  to = "/es/bogota.html"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/es/servicios"
-  to = "/es/servicios.html"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/es/portafolio"
-  to = "/es/portafolio.html"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/es/faq"
-  to = "/es/faq.html"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/es/contacto"
-  to = "/es/contacto.html"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/es/mapa-del-sitio"
-  to = "/es/mapa-del-sitio.html"
+  to = "/es/diseno-web-bogota"
   status = 301
   force = true
 
 [[redirects]]
   from = "/landing-pages-medellin.html"
-  to = "/es/medellin/landing-pages-medellin.html"
+  to = "/es/medellin/landing-pages-medellin"
   status = 301
   force = true
 
 [[redirects]]
   from = "/desarrollo-web-medellin.html"
-  to = "/es/medellin/desarrollo-web-medellin.html"
+  to = "/es/medellin/desarrollo-web-medellin"
   status = 301
   force = true
 
 [[redirects]]
   from = "/seo-local-medellin.html"
-  to = "/es/medellin/seo-local-medellin.html"
+  to = "/es/medellin/seo-local-medellin"
   status = 301
   force = true
 
 [[redirects]]
   from = "/mantenimiento-web-medellin.html"
-  to = "/es/medellin/mantenimiento-web-medellin.html"
+  to = "/es/medellin/mantenimiento-web-medellin"
   status = 301
   force = true
 
 [[redirects]]
   from = "/redisenio-web-medellin.html"
-  to = "/es/medellin/redisenio-web-medellin.html"
+  to = "/es/medellin/redisenio-web-medellin"
   status = 301
   force = true
 
 [[redirects]]
   from = "/cuanto-cuesta-pagina-web-medellin.html"
-  to = "/es/medellin/cuanto-cuesta-pagina-web-medellin.html"
+  to = "/es/medellin/cuanto-cuesta-pagina-web-medellin"
   status = 301
   force = true
 
-# --- One English home: "/" (en/index.html was a second, different EN home canonicalised to "/") ---
 [[redirects]]
   from = "/en/index.html"
   to = "/"
@@ -208,15 +390,3 @@
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
 
-# --- TEMP: behaviour test for the clean-URL migration (removed in the next commit) ---
-[[redirects]]
-  from = "/qa-url-test.html"
-  to = "/qa-url-test"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/qa-url-test-dir/index.html"
-  to = "/qa-url-test-dir/"
-  status = 301
-  force = true

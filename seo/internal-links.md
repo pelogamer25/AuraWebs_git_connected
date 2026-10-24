@@ -13,9 +13,9 @@ anchor text.
 | Page | Inbound | Outbound |
 |---|---:|---:|
 | `es/index.html` | 108 | 43 |
-| `es/medellin.html` | 30 | 37 |
+| `es/diseno-web-medellin.html` | 30 | 37 |
 | `es/servicios.html` | 99 | 25 |
-| `es/bogota.html` | 5 | 24 |
+| `es/diseno-web-bogota.html` | 5 | 24 |
 | `es/medellin/index.html` | 16 | 24 |
 | `es/medellin/desarrollo-web-medellin.html` | 25 | 23 |
 | `es/medellin/landing-pages-medellin.html` | 16 | 23 |
@@ -32,7 +32,7 @@ anchor text.
 
 ## Anchor text pointing at each money page
 
-### → `es/medellin.html`  (30 inbound)
+### → `es/diseno-web-medellin.html`  (30 inbound)
 
 | # | Anchor text |
 |---:|---|
@@ -47,7 +47,7 @@ anchor text.
 | 1 | Diseño Web en Medellín |
 | 1 | Ver servicios de diseño web |
 
-### → `es/bogota.html`  (5 inbound)
+### → `es/diseno-web-bogota.html`  (5 inbound)
 
 | # | Anchor text |
 |---:|---|

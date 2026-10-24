@@ -29,6 +29,7 @@ function fileFor(loc) {
   let rel = loc.startsWith(ORIGIN) ? loc.slice(ORIGIN.length) : loc.replace(/^https?:\/\/[^/]+\//, '');
   rel = rel.split(/[?#]/)[0];
   if (rel === '' || rel.endsWith('/')) rel += 'index.html';
+  else if (!rel.endsWith('.html')) rel += '.html'; // clean URL /x is served from x.html
   return join(ROOT, rel);
 }
 

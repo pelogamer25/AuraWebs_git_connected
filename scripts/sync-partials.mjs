@@ -19,60 +19,60 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const WA = 'https://wa.me/573217466755';
 
 const SERVICES_ES = [
-  ['/es/medellin.html', 'Diseño web en Medellín', 'Sitios profesionales que consiguen clientes'],
-  ['/es/medellin/desarrollo-web-medellin.html', 'Desarrollo web', 'A medida, rápido y escalable'],
-  ['/es/medellin/landing-pages-medellin.html', 'Landing pages', 'Páginas de campaña que convierten'],
-  ['/es/medellin/seo-local-medellin.html', 'SEO local', 'Aparece en Google y Google Maps'],
-  ['/es/medellin/redisenio-web-medellin.html', 'Rediseño web', 'Moderniza sin perder posicionamiento'],
-  ['/es/medellin/mantenimiento-web-medellin.html', 'Mantenimiento web', 'Soporte, seguridad y actualizaciones'],
-  ['/es/bogota.html', 'Diseño web en Bogotá', 'Proyectos para empresas en Bogotá'],
+  ['/es/diseno-web-medellin', 'Diseño web en Medellín', 'Sitios profesionales que consiguen clientes'],
+  ['/es/medellin/desarrollo-web-medellin', 'Desarrollo web', 'A medida, rápido y escalable'],
+  ['/es/medellin/landing-pages-medellin', 'Landing pages', 'Páginas de campaña que convierten'],
+  ['/es/medellin/seo-local-medellin', 'SEO local', 'Aparece en Google y Google Maps'],
+  ['/es/medellin/redisenio-web-medellin', 'Rediseño web', 'Moderniza sin perder posicionamiento'],
+  ['/es/medellin/mantenimiento-web-medellin', 'Mantenimiento web', 'Soporte, seguridad y actualizaciones'],
+  ['/es/diseno-web-bogota', 'Diseño web en Bogotá', 'Proyectos para empresas en Bogotá'],
 ];
-const SERVICES_CLUSTER = new Set([...SERVICES_ES.map(s => s[0]), '/es/servicios.html', '/es/medellin/index.html']);
+const SERVICES_CLUSTER = new Set([...SERVICES_ES.map(s => s[0]), '/es/servicios', '/es/medellin/']);
 
 // "Sigue explorando" block before </main>: three related pages so every page leads somewhere.
 const CARDS = {
-  med: ['/es/medellin.html', 'Diseño web en Medellín', 'Sitios profesionales que consiguen clientes desde Google.'],
-  dev: ['/es/medellin/desarrollo-web-medellin.html', 'Desarrollo web', 'Sitios y aplicaciones a medida, rápidos y escalables.'],
-  land: ['/es/medellin/landing-pages-medellin.html', 'Landing pages', 'Páginas de campaña que convierten visitas en contactos.'],
-  seo: ['/es/medellin/seo-local-medellin.html', 'SEO local', 'Aparece en Google y Google Maps en tu ciudad.'],
-  redis: ['/es/medellin/redisenio-web-medellin.html', 'Rediseño web', 'Moderniza tu sitio sin perder posicionamiento.'],
-  mant: ['/es/medellin/mantenimiento-web-medellin.html', 'Mantenimiento web', 'Soporte, seguridad y actualizaciones cada mes.'],
-  precios: ['/es/medellin/cuanto-cuesta-pagina-web-medellin.html', '¿Cuánto cuesta una página web?', 'Rangos de precio 2026 y qué debe incluir una cotización.'],
-  port: ['/es/portafolio.html', 'Portafolio', 'Proyectos reales de diseño y desarrollo web.'],
-  serv: ['/es/servicios.html', 'Todos los servicios', 'Diseño, desarrollo, SEO, apps y analítica en un solo lugar.'],
-  faq: ['/es/faq.html', 'Preguntas frecuentes', 'Tiempos, proceso, pagos y soporte, respondidos.'],
-  blog: ['/es/blog/index.html', 'Blog', 'Guías prácticas sobre diseño web y SEO local.'],
-  en_web: ['/en/web-design.html', 'Web design', 'Websites built to rank on Google and convert visitors.'],
-  en_serv: ['/en/services.html', 'Services & pricing', 'What we build and what it costs.'],
-  en_work: ['/en/showcase.html', 'Our work', 'Selected design and development projects.'],
-  en_faq: ['/en/faq.html', 'FAQ', 'Timelines, process, payments and support.'],
-  en_contact: ['/en/contact.html', 'Contact', 'Tell us about your project. We reply within 24 hours.'],
+  med: ['/es/diseno-web-medellin', 'Diseño web en Medellín', 'Sitios profesionales que consiguen clientes desde Google.'],
+  dev: ['/es/medellin/desarrollo-web-medellin', 'Desarrollo web', 'Sitios y aplicaciones a medida, rápidos y escalables.'],
+  land: ['/es/medellin/landing-pages-medellin', 'Landing pages', 'Páginas de campaña que convierten visitas en contactos.'],
+  seo: ['/es/medellin/seo-local-medellin', 'SEO local', 'Aparece en Google y Google Maps en tu ciudad.'],
+  redis: ['/es/medellin/redisenio-web-medellin', 'Rediseño web', 'Moderniza tu sitio sin perder posicionamiento.'],
+  mant: ['/es/medellin/mantenimiento-web-medellin', 'Mantenimiento web', 'Soporte, seguridad y actualizaciones cada mes.'],
+  precios: ['/es/medellin/cuanto-cuesta-pagina-web-medellin', '¿Cuánto cuesta una página web?', 'Rangos de precio 2026 y qué debe incluir una cotización.'],
+  port: ['/es/portafolio', 'Portafolio', 'Proyectos reales de diseño y desarrollo web.'],
+  serv: ['/es/servicios', 'Todos los servicios', 'Diseño, desarrollo, SEO, apps y analítica en un solo lugar.'],
+  faq: ['/es/faq', 'Preguntas frecuentes', 'Tiempos, proceso, pagos y soporte, respondidos.'],
+  blog: ['/es/blog/', 'Blog', 'Guías prácticas sobre diseño web y SEO local.'],
+  en_web: ['/en/web-design', 'Web design', 'Websites built to rank on Google and convert visitors.'],
+  en_serv: ['/en/services', 'Services & pricing', 'What we build and what it costs.'],
+  en_work: ['/en/showcase', 'Our work', 'Selected design and development projects.'],
+  en_faq: ['/en/faq', 'FAQ', 'Timelines, process, payments and support.'],
+  en_contact: ['/en/contact', 'Contact', 'Tell us about your project. We reply within 24 hours.'],
 };
 const NEXT = {
-  '/es/medellin.html': ['port', 'precios', 'serv'],
-  '/es/medellin/index.html': ['med', 'precios', 'port'],
-  '/es/medellin/desarrollo-web-medellin.html': ['land', 'redis', 'precios'],
-  '/es/medellin/landing-pages-medellin.html': ['seo', 'dev', 'precios'],
-  '/es/medellin/seo-local-medellin.html': ['med', 'land', 'precios'],
-  '/es/medellin/redisenio-web-medellin.html': ['seo', 'mant', 'precios'],
-  '/es/medellin/mantenimiento-web-medellin.html': ['redis', 'seo', 'precios'],
-  '/es/medellin/cuanto-cuesta-pagina-web-medellin.html': ['med', 'land', 'port'],
-  '/es/bogota.html': ['port', 'precios', 'serv'],
-  '/es/servicios.html': ['port', 'faq', 'blog'],
-  '/es/portafolio.html': ['serv', 'precios', 'med'],
-  '/es/faq.html': ['precios', 'serv', 'port'],
-  '/es/blog/index.html': ['med', 'serv', 'port'],
-  '/es/blog/agencias-diseno-web-medellin.html': ['med', 'precios', 'port'],
-  '/es/blog/desarrollo-web-medellin.html': ['dev', 'precios', 'port'],
-  '/es/blog/diseno-web-pymes-medellin.html': ['med', 'land', 'precios'],
-  '/es/blog/paginas-web-medellin.html': ['med', 'precios', 'port'],
-  '/es/blog/redisenio-web-medellin.html': ['redis', 'precios', 'port'],
-  '/es/blog/seo-local-medellin.html': ['seo', 'med', 'precios'],
-  '/es/blog/tienda-online-medellin.html': ['dev', 'precios', 'port'],
-  '/en/services.html': ['en_web', 'en_work', 'en_faq'],
-  '/en/web-design.html': ['en_serv', 'en_work', 'en_faq'],
-  '/en/showcase.html': ['en_serv', 'en_web', 'en_contact'],
-  '/en/faq.html': ['en_serv', 'en_work', 'en_contact'],
+  '/es/diseno-web-medellin': ['port', 'precios', 'serv'],
+  '/es/medellin/': ['med', 'precios', 'port'],
+  '/es/medellin/desarrollo-web-medellin': ['land', 'redis', 'precios'],
+  '/es/medellin/landing-pages-medellin': ['seo', 'dev', 'precios'],
+  '/es/medellin/seo-local-medellin': ['med', 'land', 'precios'],
+  '/es/medellin/redisenio-web-medellin': ['seo', 'mant', 'precios'],
+  '/es/medellin/mantenimiento-web-medellin': ['redis', 'seo', 'precios'],
+  '/es/medellin/cuanto-cuesta-pagina-web-medellin': ['med', 'land', 'port'],
+  '/es/diseno-web-bogota': ['port', 'precios', 'serv'],
+  '/es/servicios': ['port', 'faq', 'blog'],
+  '/es/portafolio': ['serv', 'precios', 'med'],
+  '/es/faq': ['precios', 'serv', 'port'],
+  '/es/blog/': ['med', 'serv', 'port'],
+  '/es/blog/agencias-diseno-web-medellin': ['med', 'precios', 'port'],
+  '/es/blog/desarrollo-web-medellin': ['dev', 'precios', 'port'],
+  '/es/blog/diseno-web-pymes-medellin': ['med', 'land', 'precios'],
+  '/es/blog/paginas-web-medellin': ['med', 'precios', 'port'],
+  '/es/blog/redisenio-web-medellin': ['redis', 'precios', 'port'],
+  '/es/blog/seo-local-medellin': ['seo', 'med', 'precios'],
+  '/es/blog/tienda-online-medellin': ['dev', 'precios', 'port'],
+  '/en/services': ['en_web', 'en_work', 'en_faq'],
+  '/en/web-design': ['en_serv', 'en_work', 'en_faq'],
+  '/en/showcase': ['en_serv', 'en_web', 'en_contact'],
+  '/en/faq': ['en_serv', 'en_work', 'en_contact'],
 };
 
 function renderNext(path, lang) {
@@ -150,7 +150,7 @@ function render(tpl, ctx) {
     .replace('{{services_mobile}}', SERVICES_ES.map(([h, t]) => `<li><a href="${h}"${cur(h)}>${t}</a></li>`).join('\n            '))
     .replace('{{services_footer}}', SERVICES_ES.map(([h, t]) => `<li><a href="${h}"${cur(h)}>${t}</a></li>`).join('\n          '))
     .replace(/\{\{page:([^}]+)\}\}/g, (_, p) => cur(p))
-    .replace(/\{\{cur:([^}]+)\}\}/g, (_, s) => cur(s === 'blog' ? '/es/blog/index.html' : null, s))
+    .replace(/\{\{cur:([^}]+)\}\}/g, (_, s) => cur(s === 'blog' ? '/es/blog/' : null, s))
     .replace(/\{\{open:([^}]+)\}\}/g, (_, s) => (s === ctx.section ? ' open' : ''))
     .replace(/\{\{en_url\}\}/g, ctx.enUrl)
     .replace(/\{\{es_url\}\}/g, ctx.esUrl)
@@ -192,7 +192,8 @@ for (const rel of pages()) {
   let html = bom ? raw.slice(1) : raw;
   const before = html;
 
-  const path = rel === 'index.html' ? '/' : '/' + rel.split(sep).join('/');
+  // Pages are linked by clean URL: /x for x.html, /dir/ for dir/index.html (Netlify serves both).
+  const path = rel === 'index.html' ? '/' : '/' + rel.split(sep).join('/').replace(/(^|\/)index\.html$/, '$1').replace(/\.html$/, '');
   const lang = /<html[^>]*\blang="es/i.test(html) ? 'es' : 'en';
   const alt = Object.fromEntries([...html.matchAll(/<link rel="alternate" hreflang="(en|es)[^"]*" href="https:\/\/aurawebs\.site([^"]*)"/g)].map(m => [m[1], m[2]]));
   const title = (html.match(/<title>([^<]*)<\/title>/)?.[1] || '').split('|')[0].trim()
@@ -204,7 +205,7 @@ for (const rel of pages()) {
     path,
     section: path.startsWith('/es/blog/') ? 'blog' : SERVICES_CLUSTER.has(path) ? 'servicios' : null,
     enUrl: alt.en || (lang === 'en' ? path : '/'),
-    esUrl: alt.es || (lang === 'es' ? path : '/es/index.html'),
+    esUrl: alt.es || (lang === 'es' ? path : '/es/'),
     wa: `${WA}?text=${encodeURIComponent(msg)}`,
   };
 
