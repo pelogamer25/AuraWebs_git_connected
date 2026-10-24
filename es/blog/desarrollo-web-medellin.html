@@ -37,7 +37,10 @@ window.addEventListener('load', function () {
     <meta property="twitter:title" content="Desarrollo Web en Medellín para Empresas y Pymes 2026" />
     <meta property="twitter:description" content="Tecnologías, costos reales y cómo elegir empresa de desarrollo web en Medellín para pymes colombianas en 2026." />
     <meta property="twitter:image" content="https://aurawebs.site/assets/images/optimized/Web3-1200.webp" />
-    <link rel="icon" type="image/png" href="/assets/images/novemodel.png" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon-192.png" />
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
     <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="preload" href="/assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="/styles.css" />
@@ -164,7 +167,7 @@ window.addEventListener('load', function () {
       <div class="flex flex-col min-h-screen relative font-sans text-white bg-aura-bg selection:bg-aura-purple selection:text-white">
 
         <!-- Animated background -->
-        <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none bg-aura-bg">
+        <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none bg-aura-bg" aria-hidden="true">
           <div class="absolute inset-0 bg-gradient-to-b from-[#020010] via-[#050115] to-[#020010]"></div>
           <div class="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[80vw] h-[50vh] bg-aura-purple/20 blur-[120px] rounded-full mix-blend-screen opacity-60"></div>
           <div class="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[1px] h-[50vh] bg-gradient-to-b from-white/20 via-aura-purple/50 to-transparent blur-[1px] opacity-70"></div>
@@ -274,9 +277,9 @@ window.addEventListener('load', function () {
 
             <div class="container mx-auto px-6 relative z-10 text-center">
               <nav aria-label="breadcrumb" class="flex items-center justify-center gap-2 text-sm text-gray-500 mb-8">
-                <a href="/es/index.html" class="hover:text-aura-purple transition-colors">Inicio</a>
+                <a href="/es/index.html" class="hover:text-aura-violet transition-colors">Inicio</a>
                 <span>/</span>
-                <a href="/es/blog/index.html" class="hover:text-aura-purple transition-colors">Blog</a>
+                <a href="/es/blog/index.html" class="hover:text-aura-violet transition-colors">Blog</a>
                 <span>/</span>
                 <span class="text-gray-300">Desarrollo Web Medellín</span>
               </nav>
@@ -312,10 +315,10 @@ window.addEventListener('load', function () {
                 <div class="flex flex-col lg:flex-row gap-12">
 
                   <!-- Sidebar TOC -->
-                  <aside class="lg:w-72 flex-shrink-0">
+                  <div class="lg:w-72 flex-shrink-0">
                     <div id="toc" class="glass-panel rounded-2xl border border-white/10 p-6">
                       <p class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">En este artículo</p>
-                      <nav>
+                      <nav aria-label="En este artículo">
                         <a href="#que-es-desarrollo-web" class="active">¿Qué es el desarrollo web?</a>
                         <a href="#desarrollo-vs-diseno">Desarrollo vs. diseño web</a>
                         <a href="#tecnologias-medellin">Tecnologías en Medellín</a>
@@ -332,7 +335,7 @@ window.addEventListener('load', function () {
                         </a>
                       </div>
                     </div>
-                  </aside>
+                  </div>
 
                   <!-- Article body -->
                   <article class="flex-1 min-w-0">
@@ -361,10 +364,10 @@ window.addEventListener('load', function () {
                           <div class="glass-panel rounded-xl p-4 border border-aura-purple/20">
                             <p class="font-semibold text-white text-sm mb-3">Necesitas desarrollo web básico si:</p>
                             <ul class="text-sm text-gray-400 space-y-2">
-                              <li class="flex gap-2"><span class="text-aura-purple">→</span>Quieres un sitio que cargue rápido y posicione en Google</li>
-                              <li class="flex gap-2"><span class="text-aura-purple">→</span>Necesitas formularios de contacto y cotización</li>
-                              <li class="flex gap-2"><span class="text-aura-purple">→</span>Tienes servicios o productos que mostrar online</li>
-                              <li class="flex gap-2"><span class="text-aura-purple">→</span>Quieres integrar WhatsApp, redes y mapas</li>
+                              <li class="flex gap-2"><span class="text-aura-violet">→</span>Quieres un sitio que cargue rápido y posicione en Google</li>
+                              <li class="flex gap-2"><span class="text-aura-violet">→</span>Necesitas formularios de contacto y cotización</li>
+                              <li class="flex gap-2"><span class="text-aura-violet">→</span>Tienes servicios o productos que mostrar online</li>
+                              <li class="flex gap-2"><span class="text-aura-violet">→</span>Quieres integrar WhatsApp, redes y mapas</li>
                             </ul>
                           </div>
                           <div class="glass-panel rounded-xl p-4 border border-aura-cyan/20">
@@ -387,12 +390,12 @@ window.addEventListener('load', function () {
                         <p class="text-gray-400 leading-relaxed mb-6">
                           La confusión entre estos dos términos genera malentendidos frecuentes en cotizaciones. Es importante entender la diferencia antes de hablar con cualquier proveedor en Medellín:
                         </p>
-                        <div class="overflow-x-auto mb-6">
+                        <div class="overflow-x-auto mb-6" tabindex="0" role="region" aria-label="Tabla (desliza para ver más)">
                           <table class="w-full text-sm text-gray-400">
                             <thead>
                               <tr class="border-b border-white/10">
                                 <th class="text-left py-3 pr-6 text-white font-semibold w-1/3">Aspecto</th>
-                                <th class="text-left py-3 pr-6 text-aura-purple font-semibold">Diseño Web</th>
+                                <th class="text-left py-3 pr-6 text-aura-violet font-semibold">Diseño Web</th>
                                 <th class="text-left py-3 text-aura-cyan font-semibold">Desarrollo Web</th>
                               </tr>
                             </thead>
@@ -401,7 +404,7 @@ window.addEventListener('load', function () {
                               <tr><td class="py-3 pr-6">Herramientas</td><td class="py-3 pr-6">Figma, Adobe XD, CSS</td><td class="py-3">HTML, JS, React, Node, PHP</td></tr>
                               <tr><td class="py-3 pr-6">Resultado</td><td class="py-3 pr-6">Maqueta visual, prototipos</td><td class="py-3">Código funcional, sitio en vivo</td></tr>
                               <tr><td class="py-3 pr-6">Perfil</td><td class="py-3 pr-6">Diseñador UX/UI</td><td class="py-3">Desarrollador frontend/backend</td></tr>
-                              <tr><td class="py-3 pr-6">AuraWebs</td><td class="py-3 pr-6 text-aura-purple">✓ Incluido</td><td class="py-3 text-aura-cyan">✓ Incluido</td></tr>
+                              <tr><td class="py-3 pr-6">AuraWebs</td><td class="py-3 pr-6 text-aura-violet">✓ Incluido</td><td class="py-3 text-aura-cyan">✓ Incluido</td></tr>
                             </tbody>
                           </table>
                         </div>
@@ -491,7 +494,7 @@ window.addEventListener('load', function () {
                               <p class="text-gray-500 text-xs mt-0.5">1 página, formulario, SEO básico</p>
                             </div>
                             <div class="text-right">
-                              <p class="text-aura-purple font-bold">COP 400K–1.2M</p>
+                              <p class="text-aura-violet font-bold">COP 400K–1.2M</p>
                               <p class="text-gray-500 text-xs">7–12 días</p>
                             </div>
                           </div>
@@ -501,7 +504,7 @@ window.addEventListener('load', function () {
                               <p class="text-gray-500 text-xs mt-0.5">5–10 páginas, blog, SEO avanzado</p>
                             </div>
                             <div class="text-right">
-                              <p class="text-aura-purple font-bold">COP 1.2M–5M</p>
+                              <p class="text-aura-violet font-bold">COP 1.2M–5M</p>
                               <p class="text-gray-500 text-xs">3–6 semanas</p>
                             </div>
                           </div>
@@ -511,7 +514,7 @@ window.addEventListener('load', function () {
                               <p class="text-gray-500 text-xs mt-0.5">Catálogo, carrito, pagos Colombia</p>
                             </div>
                             <div class="text-right">
-                              <p class="text-aura-purple font-bold">COP 3M–9M</p>
+                              <p class="text-aura-violet font-bold">COP 3M–9M</p>
                               <p class="text-gray-500 text-xs">4–8 semanas</p>
                             </div>
                           </div>
@@ -521,7 +524,7 @@ window.addEventListener('load', function () {
                               <p class="text-gray-500 text-xs mt-0.5">Login, panel admin, integraciones API</p>
                             </div>
                             <div class="text-right">
-                              <p class="text-aura-purple font-bold">COP 8M–30M+</p>
+                              <p class="text-aura-violet font-bold">COP 8M–30M+</p>
                               <p class="text-gray-500 text-xs">2–4 meses</p>
                             </div>
                           </div>
@@ -541,7 +544,7 @@ window.addEventListener('load', function () {
                         </p>
                         <div class="space-y-4">
                           <div class="flex items-start gap-4 glass-panel rounded-xl p-4">
-                            <div class="w-8 h-8 rounded-full bg-aura-purple/15 border border-aura-purple/30 flex items-center justify-center flex-shrink-0 font-bold text-aura-purple text-sm">1</div>
+                            <div class="w-8 h-8 rounded-full bg-aura-purple/15 border border-aura-purple/30 flex items-center justify-center flex-shrink-0 font-bold text-aura-violet text-sm">1</div>
                             <div>
                               <p class="font-semibold text-white text-sm mb-1">Pide URLs en vivo y mídelas en PageSpeed Insights</p>
                               <p class="text-gray-400 text-xs">Abre los proyectos del portafolio en tu celular y pásalos por <code class="text-aura-cyan text-xs">pagespeed.web.dev</code>. Un score de Performance menor a 70 en móvil es señal de que el desarrollo no es prioritario en esa empresa.</p>
@@ -562,7 +565,7 @@ window.addEventListener('load', function () {
                             </div>
                           </div>
                           <div class="flex items-start gap-4 glass-panel rounded-xl p-4">
-                            <div class="w-8 h-8 rounded-full bg-aura-purple/15 border border-aura-purple/30 flex items-center justify-center flex-shrink-0 font-bold text-aura-purple text-sm">4</div>
+                            <div class="w-8 h-8 rounded-full bg-aura-purple/15 border border-aura-purple/30 flex items-center justify-center flex-shrink-0 font-bold text-aura-violet text-sm">4</div>
                             <div>
                               <p class="font-semibold text-white text-sm mb-1">Confirma que el SEO está integrado desde el inicio</p>
                               <p class="text-gray-400 text-xs">SEO técnico es más fácil y barato cuando se construye desde el primer commit, no cuando se "agrega" después. Pregunta si usan schema.org, meta tags optimizadas, sitemap XML y velocidad como criterio en el proceso de desarrollo.</p>
@@ -622,7 +625,7 @@ window.addEventListener('load', function () {
                         <div class="space-y-4">
                           <div class="trend-card">
                             <div class="flex items-start gap-3">
-                              <span class="text-aura-purple font-bold text-sm flex-shrink-0 mt-0.5">01</span>
+                              <span class="text-aura-violet font-bold text-sm flex-shrink-0 mt-0.5">01</span>
                               <div>
                                 <p class="font-semibold text-white text-sm mb-1">IA integrada en sitios web (chatbots, generación de contenido)</p>
                                 <p class="text-gray-400 text-xs">Cada vez más negocios en Medellín agregan asistentes conversacionales a sus webs para responder preguntas frecuentes 24/7 sin intervención humana. El costo bajó drásticamente en 2025–2026 y la integración con WhatsApp Business API lo hace especialmente relevante para el mercado colombiano.</p>
@@ -631,7 +634,7 @@ window.addEventListener('load', function () {
                           </div>
                           <div class="trend-card">
                             <div class="flex items-start gap-3">
-                              <span class="text-aura-purple font-bold text-sm flex-shrink-0 mt-0.5">02</span>
+                              <span class="text-aura-violet font-bold text-sm flex-shrink-0 mt-0.5">02</span>
                               <div>
                                 <p class="font-semibold text-white text-sm mb-1">Core Web Vitals como factor de ranking en Google Colombia</p>
                                 <p class="text-gray-400 text-xs">Google penaliza activamente los sitios lentos en los rankings. En Colombia, donde muchos usuarios tienen conexiones 4G en zonas de menor cobertura, la velocidad de carga es más crítica que en mercados con fibra óptica masiva. Sitios con LCP mayor a 4 segundos pierden posición.</p>
@@ -640,7 +643,7 @@ window.addEventListener('load', function () {
                           </div>
                           <div class="trend-card">
                             <div class="flex items-start gap-3">
-                              <span class="text-aura-purple font-bold text-sm flex-shrink-0 mt-0.5">03</span>
+                              <span class="text-aura-violet font-bold text-sm flex-shrink-0 mt-0.5">03</span>
                               <div>
                                 <p class="font-semibold text-white text-sm mb-1">GEO — Generative Engine Optimization para IA</p>
                                 <p class="text-gray-400 text-xs">ChatGPT, Perplexity y Google AI Overviews responden preguntas directamente sin llevar al usuario a los resultados. Las webs que quieren aparecer en esas respuestas necesitan schema.org correcto, contenido Q&A estructurado y archivos llms.txt — algo que AuraWebs ya implementa en sus proyectos.</p>
@@ -649,7 +652,7 @@ window.addEventListener('load', function () {
                           </div>
                           <div class="trend-card">
                             <div class="flex items-start gap-3">
-                              <span class="text-aura-purple font-bold text-sm flex-shrink-0 mt-0.5">04</span>
+                              <span class="text-aura-violet font-bold text-sm flex-shrink-0 mt-0.5">04</span>
                               <div>
                                 <p class="font-semibold text-white text-sm mb-1">Pagos digitales colombianos como estándar</p>
                                 <p class="text-gray-400 text-xs">Nequi superó los 20 millones de usuarios en Colombia en 2025. Daviplata y PSE son las pasarelas preferidas para compras online. Cualquier e-commerce en Medellín que no acepte estos métodos de pago tiene una barrera enorme de conversión frente a sus competidores.</p>
@@ -708,7 +711,7 @@ window.addEventListener('load', function () {
                     <div class="glass-panel rounded-2xl border border-white/10 p-6">
                       <p class="text-sm font-bold uppercase tracking-widest text-gray-500 mb-4">Artículos relacionados</p>
                       <div class="space-y-3">
-                        <a href="/es/blog/paginas-web-medellin.html" class="flex items-center gap-3 text-sm text-gray-400 hover:text-aura-purple transition-colors">
+                        <a href="/es/blog/paginas-web-medellin.html" class="flex items-center gap-3 text-sm text-gray-400 hover:text-aura-violet transition-colors">
                           <span class="w-1.5 h-1.5 rounded-full bg-aura-purple inline-block flex-shrink-0"></span>
                           Páginas web en Medellín: precios, tipos y qué incluir en 2026
                         </a>
@@ -720,7 +723,7 @@ window.addEventListener('load', function () {
                           <span class="w-1.5 h-1.5 rounded-full bg-aura-magenta inline-block flex-shrink-0"></span>
                           Agencias de diseño web en Medellín: cómo elegir en 2026
                         </a>
-                        <a href="/es/medellin/desarrollo-web-medellin.html" class="flex items-center gap-3 text-sm text-gray-400 hover:text-aura-purple transition-colors">
+                        <a href="/es/medellin/desarrollo-web-medellin.html" class="flex items-center gap-3 text-sm text-gray-400 hover:text-aura-violet transition-colors">
                           <span class="w-1.5 h-1.5 rounded-full bg-aura-purple inline-block flex-shrink-0"></span>
                           Servicio de desarrollo web Medellín — AuraWebs
                         </a>

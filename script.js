@@ -272,6 +272,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const banner = document.createElement('div');
       banner.id = 'lang-banner';
+      banner.setAttribute('role', 'region');
+      banner.setAttribute('aria-label', suggestedLang === 'es' ? 'Sugerencia de idioma' : 'Language suggestion');
       // Initial state is hidden below viewport (translate-y-full)
       banner.className = 'fixed bottom-0 left-0 w-full z-[100] bg-[#050115]/90 backdrop-blur-xl border-t border-white/10 p-4 transform translate-y-full transition-transform duration-[600ms] flex flex-col sm:flex-row items-center shadow-[0_-10px_40px_rgba(0,0,0,0.5)]';
       

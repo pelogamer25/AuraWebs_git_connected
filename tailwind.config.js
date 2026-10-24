@@ -8,6 +8,8 @@ module.exports = {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       colors: {
+        // Muted greys lifted so small text keeps >= 4.5:1 on the near-black backgrounds (WCAG AA).
+        gray: { 500: '#7d8594', 600: '#737b8a' },
         aura: {
           bg: '#030014',
           card: '#0f0728',

@@ -204,8 +204,8 @@ select.input-premium option {background-color: #0f0728; color: #fff;}
   .lang-switch a:hover {color: #fff;}
   .lang-switch a[aria-current] {background: rgba(124, 58, 237, 0.5); color: #fff;}
 
-  .nav-cta {align-items: center; gap: 0.5rem; padding: 0.625rem 1.125rem; border-radius: 9999px; background: #16a34a; color: #fff; font-size: 0.875rem; font-weight: 600; white-space: nowrap; transition: background-color 0.2s ease;}
-  .nav-cta:hover {background: #22c55e;}
+  .nav-cta {align-items: center; gap: 0.5rem; padding: 0.625rem 1.125rem; border-radius: 9999px; background: #15803d; color: #fff; font-size: 0.875rem; font-weight: 600; white-space: nowrap; transition: background-color 0.2s ease;}
+  .nav-cta:hover {background: #166534;}
   @media (max-width: 639px) {.nav-cta {padding: 0.5rem 0.875rem;}}
 
   .nav-toggle {display: inline-flex; align-items: center; justify-content: center; width: 2.75rem; height: 2.75rem; border-radius: 9999px; color: #fff;}
@@ -224,8 +224,10 @@ select.input-premium option {background-color: #0f0728; color: #fff;}
   .nav-m-group li a {display: block; padding: 0.5rem 0.25rem; color: #9ca3af; font-size: 0.9375rem;}
   .nav-m-group li a[aria-current="page"] {color: #c4b5fd;}
 
-  .btn-wa {display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.875rem 1.5rem; border-radius: 9999px; background: #16a34a; color: #fff; font-weight: 700; white-space: nowrap; box-shadow: 0 0 20px rgba(34, 197, 94, 0.25); transition: background-color 0.2s ease, box-shadow 0.2s ease;}
-  .btn-wa:hover {background: #22c55e; box-shadow: 0 0 28px rgba(34, 197, 94, 0.4);}
+  .btn-wa {display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.875rem 1.5rem; border-radius: 9999px; background: #15803d; color: #fff; font-weight: 700; white-space: nowrap; box-shadow: 0 0 20px rgba(34, 197, 94, 0.25); transition: background-color 0.2s ease, box-shadow 0.2s ease;}
+  .btn-wa:hover {background: #166534; box-shadow: 0 0 28px rgba(34, 197, 94, 0.4);}
+  /* White on #15803d = 5:1. Page-level link colours (e.g. a blog TOC's `.toc a`) must not grey it out. */
+  a.btn-wa, a.btn-wa:hover, a.nav-cta, a.nav-cta:hover {color: #fff !important;} /* beats page rules like `#toc a` */
   .btn-secondary {display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.875rem 1.5rem; border-radius: 9999px; border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(255, 255, 255, 0.04); color: #fff; font-weight: 600; white-space: nowrap; transition: border-color 0.2s ease, background-color 0.2s ease;}
   .btn-secondary:hover {border-color: rgba(255, 255, 255, 0.3); background: rgba(255, 255, 255, 0.08);}
 
@@ -287,6 +289,20 @@ select.input-premium option {background-color: #0f0728; color: #fff;}
   .footer-links a {color: #9ca3af; transition: color 0.2s ease;}
   .footer-links a:hover, .footer-links a[aria-current="page"] {color: #fff;}
 }
+
+/* Reduced motion: freeze every CSS animation/transition at its end state and stop scroll parallax
+   (inline scripts set transforms on .parallax-*). The starfield canvas already checks this in script.js. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important;}
+  .parallax-slow, .parallax-med, .parallax-fast {transform: none !important;}
+}
+
+/* Links inside running text need more than colour to stand out (WCAG 1.4.1). */
+main p a:not([class*="btn"]) {text-decoration: underline; text-decoration-color: rgba(167, 139, 250, 0.55); text-decoration-thickness: 1px; text-underline-offset: 3px;}
+main p a:not([class*="btn"]):hover {text-decoration-color: currentColor;}
+
+/* Anchored headings land below the fixed header. */
+html {scroll-padding-top: 7rem;}
 
 /* Visible keyboard focus everywhere (mouse clicks don't trigger :focus-visible). */
 a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-visible {outline: 2px solid #a78bfa; outline-offset: 3px;}
