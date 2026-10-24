@@ -207,3 +207,16 @@
   for = "/scripts/*"
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
+
+# --- TEMP: behaviour test for the clean-URL migration (removed in the next commit) ---
+[[redirects]]
+  from = "/qa-url-test.html"
+  to = "/qa-url-test"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/qa-url-test-dir/index.html"
+  to = "/qa-url-test-dir/"
+  status = 301
+  force = true
