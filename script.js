@@ -455,6 +455,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const intro = es ? 'Hola AuraWebs, quiero cotizar un proyecto.' : 'Hi AuraWebs, I would like a quote.';
       const body = fields.filter(([, id]) => val(id)).map(([label, id]) => `${label}: ${val(id)}`).join('\n');
       const url = form.action + '?text=' + encodeURIComponent(intro + '\n\n' + body);
+      if (window.gtag) window.gtag('event', 'whatsapp_click', { cta_location: 'formulario', cta_text: es ? 'Formulario de contacto' : 'Contact form', project_type: val('interest') });
       const win = window.open(url, '_blank');
       if (win) win.opener = null; else window.location.href = url;
       if (status) status.textContent = es
