@@ -30,3 +30,6 @@ dist-ssr
 AURAWEBSINFORME_*/
 *Performance-on-Search*
 Keyword Stats *.csv
+
+# playwright-cli snapshots (created when QA runs from the repo)
+.playwright-cli/
