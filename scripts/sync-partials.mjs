@@ -19,7 +19,7 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const WA = 'https://wa.me/573217466755';
 
 const SERVICES_ES = [
-  ['/es/diseno-web-medellin', 'Diseño web en Medellín', 'Sitios profesionales que consiguen clientes'],
+  ['/es/medellin', 'Diseño web en Medellín', 'Sitios profesionales que consiguen clientes'],
   ['/es/medellin/desarrollo-web-medellin', 'Desarrollo web', 'A medida, rápido y escalable'],
   ['/es/medellin/landing-pages-medellin', 'Landing pages', 'Páginas de campaña que convierten'],
   ['/es/medellin/seo-local-medellin', 'SEO local', 'Aparece en Google y Google Maps'],
@@ -27,11 +27,11 @@ const SERVICES_ES = [
   ['/es/medellin/mantenimiento-web-medellin', 'Mantenimiento web', 'Soporte, seguridad y actualizaciones'],
   ['/es/diseno-web-bogota', 'Diseño web en Bogotá', 'Proyectos para empresas en Bogotá'],
 ];
-const SERVICES_CLUSTER = new Set([...SERVICES_ES.map(s => s[0]), '/es/servicios', '/es/medellin/']);
+const SERVICES_CLUSTER = new Set([...SERVICES_ES.map(s => s[0]), '/es/servicios']);
 
 // "Sigue explorando" block before </main>: three related pages so every page leads somewhere.
 const CARDS = {
-  med: ['/es/diseno-web-medellin', 'Diseño web en Medellín', 'Sitios profesionales que consiguen clientes desde Google.'],
+  med: ['/es/medellin', 'Diseño web en Medellín', 'Sitios profesionales que consiguen clientes desde Google.'],
   dev: ['/es/medellin/desarrollo-web-medellin', 'Desarrollo web', 'Sitios y aplicaciones a medida, rápidos y escalables.'],
   land: ['/es/medellin/landing-pages-medellin', 'Landing pages', 'Páginas de campaña que convierten visitas en contactos.'],
   seo: ['/es/medellin/seo-local-medellin', 'SEO local', 'Aparece en Google y Google Maps en tu ciudad.'],
@@ -49,8 +49,7 @@ const CARDS = {
   en_contact: ['/en/contact', 'Contact', 'Tell us about your project. We reply within 24 hours.'],
 };
 const NEXT = {
-  '/es/diseno-web-medellin': ['port', 'precios', 'serv'],
-  '/es/medellin/': ['med', 'precios', 'port'],
+  '/es/medellin': ['port', 'precios', 'serv'],
   '/es/medellin/desarrollo-web-medellin': ['land', 'redis', 'precios'],
   '/es/medellin/landing-pages-medellin': ['seo', 'dev', 'precios'],
   '/es/medellin/seo-local-medellin': ['med', 'land', 'precios'],

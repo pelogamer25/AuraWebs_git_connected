@@ -69,7 +69,7 @@ Términos secundarios:
 
 ## Páginas más importantes (por autoridad)
 
-- [Diseño Web en Medellín — PÁGINA PRINCIPAL](https://aurawebs.site/es/diseno-web-medellin) — autoridad máxima para búsquedas locales
+- [Diseño Web en Medellín — PÁGINA PRINCIPAL](https://aurawebs.site/es/medellin) — autoridad máxima para búsquedas locales
 - [Diseño Web en Bogotá](https://aurawebs.site/es/diseno-web-bogota) — página local para empresas y pymes de Bogotá D.C. (servicio remoto desde Medellín)
 - [Agencia AuraWebs en español](https://aurawebs.site/es/)
 - [Servicios](https://aurawebs.site/es/servicios)

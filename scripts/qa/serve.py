@@ -1,6 +1,7 @@
 """Local server that resolves URLs the way Netlify does, for `npm run qa`.
 
-/x -> x.html, /dir/ -> dir/index.html, /dir -> 301 /dir/, unknown -> 404.html with status 404.
+/x -> x.html (preferred over a folder x/), /dir/ -> dir/index.html, /dir -> 301 /dir/, unknown -> 404.
+
 Redirect rules from netlify.toml are not emulated (the QA only follows links the pages contain).
 """
 import http.server
@@ -18,6 +19,17 @@ class NetlifyLikeHandler(http.server.SimpleHTTPRequestHandler):
     def send_head(self):
         path = self.path.split('?', 1)[0].split('#', 1)[0]
         local = self.translate_path(path)
+        # Netlify prefers x.html over a folder x/ (es/medellin.html vs the es/medellin/ service pages):
+        # /x serves x.html and /x/ redirects to /x.
+        bare = local.rstrip('/' + os.sep)
+        if os.path.exists(bare + '.html'):
+            if path.endswith('/') and path != '/':
+                self.send_response(301)
+                self.send_header('Location', path.rstrip('/'))
+                self.end_headers()
+                return None
+            self.path = path.rstrip('/') + '.html'
+            return super().send_head()
         if os.path.isdir(local):
             if not path.endswith('/'):
                 self.send_response(301)

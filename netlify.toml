@@ -1,11 +1,13 @@
 # aurawebs.site is served by NETLIFY (not Vercel). This file is the single source of truth for
 # redirects and headers; build settings, if any, stay in the Netlify UI (styles.css is committed).
 #
-# URLs are clean: /x is served from x.html and /dir/ from dir/index.html (Netlify does this natively).
-# Every old ".html" address 301s to its clean URL. Rules are matched on the incoming path only, so
-# "/x.html -> /x" cannot loop with Netlify serving /x from x.html (verified 2026-10-24).
+# URLs are clean: /x is served from x.html and /dir/ from dir/index.html (Netlify does this natively,
+# and prefers x.html over a folder x/, so /es/medellin/ 301s to /es/medellin on its own).
+# Every old ".html" address 301s to its clean URL. Rules match the incoming path only, so
+# "/x.html -> /x" cannot loop (verified 2026-10-24). Netlify ignores trailing slashes when matching,
+# so never add a "/x/ -> /x" rule (it would loop) and never list /x and /x/ separately.
 
-# --- Old .html addresses -> clean URLs ---
+# --- Every page: its .html address -> clean URL ---
 [[redirects]]
   from = "/index.html"
   to = "/"
@@ -67,26 +69,8 @@
   force = true
 
 [[redirects]]
-  from = "/es/bogota.html"
-  to = "/es/diseno-web-bogota"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "/es/diseno-web-bogota.html"
   to = "/es/diseno-web-bogota"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/es/medellin.html"
-  to = "/es/diseno-web-medellin"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/es/diseno-web-medellin.html"
-  to = "/es/diseno-web-medellin"
   status = 301
   force = true
 
@@ -109,6 +93,12 @@
   force = true
 
 [[redirects]]
+  from = "/es/medellin.html"
+  to = "/es/medellin"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/es/medellin/cuanto-cuesta-pagina-web-medellin.html"
   to = "/es/medellin/cuanto-cuesta-pagina-web-medellin"
   status = 301
@@ -117,12 +107,6 @@
 [[redirects]]
   from = "/es/medellin/desarrollo-web-medellin.html"
   to = "/es/medellin/desarrollo-web-medellin"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/es/medellin/index.html"
-  to = "/es/medellin/"
   status = 301
   force = true
 
@@ -222,7 +206,50 @@
   status = 301
   force = true
 
-# --- Legacy and short URLs (point straight at the final URL: no redirect chains) ---
+# --- Retired or moved URLs ---
+[[redirects]]
+  from = "/es/bogota.html"
+  to = "/es/diseno-web-bogota"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/bogota"
+  to = "/es/diseno-web-bogota"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/diseno-web-medellin"
+  to = "/es/medellin"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/diseno-web-medellin.html"
+  to = "/es/medellin"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/medellin/index.html"
+  to = "/es/servicios"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en"
+  to = "/"
+  status = 301
+  force = true
+
+# --- Legacy and short URLs (straight to the final URL: no chains) ---
 [[redirects]]
   from = "/contact.html"
   to = "/en/contact"
@@ -255,25 +282,25 @@
 
 [[redirects]]
   from = "/diseno-web-medellin"
-  to = "/es/diseno-web-medellin"
+  to = "/es/medellin"
   status = 301
   force = true
 
 [[redirects]]
   from = "/diseño-web-medellin"
-  to = "/es/diseno-web-medellin"
+  to = "/es/medellin"
   status = 301
   force = true
 
 [[redirects]]
   from = "/dise%C3%B1o-web-medellin"
-  to = "/es/diseno-web-medellin"
+  to = "/es/medellin"
   status = 301
   force = true
 
 [[redirects]]
   from = "/diseno-web-en-medellin"
-  to = "/es/diseno-web-medellin"
+  to = "/es/medellin"
   status = 301
   force = true
 
@@ -297,12 +324,6 @@
 
 [[redirects]]
   from = "/diseno-web-en-bogota"
-  to = "/es/diseno-web-bogota"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/es/bogota"
   to = "/es/diseno-web-bogota"
   status = 301
   force = true
@@ -340,24 +361,6 @@
 [[redirects]]
   from = "/cuanto-cuesta-pagina-web-medellin.html"
   to = "/es/medellin/cuanto-cuesta-pagina-web-medellin"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/en/index.html"
-  to = "/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/en"
-  to = "/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/en/"
-  to = "/"
   status = 301
   force = true
 

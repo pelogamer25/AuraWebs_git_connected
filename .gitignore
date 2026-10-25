@@ -25,3 +25,8 @@ dist-ssr
 
 # Local app artifacts
 # (migrated_prompt_history moved to archive/)
+
+# Search Console / analytics exports: private data, never in the public repo
+AURAWEBSINFORME_*/
+*Performance-on-Search*
+Keyword Stats *.csv

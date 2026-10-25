@@ -13,7 +13,7 @@ anchor text.
 | Page | Inbound | Outbound |
 |---|---:|---:|
 | `es/index.html` | 108 | 43 |
-| `es/diseno-web-medellin.html` | 30 | 37 |
+| `es/medellin.html` | 30 | 37 |
 | `es/servicios.html` | 99 | 25 |
 | `es/diseno-web-bogota.html` | 5 | 24 |
 | `es/medellin/index.html` | 16 | 24 |
@@ -32,7 +32,7 @@ anchor text.
 
 ## Anchor text pointing at each money page
 
-### → `es/diseno-web-medellin.html`  (30 inbound)
+### → `es/medellin.html`  (30 inbound)
 
 | # | Anchor text |
 |---:|---|

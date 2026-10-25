@@ -50,7 +50,7 @@ research behind it whatsoever** — see the open question at the bottom.
 | **Volume** | 500 / month |
 | **Competition** | Baja (indexed 19) |
 | **Top-of-page bid (low)** | 2 018 COP |
-| **Owner page** | [es/diseno-web-medellin.html](../es/diseno-web-medellin.html) |
+| **Owner page** | [es/medellin.html](../es/medellin.html) |
 
 This is the **only local term in the entire export above the floor bucket**, and it
 pairs decent volume with low difficulty — textbook low-hanging fruit. It is also
@@ -66,7 +66,7 @@ unaccented variant be matched automatically.
 ## Secondary keywords
 
 Ordered by value, with the page that should own each. Per the deliberate role split
-between `es/index.html` and `es/diseno-web-medellin.html`, local intent belongs to the Medellín
+between `es/index.html` and `es/medellin.html`, local intent belongs to the Medellín
 page and broad agency intent to the home page — do not mix them.
 
 | # | Keyword | Vol | Comp | Idx | Owner page |
@@ -75,10 +75,10 @@ page and broad agency intent to the home page — do not mix them.
 | 2 | `agencia de diseño` | 500 | Baja | 16 | es/index.html |
 | 3 | `diseño de sitios web` | 500 | Baja | 21 | es/servicios.html |
 | 4 | `desarrollo de paginas web` | 500 | Media | 55 | es/medellin/desarrollo-web-medellin.html |
-| 5 | `diseño paginas web medellin` | 50 | Baja | 26 | es/diseno-web-medellin.html |
+| 5 | `diseño paginas web medellin` | 50 | Baja | 26 | es/medellin.html |
 | 6 | `desarrollo de paginas web medellin` | 50 | Baja | 14 | es/medellin/desarrollo-web-medellin.html |
 | 7 | `diseño de tiendas virtuales en medellin` | 50 | Baja | 7 | es/blog/tienda-online-medellin.html |
-| 8 | `sitios web en medellin` | 50 | Media | 36 | es/diseno-web-medellin.html |
+| 8 | `sitios web en medellin` | 50 | Media | 36 | es/medellin.html |
 | 9 | `desarrolladores web medellin` | 50 | Media | 38 | es/medellin/desarrollo-web-medellin.html |
 | 10 | `posicionar pagina web en google` | 50 | Baja | 25 | es/medellin/seo-local-medellin.html |
 
@@ -106,7 +106,7 @@ total (once in a header, once in the body sentence below it).
 |---|---|---|
 | `es/index.html` | agencia de diseño | agencia de diseño y desarrollo web |
 | `es/blog/agencias-diseno-web-medellin.html` | agencias de diseño web | mejores agencias de diseño web |
-| `es/diseno-web-medellin.html` | diseño de paginas web en medellin | diseño paginas web medellin, sitios web en medellin |
+| `es/medellin.html` | diseño de paginas web en medellin | diseño paginas web medellin, sitios web en medellin |
 | `es/servicios.html` | diseño de sitios web | diseño de paginas web, paginas web profesionales |
 | `es/medellin/desarrollo-web-medellin.html` | desarrollo de paginas web medellin | desarrolladores web medellin, desarrollo web en medellin |
 | `es/medellin/seo-local-medellin.html` | posicionar pagina web en google | posicionamiento de paginas web, diseño web seo |
@@ -149,7 +149,7 @@ verbatim, because the exact phrase is stilted Spanish:
 | `es/medellin/cuanto-cuesta-…html` | `precio crear pagina web` | "Rangos de precio para crear una página web en Medellín" | The bare phrase is not how anyone writes Spanish; the H1 question matches how people actually search. |
 | `es/blog/tienda-online-medellin.html` | `diseño de tiendas virtuales en medellin` | H1 stays; target placed on the closing CTA header | Buyer-intent term belongs where the reader is asked to hire, not on an informational H1. |
 
-Also note `es/diseno-web-medellin.html` keeps "Diseño Web en Medellín" in its **H1** (preserving the
+Also note `es/medellin.html` keeps "Diseño Web en Medellín" in its **H1** (preserving the
 role split against `es/index.html`) while its **title** now leads with the measured
 500-volume term. The page owns both.
 
