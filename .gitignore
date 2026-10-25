@@ -33,3 +33,7 @@ Keyword Stats *.csv
 
 # playwright-cli snapshots (created when QA runs from the repo)
 .playwright-cli/
+
+# Internal working notes (not for the public repo)
+docs/PLAN_REDISENO.md
+docs/KIT_SEO_LOCAL.md
