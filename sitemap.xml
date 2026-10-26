@@ -277,6 +277,33 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design" />
   </url>
   <url>
+    <loc>https://aurawebs.site/es/blog/wordpress-o-desarrollo-a-medida</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/blog/wordpress-o-desarrollo-a-medida" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/blog/wordpress-o-desarrollo-a-medida" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design" />
+  </url>
+  <url>
+    <loc>https://aurawebs.site/es/blog/pagina-web-restaurantes-medellin</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/blog/pagina-web-restaurantes-medellin" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/blog/pagina-web-restaurantes-medellin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design" />
+  </url>
+  <url>
+    <loc>https://aurawebs.site/es/blog/landing-page-o-sitio-web</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://aurawebs.site/es/blog/landing-page-o-sitio-web" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://aurawebs.site/es/blog/landing-page-o-sitio-web" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aurawebs.site/en/web-design" />
+  </url>
+  <url>
     <loc>https://aurawebs.site/es/blog/redisenio-web-medellin</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
