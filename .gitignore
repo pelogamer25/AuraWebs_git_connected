@@ -37,3 +37,7 @@ Keyword Stats *.csv
 # Internal working notes (not for the public repo)
 docs/PLAN_REDISENO.md
 docs/KIT_SEO_LOCAL.md
+
+# Local Claude Code skills/config (not part of the site)
+.claude/
+skills-lock.json
