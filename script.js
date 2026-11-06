@@ -440,6 +440,27 @@ document.addEventListener('DOMContentLoaded', () => {
     select(tabs.find(t => t.getAttribute('aria-selected') === 'true') || tabs[0]);
   });
 
+  // --- 9c. Filters ([data-filter-root]): chips show only [data-cat] items of one category; sections left empty hide.
+  // The chip bar ships hidden, so without JS every project simply shows. ---
+  document.querySelectorAll('[data-filter-root]').forEach(root => {
+    const chips = [...root.querySelectorAll('[data-filter]')];
+    const items = [...root.querySelectorAll('[data-cat]')];
+    const sections = [...root.querySelectorAll('[data-filter-section]')];
+    const empty = root.querySelector('[data-filter-empty]');
+    chips.forEach(chip => chip.addEventListener('click', () => {
+      const f = chip.dataset.filter;
+      chips.forEach(c => c.setAttribute('aria-pressed', String(c === chip)));
+      items.forEach(it => {
+        it.hidden = f !== 'todos' && it.dataset.cat !== f;
+        if (!it.hidden) it.classList.add('revealed');
+      });
+      let any = false;
+      sections.forEach(s => { const vis = !!s.querySelector('[data-cat]:not([hidden])'); s.hidden = !vis; any = any || vis; });
+      if (empty) empty.hidden = any;
+    }));
+    if (chips.length) chips[0].closest('[role="group"]').hidden = false;
+  });
+
   // --- 10. Contact forms send everything to WhatsApp ---
   // Without JS the form still GETs wa.me with the textarea as ?text=.
   document.querySelectorAll('form[data-whatsapp-form]').forEach(form => {

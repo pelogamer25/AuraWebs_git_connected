@@ -284,6 +284,65 @@ select.input-premium option {background-color: #0f0728; color: #fff;}
   .breadcrumbs a:hover {color: #fff;}
   .breadcrumbs [aria-current] {color: #e5e7eb;}
 
+  /* Portfolio (/es/portafolio): featured rows with browser + phone mockups, compact cards, filter chips. */
+  .pf-filters {display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-bottom: 4rem;}
+  .pf-chip {padding: 0.5rem 1rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500; color: #d1d5db; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); transition: color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;}
+  .pf-chip:hover {color: #fff; background: rgba(255, 255, 255, 0.1);}
+  .pf-chip[aria-pressed="true"] {color: #fff; background: #7c3aed; border-color: #7c3aed; box-shadow: 0 0 15px rgba(124, 58, 237, 0.4);}
+  [data-filter-root] [hidden] {display: none !important;}
+  .pf-h2 {display: flex; align-items: center; gap: 1rem; margin-bottom: 2.5rem; font-size: clamp(1.5rem, 2.6vw, 2rem); font-weight: 700; letter-spacing: -0.02em; color: #fff;}
+  .pf-h2::after {content: ""; flex: 1; height: 1px; background: linear-gradient(to right, rgba(124, 58, 237, 0.45), transparent);}
+  .pf-feature-list {display: flex; flex-direction: column; gap: 6rem;}
+  .pf-feature {display: grid; gap: 2.5rem; align-items: center;}
+  .pf-media {position: relative; padding: 0 1.75rem 1.75rem 0;}
+  .pf-browser {border-radius: 1rem; overflow: hidden; background: #0b0820; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45); transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);}
+  .pf-feature:hover .pf-browser {transform: translateY(-4px);}
+  .pf-browser img, .pf-phone img, .pf-before img {display: block; width: 100%; height: auto;}
+  .pf-browser-bar {display: flex; align-items: center; gap: 0.375rem; padding: 0.625rem 0.875rem; background: rgba(255, 255, 255, 0.04); border-bottom: 1px solid rgba(255, 255, 255, 0.06);}
+  .pf-browser-bar span {flex-shrink: 0; width: 0.625rem; height: 0.625rem; border-radius: 9999px; background: rgba(255, 255, 255, 0.18);}
+  .pf-browser-bar em {min-width: 0; margin-left: 0.75rem; padding: 0.125rem 0.75rem; border-radius: 9999px; background: rgba(255, 255, 255, 0.05); color: #9ca3af; font-size: 0.75rem; font-style: normal; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+  .pf-phone {position: absolute; right: 0; bottom: 0; width: 26%; max-width: 170px; border-radius: 1.25rem; overflow: hidden; border: 4px solid #1b1630; box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);}
+  .pf-flip .pf-media {padding: 0 0 1.75rem 1.75rem;}
+  .pf-flip .pf-phone {right: auto; left: 0;}
+  @media (min-width: 768px) {
+    .pf-feature {grid-template-columns: 7fr 5fr; gap: 4rem;}
+    .pf-feature.pf-flip {grid-template-columns: 5fr 7fr;}
+    .pf-flip .pf-media {order: 2;}
+    .pf-media {padding: 0 2.75rem 2.5rem 0;}
+    .pf-flip .pf-media {padding: 0 0 2.5rem 2.75rem;}
+  }
+  .pf-kicker {margin-bottom: 0.75rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #f0abfc;}
+  .pf-num {margin-right: 0.5rem; color: #a78bfa;}
+  .pf-title {margin-bottom: 1rem; font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.025em; color: #fff;}
+  .pf-card-title {margin-bottom: 0.5rem; font-size: 1.375rem; font-weight: 700; letter-spacing: -0.015em; color: #fff;}
+  .pf-desc {margin-bottom: 1rem; color: #d1d5db; line-height: 1.7;}
+  .pf-style {display: flex; align-items: flex-start; gap: 0.75rem; margin-bottom: 1.25rem; color: #9ca3af; font-size: 0.9rem; line-height: 1.6;}
+  .pf-style strong {font-weight: 600; color: #e5e7eb;}
+  .pf-swatches {display: inline-flex; flex-shrink: 0; margin-top: 0.15rem;}
+  .pf-swatches span {width: 1.125rem; height: 1.125rem; border-radius: 9999px; border: 2px solid #0b0820; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18);}
+  .pf-swatches span + span {margin-left: -0.375rem;}
+  .pf-tags {display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;}
+  .pf-tags li {padding: 0.25rem 0.625rem; border-radius: 0.375rem; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: #d1d5db; font-size: 0.75rem;}
+  .pf-actions {display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem;}
+  .pf-live {display: inline-flex; align-items: center; gap: 0.375rem; padding: 0.625rem 1.125rem; border-radius: 9999px; background: rgba(124, 58, 237, 0.15); border: 1px solid rgba(167, 139, 250, 0.4); color: #fff; font-weight: 600; transition: background-color 0.2s ease;}
+  .pf-live:hover {background: rgba(124, 58, 237, 0.35);}
+  .pf-guide {color: #c4b5fd; font-size: 0.9375rem; font-weight: 600; transition: color 0.2s ease;}
+  .pf-guide:hover {color: #fff;}
+  .pf-grid {display: grid; gap: 1.5rem;}
+  @media (min-width: 768px) {.pf-grid {grid-template-columns: repeat(2, minmax(0, 1fr));}}
+  @media (min-width: 1280px) {.pf-grid {grid-template-columns: repeat(3, minmax(0, 1fr));}}
+  .pf-card {display: flex; flex-direction: column; border-radius: 1rem; overflow: hidden; background: rgba(15, 7, 40, 0.5); border: 1px solid rgba(255, 255, 255, 0.08); transition: border-color 0.3s ease;}
+  .pf-card:hover {border-color: rgba(124, 58, 237, 0.45);}
+  .pf-card-media {position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: #0b0820;}
+  .pf-card-media > img {width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);}
+  .pf-card:hover .pf-card-media > img {transform: scale(1.04);}
+  .pf-card-body {display: flex; flex: 1; flex-direction: column; padding: 1.5rem;}
+  .pf-card-body .pf-desc {font-size: 0.9375rem;}
+  .pf-card-body .pf-live {align-self: flex-start; margin-top: auto;}
+  .pf-badge {position: absolute; top: 0.75rem; left: 0.75rem; z-index: 1; padding: 0.25rem 0.625rem; border-radius: 9999px; background: rgba(3, 0, 20, 0.8); border: 1px solid rgba(252, 211, 77, 0.4); color: #fcd34d; font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;}
+  .pf-before {position: absolute; left: 0.75rem; bottom: 0.75rem; width: 38%; border-radius: 0.5rem; overflow: hidden; border: 2px solid rgba(255, 255, 255, 0.85); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);}
+  .pf-before figcaption {position: absolute; top: 0.25rem; left: 0.25rem; padding: 0.125rem 0.375rem; border-radius: 0.25rem; background: rgba(0, 0, 0, 0.8); color: #fff; font-size: 0.625rem; font-weight: 700; text-transform: uppercase;}
+
   .footer-heading {margin-bottom: 1.25rem; font-size: 0.875rem; font-weight: 600; color: #fff;}
   .footer-links {display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.875rem;}
   .footer-links a {color: #9ca3af; transition: color 0.2s ease;}
