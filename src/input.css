@@ -339,15 +339,110 @@ select.input-premium option {background-color: #0f0728; color: #fff;}
   .pf-card-body {display: flex; flex: 1; flex-direction: column; padding: 1.5rem;}
   .pf-card-body .pf-desc {font-size: 0.9375rem;}
   .pf-card-body .pf-live {align-self: flex-start; margin-top: auto;}
+  .pf-live {white-space: nowrap;}
+  .pf-live svg {flex-shrink: 0; width: 1rem; height: 1rem;}
   .pf-badge {position: absolute; top: 0.75rem; left: 0.75rem; z-index: 1; padding: 0.25rem 0.625rem; border-radius: 9999px; background: rgba(3, 0, 20, 0.8); border: 1px solid rgba(252, 211, 77, 0.4); color: #fcd34d; font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;}
   .pf-before {position: absolute; left: 0.75rem; bottom: 0.75rem; width: 38%; border-radius: 0.5rem; overflow: hidden; border: 2px solid rgba(255, 255, 255, 0.85); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);}
   .pf-before figcaption {position: absolute; top: 0.25rem; left: 0.25rem; padding: 0.125rem 0.375rem; border-radius: 0.25rem; background: rgba(0, 0, 0, 0.8); color: #fff; font-size: 0.625rem; font-weight: 700; text-transform: uppercase;}
+
+  /* --- Medellín: "estructura comercial" bento (cx-*). Real project screenshots, one accent family,
+     16-24px radii. Motion: reveal + hover lift + one-shot typing/compare hints, all frozen by reduced motion. */
+  .cx-icon {display: inline-flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; margin-bottom: 1.125rem; border-radius: 0.75rem; color: #c4b5fd; background: rgba(139, 92, 246, 0.14); border: 1px solid rgba(167, 139, 250, 0.28);}
+  .cx-icon svg {width: 1.25rem; height: 1.25rem;}
+  .cx-icon--cyan {color: #67e8f9; background: rgba(6, 182, 212, 0.12); border-color: rgba(103, 232, 249, 0.28);}
+  .cx-icon--magenta {color: #f0abfc; background: rgba(217, 70, 239, 0.12); border-color: rgba(240, 171, 252, 0.28);}
+  .cx-head {max-width: 48rem; margin-bottom: 3.5rem;}
+  .cx-lead {max-width: 62ch; color: #9ca3af; font-size: 1.125rem; line-height: 1.7;}
+  .cx-bento {display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.25rem;}
+  @media (min-width: 768px) {
+    .cx-bento {grid-template-columns: repeat(2, minmax(0, 1fr));}
+    .cx-a, .cx-d {grid-column: 1 / -1;}
+  }
+  @media (min-width: 1024px) {
+    .cx-bento {grid-template-columns: repeat(12, minmax(0, 1fr));}
+    .cx-a, .cx-d {grid-column: span 7 / span 7;}
+    .cx-b, .cx-c {grid-column: span 5 / span 5;}
+  }
+  .cx-cell {position: relative; display: flex; flex-direction: column; overflow: hidden; border-radius: 1.5rem; background: linear-gradient(180deg, rgba(22, 13, 52, 0.9), rgba(9, 5, 26, 0.92)); border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06); transition: border-color 0.4s ease;}
+  .cx-cell::before {content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0.9;}
+  .cx-a::before {background: radial-gradient(60% 55% at 85% 100%, rgba(124, 58, 237, 0.28), transparent 70%);}
+  .cx-b::before {background: radial-gradient(70% 50% at 50% 100%, rgba(6, 182, 212, 0.2), transparent 70%);}
+  .cx-c::before {background: radial-gradient(70% 55% at 0% 100%, rgba(217, 70, 239, 0.16), transparent 70%);}
+  .cx-d::before {background: radial-gradient(55% 60% at 100% 0%, rgba(139, 92, 246, 0.16), transparent 70%);}
+  .cx-cell:hover {border-color: rgba(167, 139, 250, 0.35);}
+  .cx-copy {position: relative; padding: 1.75rem 1.75rem 0;}
+  .cx-h3 {text-wrap: balance; max-width: 24ch; margin-bottom: 0.625rem; color: #fff; font-size: 1.375rem; font-weight: 700; line-height: 1.25; letter-spacing: -0.015em;}
+  .cx-p {max-width: 50ch; color: #9ca3af; font-size: 0.9375rem; line-height: 1.65;}
+  .cx-link {display: inline-flex; align-items: center; gap: 0.375rem; margin-top: 0.75rem; padding: 0.5rem 0; color: #c4b5fd; font-size: 0.9375rem; font-weight: 600; transition: color 0.2s ease;}
+  .cx-link svg {width: 1rem; height: 1rem; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);}
+  .cx-link:hover {color: #fff;}
+  .cx-link:hover svg {transform: translate(2px, -2px);}
+  .cx-cap {margin-top: 0.75rem; color: #8b93a3; font-size: 0.8125rem;}
+  /* A: browser shot that bleeds off the bottom-right corner */
+  .cx-shot {display: flex; flex: 1; flex-direction: column-reverse; justify-content: flex-start; margin: 1.25rem 0 0 1.75rem;}
+  .cx-shot .pf-browser {border-radius: 0.875rem 0 0 0; border-right: 0; border-bottom: 0; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);}
+  .cx-shot .pf-browser img {display: block; width: 100%; height: 17rem; object-fit: cover; object-position: top left;}
+  @media (min-width: 1024px) {.cx-shot .pf-browser img {height: 19rem;}}
+  .cx-a:hover .cx-shot .pf-browser {transform: translateY(-6px);}
+  .cx-a .cx-cap {margin: 0 0 0.75rem;}
+  /* B: phone that rises from the bottom edge */
+  .cx-phone-wrap {display: flex; flex: 1; flex-direction: column-reverse; align-items: center; justify-content: flex-start; margin-top: 1.25rem;}
+  .cx-phone {width: min(15rem, 66%); flex: 1; min-height: 18rem; max-height: 24rem; overflow: hidden; border: 6px solid #1d1838; border-bottom: 0; border-radius: 2rem 2rem 0 0; box-shadow: 0 -20px 50px rgba(6, 182, 212, 0.12); transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);}
+  .cx-phone img {display: block; width: 100%; height: 100%; object-fit: cover; object-position: top;}
+  .cx-b:hover .cx-phone {transform: translateY(-10px);}
+  .cx-b .cx-cap {margin: 0 0 0.75rem;}
+  /* C: search -> visit -> WhatsApp */
+  .cx-seo {display: flex; flex: 1; flex-direction: column; justify-content: center; gap: 1.25rem; padding: 1.5rem 1.75rem 1.75rem;}
+  .cx-search {display: flex; align-items: center; gap: 0.625rem; padding: 0.75rem 1rem; border-radius: 9999px; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12); color: #e5e7eb; font-size: 0.9375rem;}
+  .cx-search svg {flex-shrink: 0; width: 1.125rem; height: 1.125rem; color: #9ca3af;}
+  .cx-type {display: inline-block; white-space: nowrap;}
+  .cx-flow {display: grid; gap: 0.875rem; padding-left: 0.25rem;}
+  .cx-flow li {position: relative; display: flex; align-items: center; gap: 0.75rem; color: #d1d5db; font-size: 0.9375rem;}
+  .cx-flow svg {flex-shrink: 0; width: 1.875rem; height: 1.875rem; padding: 0.4375rem; border-radius: 9999px; color: #f0abfc; background: rgba(217, 70, 239, 0.12); border: 1px solid rgba(240, 171, 252, 0.25);}
+  .cx-flow li + li::before {content: ""; position: absolute; left: 0.875rem; top: -0.875rem; height: 0.875rem; border-left: 1px dashed rgba(240, 171, 252, 0.4);}
+  .cx-flow li:last-child svg {color: #4ade80; background: rgba(34, 197, 94, 0.12); border-color: rgba(74, 222, 128, 0.3);}
+  .cx-rating {display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.5rem; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.08); color: #9ca3af; font-size: 0.8125rem;}
+  .cx-rating strong {color: #fff; font-size: 1.125rem;}
+  .cx-stars {color: #facc15; letter-spacing: 0.05em;}
+  @media (prefers-reduced-motion: no-preference) {
+    .cx-c.revealed .cx-type {animation: cx-type 1.3s steps(19, end) 0.35s both;}
+    .cx-c.revealed .cx-flow li {animation: cx-lit 0.6s cubic-bezier(0.16, 1, 0.3, 1) both; animation-delay: calc(1.7s + var(--i) * 0.3s);}
+    .cx-d.revealed .cx-compare:not(.is-touched) {animation: cx-hint 1.8s cubic-bezier(0.65, 0, 0.35, 1) 0.6s 1;}
+  }
+  /* D: before/after compare (range input on top keeps it keyboard + touch accessible) */
+  .cx-compare-wrap {padding: 1.5rem 1.75rem 1.75rem;}
+  .cx-compare {position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 1rem; background: #0b0820; border: 1px solid rgba(255, 255, 255, 0.1); isolation: isolate;}
+  .cx-compare img {position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top;}
+  .cx-before {position: absolute; inset: 0; clip-path: inset(0 calc(100% - var(--pos)) 0 0);}
+  .cx-handle {position: absolute; top: 0; bottom: 0; left: var(--pos); width: 2px; background: #fff; transform: translateX(-50%); pointer-events: none; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);}
+  .cx-handle span {position: absolute; top: 50%; left: 50%; display: flex; align-items: center; justify-content: center; width: 2.75rem; height: 2.75rem; border-radius: 9999px; background: #fff; color: #1e1b4b; transform: translate(-50%, -50%); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);}
+  .cx-handle svg {width: 1.25rem; height: 1.25rem;}
+  .cx-compare input {position: absolute; inset: 0; z-index: 2; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; touch-action: pan-y;}
+  .cx-compare:has(input:focus-visible) .cx-handle span {outline: 3px solid #c4b5fd; outline-offset: 3px;}
+  .cx-tag {position: absolute; top: 0.75rem; z-index: 1; padding: 0.25rem 0.625rem; border-radius: 9999px; background: rgba(3, 0, 20, 0.82); color: #fff; font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; pointer-events: none;}
+  .cx-tag--before {left: 0.75rem;}
+  .cx-tag--after {right: 0.75rem;}
+  /* industries strip */
+  .cx-ind {display: grid; gap: 1.5rem; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.08);}
+  .cx-ind p {max-width: 62ch; color: #9ca3af; line-height: 1.7;}
+  .cx-ind ul {display: flex; flex-wrap: wrap; align-content: flex-start; gap: 0.625rem;}
+  .cx-ind a {display: inline-flex; align-items: center; gap: 0.5rem; min-height: 2.75rem; padding: 0.5rem 1rem; border-radius: 9999px; color: #e5e7eb; font-size: 0.875rem; font-weight: 500; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);}
+  .cx-ind a svg {width: 1rem; height: 1rem; color: #c4b5fd;}
+  .cx-ind a:hover {background: rgba(124, 58, 237, 0.18); border-color: rgba(167, 139, 250, 0.45); transform: translateY(-2px);}
+  .cx-ind a:active, .cx-link:active {transform: scale(0.98);}
+  @media (min-width: 1024px) {.cx-ind {grid-template-columns: 1fr 1fr; gap: 3rem;}}
 
   .footer-heading {margin-bottom: 1.25rem; font-size: 0.875rem; font-weight: 600; color: #fff;}
   .footer-links {display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.875rem;}
   .footer-links a {color: #9ca3af; transition: color 0.2s ease;}
   .footer-links a:hover, .footer-links a[aria-current="page"] {color: #fff;}
 }
+
+/* Medellín bento keyframes. --pos is registered so the compare handle can animate (one-shot hint). */
+@property --pos {syntax: "<percentage>"; inherits: true; initial-value: 50%;}
+@keyframes cx-type {from {clip-path: inset(0 100% 0 0);} to {clip-path: inset(0 0 0 0);}}
+@keyframes cx-lit {from {opacity: 0.25; transform: translateX(-6px);} to {opacity: 1; transform: none;}}
+@keyframes cx-hint {0% {--pos: 50%;} 40% {--pos: 30%;} 75% {--pos: 62%;} 100% {--pos: 50%;}}
 
 /* Reduced motion: freeze every CSS animation/transition at its end state and stop scroll parallax
    (inline scripts set transforms on .parallax-*). The starfield canvas already checks this in script.js. */

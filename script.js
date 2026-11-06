@@ -461,6 +461,17 @@ document.addEventListener('DOMContentLoaded', () => {
     if (chips.length) chips[0].closest('[role="group"]').hidden = false;
   });
 
+  // --- 9d. Before/after compare ([data-compare]): a transparent range input drives --pos (keyboard + touch work natively).
+  // Without JS the split simply stays at 50%. ---
+  document.querySelectorAll('[data-compare]').forEach(box => {
+    const range = box.querySelector('input[type="range"]');
+    if (!range) return;
+    range.addEventListener('input', () => {
+      box.classList.add('is-touched');
+      box.style.setProperty('--pos', range.value + '%');
+    });
+  });
+
   // --- 10. Contact forms send everything to WhatsApp ---
   // Without JS the form still GETs wa.me with the textarea as ?text=.
   document.querySelectorAll('form[data-whatsapp-form]').forEach(form => {
